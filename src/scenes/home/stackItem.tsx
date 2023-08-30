@@ -8,7 +8,7 @@ interface StackItemProps {
 export function StackItem({ item }: StackItemProps) {
   return (
     <div>
-      <div style={{ backgroundColor: "#093f96" }}>
+      <div>
         <item.component />
         <p>{item.label}</p>
       </div>

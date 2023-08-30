@@ -98,7 +98,7 @@ export function Message() {
   };
   return (
     <>
-      <p>{currentTextFirstLine}</p>
+      <p style={{ paddingTop: 40 }}>{currentTextFirstLine}</p>
       <p>{currentTextSecondLine}</p>
     </>
   );

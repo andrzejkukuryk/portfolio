@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
-import { Message } from "./scenes/greeting/message";
-import { StackItem } from "./scenes/greeting/stackItem";
-import { stack } from "./models/stackIcons";
+import { Home } from "./scenes/home/home";
+import { Projects } from "./scenes/projects/projects";
+import { About } from "./scenes/about/about";
+import { Contact } from "./scenes/contact/contact";
 
 function App() {
   return (
     <div className="App">
-      <Message />
-      <StackItem item={stack[0]} />
+      <Home />
+      <Projects />
+      <About />
+      <Contact />
     </div>
   );
 }
