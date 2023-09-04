@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.label {
+    padding-top: 90px;
+    margin: 0 30px;
+}

@@ -1,4 +1,11 @@
 .container {
     background-color: darkgoldenrod;
     min-height: 100vh;
+
+}
+
+.innerContainer {
+    max-width: 1024px;
+    border: solid black 1px;
+    margin: 0 auto;
 }
