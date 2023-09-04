@@ -4,13 +4,13 @@ import { MenuItem } from "./menuItem";
 import { sections } from "../../../models/menu";
 
 export function Menu() {
-  return (
-    <div className={styles.container}>
-      <ul>
-        {sections.map((section) => {
-          return <MenuItem listItem={section} />;
-        })}
-      </ul>
-    </div>
-  );
+const createList = () => {
+  return sections.map((section) => <MenuItem listItem={section} />);
+};
+
+return (
+  <div className={styles.container}>
+    <ul className={styles.list}>{createList()}</ul>
+  </div>
+);
 }

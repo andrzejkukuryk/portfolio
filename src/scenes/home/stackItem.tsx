@@ -1,5 +1,5 @@
 import React from "react";
-import { StackInfo } from "../../models/stackIcons";
+import { StackInfo } from "../../data/stackIcons";
 
 interface StackItemProps {
   item: StackInfo;
