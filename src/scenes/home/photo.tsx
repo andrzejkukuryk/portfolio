@@ -4,7 +4,7 @@ import styles from "./photo.module.css";
 
 export function Photo() {
   return (
-    <div>
+    <div className={styles.container}>
       <img src={photo} alt="Andrzej Kukuryk photo" className={styles.circle} />
     </div>
   );

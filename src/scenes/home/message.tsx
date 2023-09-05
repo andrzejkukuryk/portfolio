@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./message.module.css";
 
 export function Message() {
   const [currentTextFirstLine, setCurrentTextFirstLine] = useState("");
@@ -97,9 +98,9 @@ export function Message() {
     }
   };
   return (
-    <div>
-      <p style={{ paddingTop: 40 }}>{currentTextFirstLine}</p>
-      <p>{currentTextSecondLine}</p>
+    <div className={styles.container}>
+      <p className={styles.firstLine}>{currentTextFirstLine}</p>
+      <p className={styles.secondLine}>{currentTextSecondLine}</p>
     </div>
   );
 }

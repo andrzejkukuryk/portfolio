@@ -5,6 +5,7 @@
 
 .innerContainer {
     max-width: 1024px;
+    height: 100%;
     border: solid black 1px;
     margin: 0 auto;
 }
