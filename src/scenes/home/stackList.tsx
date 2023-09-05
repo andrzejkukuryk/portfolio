@@ -8,9 +8,9 @@ export function StackList() {
     return stack.map((item) => <StackItem item={item} />);
   };
   return (
-    <div className={styles.container}>
-      <p className={styles.label}>My tech stack:</p>
-      {createList()}
+    <div>
+      <h3>Technical stack:</h3>
+      <div className={styles.container}>{createList()}</div>
     </div>
   );
 }

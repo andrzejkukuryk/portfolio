@@ -4,12 +4,14 @@ import { Message } from "./message";
 import { StackItem } from "./stackItem";
 import { stack } from "../../data/stackIcons";
 import { StackList } from "./stackList";
+import { PersonalLinks } from "./personalLinks";
 
 export function Home() {
   return (
     <section id="home" className={styles.container}>
       <div className={styles.innerContainer}>
         <Message />
+        <PersonalLinks />
         <StackList />
       </div>
     </section>

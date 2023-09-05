@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionName } from "../../../models/menu";
+import { SectionName } from "../../models/menu";
 import styles from "./menuItem.module.css";
 
 interface MenuItemProps {
