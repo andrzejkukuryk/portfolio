@@ -1,5 +1,6 @@
 import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
 import { ReactComponent as GitHubIcon } from "../assets/github.svg";
+import { ReactComponent as CvIcon } from "../assets/cv.svg";
 
 export interface PersonalLinksInfo {
   icon: React.FunctionComponent<
@@ -21,5 +22,10 @@ export const personalLinks: PersonalLinksInfo[] = [
     icon: GitHubIcon,
     label: "GitHub",
     url: "https://github.com/andrzejkukuryk/",
+  },
+  {
+    icon: CvIcon,
+    label: "Resume (download)",
+    url: "#",
   },
 ];

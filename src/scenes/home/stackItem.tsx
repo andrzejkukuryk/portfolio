@@ -1,6 +1,6 @@
 import React from "react";
 import { StackInfo } from "../../data/stackIcons";
-import styles from "./stackItem.module.css";
+import styles from "./item.module.css";
 
 interface StackItemProps {
   item: StackInfo;

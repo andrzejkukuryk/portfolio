@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./item.module.css";
 import { PersonalLinksInfo } from "../../data/personalLinks";
 
 interface PersonalLinksInfoProps {
@@ -7,9 +7,11 @@ interface PersonalLinksInfoProps {
 }
 export function PersonalLinksItem({ info }: PersonalLinksInfoProps) {
   return (
-    <a href={info.url}>
-      <div>
-        <info.icon />
+    <a href={info.url} target="_blank" className={styles.a}>
+      <div className={styles.container}>
+        <div className={styles.circle}>
+          <info.icon className={styles.icon} />
+        </div>
         <p>{info.label}</p>
       </div>
     </a>

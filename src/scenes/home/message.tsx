@@ -97,9 +97,9 @@ export function Message() {
     }
   };
   return (
-    <>
+    <div>
       <p style={{ paddingTop: 40 }}>{currentTextFirstLine}</p>
       <p>{currentTextSecondLine}</p>
-    </>
+    </div>
   );
 }
