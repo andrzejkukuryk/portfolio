@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .container {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,7 @@
 }
 
 .circle {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $color-primary;
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -20,7 +22,12 @@
 }
 
 .a {
-    color: black;
+    color: $color-tertiary;
     text-decoration: none;
     margin: 0 10px;
+}
+
+.label {
+    width: 80px;
+    text-align: center;
 }

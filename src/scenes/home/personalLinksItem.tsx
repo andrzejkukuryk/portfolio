@@ -12,7 +12,7 @@ export function PersonalLinksItem({ info }: PersonalLinksInfoProps) {
         <div className={styles.circle}>
           <info.icon className={styles.icon} />
         </div>
-        <p>{info.label}</p>
+        <p className={styles.label}>{info.label}</p>
       </div>
     </a>
   );
