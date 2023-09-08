@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./greeting.module.css";
+import styles from "./greeting.module.scss";
 import { Message } from "./message";
 import { Photo } from "./photo";
 

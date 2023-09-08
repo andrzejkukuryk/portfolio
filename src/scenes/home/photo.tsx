@@ -1,6 +1,6 @@
 import React from "react";
 import photo from "../../graph/foto400px.jpg";
-import styles from "./photo.module.css";
+import styles from "./photo.module.scss";
 
 export function Photo() {
   return (

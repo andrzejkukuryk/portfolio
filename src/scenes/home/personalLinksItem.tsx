@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./item.module.css";
+import styles from "./item.module.scss";
 import { PersonalLinksInfo } from "../../data/personalLinks";
 
 interface PersonalLinksInfoProps {

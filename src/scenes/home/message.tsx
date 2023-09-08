@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./message.module.css";
+import styles from "./message.module.scss";
 
 export function Message() {
   const [currentTextFirstLine, setCurrentTextFirstLine] = useState("");

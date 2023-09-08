@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./home.module.css";
+import styles from "./home.module.scss";
 import { StackList } from "./stackList";
 import { PersonalLinks } from "./personalLinks";
 import { Greeting } from "./greeting";
