@@ -1,6 +1,12 @@
+@import "../../variables.scss";
+
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     margin-top: 80px;
+}
+
+@media screen and (min-width: $tablet) {
+    .container{flex-direction: row;}
 }

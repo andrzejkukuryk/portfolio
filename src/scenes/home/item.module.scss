@@ -8,10 +8,13 @@
 }
 
 .circle {
-    background-color: $color-primary;
+    background-color: $color-secondary;
+    border-color: $color-quaternary;
+    border-width: 4px;
+    border-style: solid;
     width: 80px;
     height: 80px;
-    border-radius: 40px;
+    border-radius: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
