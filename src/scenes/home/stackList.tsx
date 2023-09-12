@@ -10,9 +10,9 @@ export function StackList() {
     ));
   };
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Technical stack:</h3>
-      <div className={styles.container}>{createList()}</div>
+      <div className={styles.listContainer}>{createList()}</div>
     </div>
   );
 }

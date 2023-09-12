@@ -11,7 +11,7 @@ export function PersonalLinks() {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Personal links:</h3>
       <div className={styles.linksContainer}>{createList()}</div>
     </div>

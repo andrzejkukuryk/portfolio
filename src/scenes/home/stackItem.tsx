@@ -12,7 +12,7 @@ export function StackItem({ item }: StackItemProps) {
       <div className={styles.circle}>
         <item.component className={styles.icon} />
       </div>
-      <p>{item.label}</p>
+      <p className={styles.label}>{item.label}</p>
     </div>
   );
 }

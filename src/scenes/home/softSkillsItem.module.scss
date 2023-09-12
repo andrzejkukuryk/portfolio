@@ -4,9 +4,9 @@
     background-color: $color-tertiary;
     border-radius: 4px;
     color: $color-secondary;
-    font-size: 1.5em;
-    width: 150px;
-    height: 35px;
+    font-size: 20px;
+    width: 130px;
+    height: 33px;
     position: relative;
     padding-left: 40px;
     margin-top: 20px;
@@ -27,7 +27,7 @@
    
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: $tablet) {
     .label {
         margin-left: -40px;
     }
