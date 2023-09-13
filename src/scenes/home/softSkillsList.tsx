@@ -1,12 +1,13 @@
 import React from "react";
 import { SoftSkillsItem } from "./softSkillsItem";
+import { softSkills } from "../../data/softSkills";
 
 export function SoftSkillsList() {
-  const softSkills = ["patient", "ambitious", "fast learner"];
-
-  const createList = () => {
-    return softSkills.map((skill) => <SoftSkillsItem label={skill} />);
-  };
-
-  return <div>{createList()}</div>;
+  return (
+    <div>
+      {softSkills.map((skill) => (
+        <SoftSkillsItem label={skill} />
+      ))}
+    </div>
+  );
 }
