@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.container {
+    background-color: $color-secondary;
+    min-height: 100vh;
+}
+
+.innerContainer {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}

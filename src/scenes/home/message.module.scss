@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+.container {
+  flex-shrink: 2;
+  flex-basis: 300px;
+  margin: 0 0 0 30px;
+  color: $color-tertiary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.firstLine {
+  font-size: 2.5em;
+  height: 53px;
+  text-align: center;
+}
+
+.secondLine {
+  font-size: 1.6em;
+  height: 35px;
+  text-align: center;
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-basis: 500px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.container {
+  margin: 30px 0px 0 0;
+  flex-basis: 300px;
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  max-width: 60%;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 30px 40px 0 0;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    margin: 30px 0px 0 0;
+    flex-basis: 400px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .circle {
+    height: 100%;
+  }
+}

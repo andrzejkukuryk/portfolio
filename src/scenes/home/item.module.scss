@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.circle {
+    background-color: $color-secondary;
+    border-color: $color-quaternary;
+    border-width: 4px;
+    border-style: solid;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    color: $color-tertiary;
+}
+
+.a {
+    color: $color-tertiary;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.label {
+    color: $color-tertiary;
+    width: 70px;
+    text-align: center;
+}
