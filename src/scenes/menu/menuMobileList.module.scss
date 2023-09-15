@@ -3,15 +3,18 @@
 .container {
     display: block;
     position: relative;
+    top: -7px;
+    right: -$laptop;
     width: 100%;
     background-color: $color-secondary;
-    margin-top: -440px;
-    transition: margin-top 0.3s;
-    z-index: 2;
+    transition: right 0.5s;
+    box-shadow: -1px 3px 3px -3px $color-tertiary;
+    -webkit-box-shadow: -1px 3px 3px -3px $color-tertiary;
+    -moz-box-shadow: -1px 3px 3px -3px $color-tertiary;
 }
 
 .menuIsOpen {
-    margin-top: -6px;
+    right: 0;
 }
 
 @media screen and (min-width: $laptop) {
