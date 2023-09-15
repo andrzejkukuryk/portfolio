@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.container {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: $color-secondary;
+    margin-top: -440px;
+    transition: margin-top 0.3s;
+    z-index: 2;
+}
+
+.menuIsOpen {
+    margin-top: -6px;
+}
+
+@media screen and (min-width: $laptop) {
+    .container {
+        display: none;
+    }
+}

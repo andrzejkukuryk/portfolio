@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+.container {
+    display: block;
+}
+
+@media screen and (min-width: $laptop) {
+    .container{
+        display: none;
+    }
+}

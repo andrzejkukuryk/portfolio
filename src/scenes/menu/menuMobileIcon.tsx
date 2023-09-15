@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as OpenMenu } from "../../assets/menu.svg";
 import { ReactComponent as CloseMenu } from "../../assets/closeMenu.svg";
+import styles from "./menuMobileIcon.module.scss";
 
 interface MenuMobileIconProps {
   menuIsOpen: boolean;
@@ -15,7 +16,7 @@ export function MenuMobileIcon({
     setMenuIsOpen(!menuIsOpen);
   };
   return (
-    <div onClick={handleClick}>
+    <div className={styles.container} onClick={handleClick}>
       {!menuIsOpen && <OpenMenu />}
       {menuIsOpen && <CloseMenu />}
     </div>
