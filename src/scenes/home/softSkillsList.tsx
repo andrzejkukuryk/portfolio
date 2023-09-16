@@ -6,7 +6,7 @@ export function SoftSkillsList() {
   return (
     <div>
       {softSkills.map((skill) => (
-        <SoftSkillsItem label={skill} />
+        <SoftSkillsItem label={skill} key={`soft${skill}`} />
       ))}
     </div>
   );
