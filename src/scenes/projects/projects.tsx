@@ -5,11 +5,10 @@ import { useNavContext } from "../../data/navProvider";
 export function Projects() {
   const [position, setPosition] = useState(0);
   const { updateProjectsPosition } = useNavContext();
-  const projectsRef = useRef();
+  const projectsRef = useRef<HTMLOptionElement | null>(null);
 
   const handleResize = () => {
     if (projectsRef.current) {
-      //@ts-ignore
       const newPosition = projectsRef.current.offsetTop;
       setPosition(newPosition);
     }
@@ -28,7 +27,6 @@ export function Projects() {
   return (
     <section
       id="projects"
-      //@ts-ignore
       ref={projectsRef}
       className={styles.container}
     ></section>

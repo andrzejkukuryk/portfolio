@@ -4,7 +4,7 @@ import { useNavContext } from "../../data/navProvider";
 export function About() {
   const [position, setPosition] = useState(0);
   const { updateAboutPosition } = useNavContext();
-  const aboutRef = useRef();
+  const aboutRef = useRef<HTMLOptionElement | null>(null);
 
   const handleResize = () => {
     if (aboutRef.current) {
@@ -25,11 +25,6 @@ export function About() {
   useEffect(() => updateAboutPosition(position), [position]);
 
   return (
-    <section
-      //@ts-ignore
-      ref={aboutRef}
-      id="about"
-      className={styles.container}
-    ></section>
+    <section ref={aboutRef} id="about" className={styles.container}></section>
   );
 }

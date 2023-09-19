@@ -8,11 +8,10 @@ import { useNavContext } from "../../data/navProvider";
 export function Home() {
   const [position, setPosition] = useState(0);
   const { updateHomePosition } = useNavContext();
-  const homeRef = useRef();
+  const homeRef = useRef<HTMLOptionElement | null>(null);
 
   const handleResize = () => {
     if (homeRef.current) {
-      //@ts-ignore
       const newPosition = homeRef.current.offsetTop;
       setPosition(newPosition);
     }
@@ -29,7 +28,6 @@ export function Home() {
   useEffect(() => updateHomePosition(position), [position]);
 
   return (
-    //@ts-ignore
     <section id="home" ref={homeRef} className={styles.container}>
       <div className={styles.innerContainer}>
         <Greeting />

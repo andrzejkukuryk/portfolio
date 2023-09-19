@@ -5,11 +5,10 @@ import styles from "./contact.module.scss";
 export function Contact() {
   const [position, setPosition] = useState(0);
   const { updateContactPosition } = useNavContext();
-  const contactRef = useRef();
+  const contactRef = useRef<HTMLOptionElement | null>(null);
 
   const handleResize = () => {
     if (contactRef.current) {
-      //@ts-ignore
       const newPosition = contactRef.current.offsetTop;
       setPosition(newPosition);
     }
@@ -27,7 +26,6 @@ export function Contact() {
 
   return (
     <section
-      //@ts-ignore
       ref={contactRef}
       id="contact"
       className={styles.container}

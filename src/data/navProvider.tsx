@@ -92,7 +92,6 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
   }, [scrollPosition]);
 
   const value: ValueProp = {
-    // updateScrollPosition,
     updateHomePosition,
     updateProjectsPosition,
     updateAboutPosition,
