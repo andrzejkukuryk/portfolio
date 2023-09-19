@@ -6,21 +6,19 @@ import React, {
   FC,
   useEffect,
 } from "react";
-import { SectionName, sections } from "../models/menu";
+import { SectionName } from "../models/menu";
 
 const initialNavContext = {
-  updateScrollPosition: () => {},
   updateHomePosition: () => {},
   updateProjectsPosition: () => {},
   updateAboutPosition: () => {},
   updateContactPosition: () => {},
-  activeSection: "",
+  activeSection: "Home",
 } as unknown as ValueProp;
 
 export const NavContext = createContext<ValueProp>(initialNavContext);
 
 interface ValueProp {
-  updateScrollPosition: (position: number) => void;
   updateHomePosition: (position: number) => void;
   updateProjectsPosition: (position: number) => void;
   updateAboutPosition: (position: number) => void;
@@ -44,10 +42,20 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
   const [contactPosition, setContactPosition] = useState(0);
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
 
-  const updateScrollPosition = (position: number) => {
-    console.log("hop");
+  console.log("scrollPosition: ", scrollPosition);
+
+  const handleScroll = () => {
+    const position = window.scrollY + 80; // (80px fixed menu height)
     setScrollPosition(position);
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const updateHomePosition = (position: number) => {
     setHomePosition(position);
@@ -84,7 +92,7 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
   }, [scrollPosition]);
 
   const value: ValueProp = {
-    updateScrollPosition,
+    // updateScrollPosition,
     updateHomePosition,
     updateProjectsPosition,
     updateAboutPosition,
