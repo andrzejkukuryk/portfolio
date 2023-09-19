@@ -1,32 +1,32 @@
 @import "../../variables.scss";
 
 .listItem {
-    display: block;
-    list-style: none;
-    padding: 30px 0;
-    width: 100%;
-    text-align: center;
+  display: block;
+  list-style: none;
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
 }
 a {
-    color: $color-primary;
-    text-decoration: none;
-    font-size: 1.3em;
-    font-weight: 600;
-    transition: 0.3s;
+  color: $color-primary;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .active {
-    color: $color-quaternary;
+  color: $color-quaternary;
 }
 
 @media screen and (min-width: $laptop) {
-a:hover{
+  a:hover {
     color: $color-tertiary;
-}
+  }
 
-    .listItem {
-        display: inline;
-        text-align: left;
-        margin: 0 20px;
-    }
+  .listItem {
+    display: inline;
+    text-align: left;
+    margin: 0 20px;
+  }
 }

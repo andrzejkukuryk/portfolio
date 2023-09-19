@@ -8,7 +8,6 @@ export function About() {
 
   const handleResize = () => {
     if (aboutRef.current) {
-      //@ts-ignore
       const newPosition = aboutRef.current.offsetTop;
       setPosition(newPosition);
     }
