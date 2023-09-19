@@ -3,6 +3,7 @@ import styles from "./home.module.scss";
 import { StackList } from "./stackList";
 import { PersonalLinks } from "./personalLinks";
 import { Greeting } from "./greeting";
+import { StackCarousel } from "./stackCarousel";
 
 export function Home() {
   return (
@@ -11,6 +12,7 @@ export function Home() {
         <Greeting />
         <PersonalLinks />
         <StackList />
+        <StackCarousel />
       </div>
     </section>
   );
