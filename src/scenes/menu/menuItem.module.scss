@@ -3,12 +3,16 @@
 .listItem {
     display: block;
     list-style: none;
-    margin: 0 20px;
     padding: 30px 0;
     width: 100%;
+    text-align: center;
 }
 a {
     color: $color-primary;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .active {
@@ -16,8 +20,13 @@ a {
 }
 
 @media screen and (min-width: $laptop) {
+a:hover{
+    color: $color-tertiary;
+}
+
     .listItem {
         display: inline;
+        text-align: left;
         margin: 0 20px;
     }
 }

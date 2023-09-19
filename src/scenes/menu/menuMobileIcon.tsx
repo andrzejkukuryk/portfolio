@@ -17,8 +17,8 @@ export function MenuMobileIcon({
   };
   return (
     <div className={styles.container} onClick={handleClick}>
-      {!menuIsOpen && <OpenMenu />}
-      {menuIsOpen && <CloseMenu />}
+      {!menuIsOpen && <OpenMenu className={styles.icon} />}
+      {menuIsOpen && <CloseMenu className={styles.icon} />}
     </div>
   );
 }

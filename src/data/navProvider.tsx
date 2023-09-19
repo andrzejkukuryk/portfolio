@@ -42,7 +42,6 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
   const [contactPosition, setContactPosition] = useState(0);
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
 
-  console.log("scrollPosition: ", scrollPosition);
 
   const handleScroll = () => {
     const position = window.scrollY + 80; // (80px fixed menu height)
@@ -85,6 +84,9 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
     }
     if (scrollPosition >= contactPosition) {
       setActiveSection("Contact");
+    }
+    if (scrollPosition === 0) {
+      setActiveSection("Home");
     }
   };
   useEffect(() => {
