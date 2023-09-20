@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { SectionName } from "../models/menu";
 
+
 const initialNavContext = {
   updateHomePosition: () => {},
   updateProjectsPosition: () => {},
@@ -42,9 +43,9 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
   const [contactPosition, setContactPosition] = useState(0);
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
 
-
   const handleScroll = () => {
-    const position = window.scrollY + 80; // (80px fixed menu height)
+    const menuHeight = 80;
+    const position = window.scrollY + menuHeight;
     setScrollPosition(position);
   };
 
@@ -54,7 +55,7 @@ export const NavProvider: FC<NavProviderProps> = ({ children }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrollPosition]);
 
   const updateHomePosition = (position: number) => {
     setHomePosition(position);

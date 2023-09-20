@@ -1,29 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "./about.module.scss";
 import { useNavContext } from "../../data/navProvider";
+import { usePosition } from "../../hooks/usePosition";
+
 export function About() {
-  const [position, setPosition] = useState(0);
   const { updateAboutPosition } = useNavContext();
-  const aboutRef = useRef<HTMLOptionElement | null>(null);
+  const { ref } = usePosition(updateAboutPosition);
 
-  const handleResize = () => {
-    if (aboutRef.current) {
-      const newPosition = aboutRef.current.offsetTop;
-      setPosition(newPosition);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("resize", handleResize, { passive: true });
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => handleResize(), []);
-  useEffect(() => updateAboutPosition(position), [position]);
-
-  return (
-    <section ref={aboutRef} id="about" className={styles.container}></section>
-  );
+  return <section ref={ref} id="about" className={styles.container}></section>;
 }
