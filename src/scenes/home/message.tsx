@@ -14,7 +14,7 @@ export function Message() {
   const frontend: string = "Frontend developer and musician";
   const typingSpeed = () => {
     if (currentIndexSecondLine === 18) {
-      return 1100;
+      return 800;
     }
     return Math.floor(Math.random() * 80) + 50;
   };
@@ -44,7 +44,7 @@ export function Message() {
     } else {
       setTimeout(() => {
         setFirtsPartWritten(true);
-      }, 800);
+      }, 600);
     }
   };
 

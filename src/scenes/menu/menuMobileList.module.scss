@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.container {
+    display: block;
+    position: relative;
+    margin-top: -400px;
+    width: 100%;
+    background-color: $color-secondary;
+    transition: margin-top 0.5s;
+    box-shadow: -1px 3px 3px -3px $color-tertiary;
+    -webkit-box-shadow: -1px 3px 3px -3px $color-tertiary;
+    -moz-box-shadow: -1px 3px 3px -3px $color-tertiary;
+    z-index: 4;
+}
+
+.menuIsOpen {
+    margin-top: 0;
+}
+
+@media screen and (min-width: $laptop) {
+    .container {
+        display: none;
+    }
+}

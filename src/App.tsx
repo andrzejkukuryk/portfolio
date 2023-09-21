@@ -5,16 +5,19 @@ import { Projects } from "./scenes/projects/projects";
 import { About } from "./scenes/about/about";
 import { Contact } from "./scenes/contact/contact";
 import { Menu } from "./scenes/menu/menu";
+import { NavProvider } from "./data/navProvider";
 
 function App() {
   return (
-    <div className="App">
-      <Menu />
-      <Home />
-      <Projects />
-      <About />
-      <Contact />
-    </div>
+    <NavProvider>
+      <div className="App">
+        <Menu />
+        <Home />
+        <Projects />
+        <About />
+        <Contact />
+      </div>
+    </NavProvider>
   );
 }
 
