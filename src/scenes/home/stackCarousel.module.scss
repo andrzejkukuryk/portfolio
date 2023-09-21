@@ -1,8 +1,10 @@
+@import "../../variables.module.scss";
+
 .container {
-    max-width: 540px;
+    max-width: 270px;
     margin: 0 auto;
-    overflow-x: hidden;
-    
+    overflow-x: hidden; 
+    display: block;  
 }
 
 .carousel {
@@ -10,17 +12,39 @@
     flex-direction: row;
     flex-wrap: nowrap;
     margin-left: -180px;
-    padding-left: 90px;
-    // padding-right: 90px;
-    
+    padding-left: 90px;    
 }
 
 .slideLeft {
-    transition: padding-left 1s;
+    transition: padding-left $carouselMove;
     padding-left: 0;
 }
 
 .slideRight {
-    transition: padding-left 1s;
+    transition: padding-left $carouselMove;
     padding-left: 180px;
+}
+
+@media screen and (min-width: 400px) {
+    .container{
+        max-width: 360px;
+    }
+}
+
+@media screen and (min-width: 490px) {
+    .container{
+        max-width: 450px;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .container{
+       display: none;
+    }
 }

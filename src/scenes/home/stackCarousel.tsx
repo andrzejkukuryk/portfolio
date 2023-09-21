@@ -3,13 +3,14 @@ import { StackInfo, stack } from "../../data/stackIcons";
 import { StackItem } from "./stackItem";
 import styles from "./stackCarousel.module.scss";
 import classNames from "classnames";
+import variables from "../../variables.module.scss";
 
 export function StackCarousel() {
   const [currentOrder, setCurrentOrder] = useState<StackInfo[]>(stack);
   const [toLeft, setToLeft] = useState(false);
   const [toRight, setToRight] = useState(false);
 
-  console.log(currentOrder);
+  const delayTime = Number(variables.carouselMove.replace("ms", ""));
 
   const next = () => {
     const temporaryOrder = [...currentOrder];
@@ -33,12 +34,12 @@ export function StackCarousel() {
 
   const slideLeft = () => {
     setToLeft(true);
-    setTimeout(() => next(), 1000);
+    setTimeout(() => next(), delayTime);
   };
 
   const slideRight = () => {
     setToRight(true);
-    setTimeout(() => prev(), 1000);
+    setTimeout(() => prev(), delayTime);
   };
 
   const carouselClass = classNames(styles.carousel, {

@@ -5,3 +5,9 @@ $color-quaternary: #ce480b;
 
 $tablet: 426px;
 $laptop: 769px;
+
+$carouselMove: 500ms;
+
+:export {
+    carouselMove: $carouselMove;
+}

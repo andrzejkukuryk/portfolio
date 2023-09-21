@@ -1,28 +1,28 @@
-@import "../../variables.scss";
+@import "../../variables.module.scss";
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .listContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: none;
 }
 
 .label {
-    padding-top: 90px;
-    margin: 0 30px;
+  padding-top: 90px;
+  margin: 0 30px;
 }
 
 @media screen and (min-width: $laptop) {
-    .container {
-        display: block;
-    }  
-    .listContainer {
-justify-content: flex-start;
-    }
+  .container {
+    display: block;
+  }
+  .listContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
