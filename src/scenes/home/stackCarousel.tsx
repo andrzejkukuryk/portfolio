@@ -12,6 +12,8 @@ export function StackCarousel() {
   const [mouseStartX, setMouseStartX] = useState(0);
   const [mouseEndX, setMouseEndX] = useState(0);
   const [mouseMoveX, setMouseMoveX] = useState(0);
+  const [mouseHold, setMouseHold] = useState(false);
+  // const mouseHold = useRef(false);
 
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -50,13 +52,14 @@ export function StackCarousel() {
   //@ts-ignore
   const checkMouseStartX = (event) => {
     event.preventDefault();
-    console.log(event.movementX);
     setMouseStartX(event.screenX);
+    setMouseHold(true);
   };
 
   //@ts-ignore
   const checkMouseEndX = (event) => {
     setMouseEndX(event.screenX);
+    setMouseHold(false);
   };
 
   const checkMouseMove = () => {
@@ -87,12 +90,23 @@ export function StackCarousel() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     ref.current.addEventListener("mouseup", checkMouseEndX);
-  //     return () => ref.current?.removeEventListener("mouseup", checkMouseEndX);
-  //   }
-  // }, []);
+  //@ts-ignore
+  const mouseMove = (event) => {
+    const move = event.movementX;
+    if (ref.current) {
+      console.log("padding left ", ref.current.style.paddingLeft);
+      // ref.current.style.paddingLeft = (90 - move).toString();
+    }
+  };
+
+  useEffect(() => {
+    if (ref.current && mouseHold) {
+      ref.current.addEventListener("mousemove", mouseMove);
+      return () => ref.current?.removeEventListener("mousemove", mouseMove);
+    }
+  }, [mouseHold]);
+
+  useEffect(() => console.log(mouseHold), [mouseHold]);
 
   const carouselClass = classNames(styles.carousel, {
     [styles.slideLeft]: toLeft,
