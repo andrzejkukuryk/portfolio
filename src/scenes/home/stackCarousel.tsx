@@ -65,6 +65,18 @@ export function StackCarousel() {
     setMouseMoveX(newMouseMove);
   };
 
+  
+
+  const checkTouchStartX = (event: TouchEvent) => {
+    event.preventDefault();
+    setMouseStartX(event.touches[0].clientX);
+  };
+
+  const checkTouchEndX = (event: TouchEvent) => {
+    console.log(event.touches);
+    setMouseEndX(event.touches[0].clientX);
+  };
+
   useEffect(() => checkMouseMove(), [mouseEndX]);
 
   const moveCarousel = () => {
@@ -81,9 +93,13 @@ export function StackCarousel() {
     if (ref.current) {
       ref.current.addEventListener("mousedown", checkMouseStartX);
       ref.current.addEventListener("mouseup", checkMouseEndX);
+      ref.current.addEventListener("touchstart", checkTouchStartX);
+      ref.current.addEventListener("touchmove", checkTouchEndX);
       return () => {
         ref.current?.removeEventListener("mousedown", checkMouseStartX);
         ref.current?.removeEventListener("mouseup", checkMouseEndX);
+        ref.current?.removeEventListener("touchstart", checkTouchStartX);
+        ref.current?.removeEventListener("touchmove", checkTouchEndX);
       };
     }
   }, []);
