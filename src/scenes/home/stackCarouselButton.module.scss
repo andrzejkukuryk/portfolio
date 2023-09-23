@@ -1,0 +1,17 @@
+@import "../../variables.module.scss";
+
+.btn {
+    background: none;
+    border: none;
+    color: $color-quaternary;
+    padding: 10px 0 0 0;
+}
+
+.arrow {
+    height: 50px;
+    width: 24px;
+}
+
+.prev {
+    rotate: (180deg);
+}

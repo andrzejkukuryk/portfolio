@@ -4,6 +4,7 @@ import { StackItem } from "./stackItem";
 import styles from "./stackCarousel.module.scss";
 import classNames from "classnames";
 import variables from "../../variables.module.scss";
+import { StackCarouselButton } from "./stackCarouselButton";
 
 export function StackCarousel() {
   const [currentOrder, setCurrentOrder] = useState<StackInfo[]>(stack);
@@ -102,24 +103,22 @@ export function StackCarousel() {
     }
   }, [mouseHold]);
 
-
   const carouselClass = classNames(styles.carousel, {
     [styles.slideLeft]: toLeft,
     [styles.slideRight]: toRight,
   });
 
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <StackCarouselButton fctn={slideLeft} direction="prev" />
+      <div className={styles.innerContainer}>
         <div ref={ref} className={carouselClass}>
           {currentOrder.map((item) => (
             <StackItem item={item} key={`carousel_${item.label}`} />
           ))}
         </div>
       </div>
-
-      <button onClick={slideLeft}>slide left</button>
-      <button onClick={slideRight}>slide right</button>
-    </>
+      <StackCarouselButton fctn={slideRight} direction="next" />
+    </div>
   );
 }
