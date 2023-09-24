@@ -13,7 +13,11 @@ export function StackCarousel() {
   const [mouseStartX, setMouseStartX] = useState(0);
   const [mouseEndX, setMouseEndX] = useState(0);
   const [mouseMoveX, setMouseMoveX] = useState(0);
-  const [mouseHold, setMouseHold] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const [touchHoldEnd, setTouchHoldEnd] = useState(false);
+  const [touchMoveX, setTouchMoveX] = useState<number | null>(null);
+  // const [mouseHold, setMouseHold] = useState(false);
 
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -52,12 +56,10 @@ export function StackCarousel() {
   const checkMouseStartX = (event: MouseEvent) => {
     event.preventDefault();
     setMouseStartX(event.screenX);
-    setMouseHold(true);
   };
 
   const checkMouseEndX = (event: MouseEvent) => {
     setMouseEndX(event.screenX);
-    setMouseHold(false);
   };
 
   const checkMouseMove = () => {
@@ -65,59 +67,66 @@ export function StackCarousel() {
     setMouseMoveX(newMouseMove);
   };
 
-  
+  useEffect(() => checkMouseMove(), [mouseEndX]);
 
   const checkTouchStartX = (event: TouchEvent) => {
     event.preventDefault();
-    setMouseStartX(event.touches[0].clientX);
+    setTouchHoldEnd(false);
+    setTouchStartX(event.touches[0].clientX);
   };
 
-  const checkTouchEndX = (event: TouchEvent) => {
-    console.log(event.touches);
-    setMouseEndX(event.touches[0].clientX);
+  const checkTouchMoveX = (event: TouchEvent) => {
+    setTouchEndX(event.touches[0].clientX);
   };
 
-  useEffect(() => checkMouseMove(), [mouseEndX]);
+  const checkTouchEnd = () => {
+    setTouchHoldEnd(true);
+  };
 
-  const moveCarousel = () => {
-    if (mouseMoveX < 0) {
+  const countTouchMoveX = () => {
+    if (touchStartX && touchEndX) {
+      const newTouchMoveX = touchStartX - touchEndX;
+      setTouchMoveX(newTouchMoveX);
+    }
+  };
+
+  useEffect(() => {
+    if (touchHoldEnd) {
+      countTouchMoveX();
+    }
+  }, [touchHoldEnd]);
+
+  const moveCarousel = (move: number) => {
+    if (move < 0) {
       slideRight();
-    } else if (mouseMoveX > 0) {
+    } else if (move > 0) {
       slideLeft();
     } else return;
   };
 
-  useEffect(() => moveCarousel(), [mouseMoveX]);
+  useEffect(() => moveCarousel(mouseMoveX), [mouseMoveX]);
+  useEffect(() => {
+    if (touchMoveX) {
+      moveCarousel(touchMoveX);
+    }
+  }, [touchMoveX]);
 
   useEffect(() => {
     if (ref.current) {
       ref.current.addEventListener("mousedown", checkMouseStartX);
       ref.current.addEventListener("mouseup", checkMouseEndX);
       ref.current.addEventListener("touchstart", checkTouchStartX);
-      ref.current.addEventListener("touchmove", checkTouchEndX);
+      ref.current.addEventListener("touchmove", checkTouchMoveX);
+      ref.current.addEventListener("touchend", checkTouchEnd);
       return () => {
         ref.current?.removeEventListener("mousedown", checkMouseStartX);
         ref.current?.removeEventListener("mouseup", checkMouseEndX);
         ref.current?.removeEventListener("touchstart", checkTouchStartX);
-        ref.current?.removeEventListener("touchmove", checkTouchEndX);
+        ref.current?.removeEventListener("touchmove", checkTouchMoveX);
+        ref.current?.removeEventListener("touchend", checkTouchEnd);
       };
     }
   }, []);
-
-  const mouseMove = (event: MouseEvent) => {
-    const move = event.movementX;
-    if (ref.current) {
-      console.log("padding left ", ref.current.style.paddingLeft);
-      // ref.current.style.paddingLeft = (90 - move).toString();
-    }
-  };
-
-  useEffect(() => {
-    if (ref.current && mouseHold) {
-      ref.current.addEventListener("mousemove", mouseMove);
-      return () => ref.current?.removeEventListener("mousemove", mouseMove);
-    }
-  }, [mouseHold]);
 
   const carouselClass = classNames(styles.carousel, {
     [styles.slideLeft]: toLeft,
@@ -126,7 +135,7 @@ export function StackCarousel() {
 
   return (
     <div className={styles.container}>
-      <StackCarouselButton fctn={slideLeft} direction="prev" />
+      <StackCarouselButton fctn={slideRight} direction="prev" />
       <div className={styles.innerContainer}>
         <div ref={ref} className={carouselClass}>
           {currentOrder.map((item) => (
@@ -134,7 +143,7 @@ export function StackCarousel() {
           ))}
         </div>
       </div>
-      <StackCarouselButton fctn={slideRight} direction="next" />
+      <StackCarouselButton fctn={slideLeft} direction="next" />
     </div>
   );
 }
