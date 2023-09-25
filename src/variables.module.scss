@@ -8,3 +8,8 @@ $tablet: 426px;
 $laptop: 769px;
 
 $menuHeight: 80px;
+$carouselMove: 500ms;
+
+:export {
+    carouselMove: $carouselMove;
+}

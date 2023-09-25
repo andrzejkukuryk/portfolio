@@ -1,0 +1,57 @@
+@import "../../variables.module.scss";
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.innerContainer {
+    width: 270px;
+    overflow-x: hidden; 
+    display: inline-block;  
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -180px;
+    padding-left: 90px;    
+}
+
+.slideLeft {
+    transition: padding-left $carouselMove;
+    padding-left: 0;
+}
+
+.slideRight {
+    transition: padding-left $carouselMove;
+    padding-left: 180px;
+}
+
+@media screen and (min-width: 420px) {
+    .innerContainer{
+        width: 360px;
+    }
+}
+
+@media screen and (min-width: 510px) {
+    .innerContainer{
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .innerContainer{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .container{
+       display: none;
+    }
+}

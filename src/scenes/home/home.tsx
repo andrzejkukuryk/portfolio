@@ -5,6 +5,7 @@ import { PersonalLinks } from "./personalLinks";
 import { Greeting } from "./greeting";
 import { useNavContext } from "../../data/navProvider";
 import { usePosition } from "../../hooks/usePosition";
+import { StackCarousel } from "./stackCarousel";
 
 export function Home() {
   const { updateHomePosition } = useNavContext();
@@ -16,6 +17,7 @@ export function Home() {
         <Greeting />
         <PersonalLinks />
         <StackList />
+        <StackCarousel />
       </div>
     </section>
   );
