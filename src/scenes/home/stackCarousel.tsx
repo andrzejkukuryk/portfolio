@@ -17,7 +17,6 @@ export function StackCarousel() {
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const [touchHoldEnd, setTouchHoldEnd] = useState(false);
   const [touchMoveX, setTouchMoveX] = useState<number | null>(null);
-  // const [mouseHold, setMouseHold] = useState(false);
 
   const ref = useRef<HTMLDivElement | null>(null);
 
