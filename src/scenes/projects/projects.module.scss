@@ -1,4 +1,13 @@
+@import "../../variables.module.scss";
+
 .container {
-    background-color: burlywood;
+    background-color: $color-primary;
     min-height: 100vh;
+    // padding-top: 30px;
+}
+
+.innerContainer {
+    max-width: $appWidth;
+    height: 100%;
+    margin: 0px auto;
 }

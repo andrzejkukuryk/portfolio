@@ -1,0 +1,41 @@
+@import "../../variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 30px;
+  padding: 0;
+  background-color: $color-secondary;
+  border: 3px solid $color-quaternary;
+  border-radius: 10px;
+}
+
+.image {
+  border-radius: 10px 10px 0 0;
+}
+
+.description {
+  padding: 0px 5px 25px 5px;
+
+  h3 {
+    color: $color-primary;
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    padding: 20px;
+  }
+
+  .image {
+    border-radius: 0;
+  }
+}

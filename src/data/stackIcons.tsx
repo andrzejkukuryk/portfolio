@@ -4,6 +4,7 @@ import { ReactComponent as ReactIcon } from "../assets/react.svg";
 import { ReactComponent as TsIcon } from "../assets/typescript.svg";
 import { ReactComponent as JsIcon } from "../assets/javascript.svg";
 import { ReactComponent as ReduxIcon } from "../assets/redux.svg";
+import { ReactComponent as ReactRouterIcon } from "../assets/router.svg";
 import { ReactComponent as BootstrapIcon } from "../assets/bootstrap.svg";
 import { ReactComponent as MuiIcon } from "../assets/mui.svg";
 
@@ -13,8 +14,19 @@ export interface StackInfo {
       title?: string | undefined;
     }
   >;
-  label: string;
+  label: StackLabel;
 }
+
+export type StackLabel =
+  | "React.js"
+  | "Redux"
+  | "React Router"
+  | "JavaScript"
+  | "TypeScript"
+  | "HTML"
+  | "CSS"
+  | "Bootstrap"
+  | "Material-UI";
 
 export const stack: StackInfo[] = [
   {
@@ -24,6 +36,10 @@ export const stack: StackInfo[] = [
   {
     component: ReduxIcon,
     label: "Redux",
+  },
+  {
+    component: ReactRouterIcon,
+    label: "React Router",
   },
   {
     component: JsIcon,
