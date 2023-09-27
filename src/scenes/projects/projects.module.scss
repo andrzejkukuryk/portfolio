@@ -1,13 +1,18 @@
 @import "../../variables.module.scss";
 
 .container {
-    background-color: $color-primary;
+    background-color: $color-tertiary;
     min-height: 100vh;
-    // padding-top: 30px;
 }
 
 .innerContainer {
     max-width: $appWidth;
     height: 100%;
     margin: 0px auto;
+
+    h2{
+        color: $color-secondary;
+        padding: 30px 0 10px 30px;
+        margin: 0;
+    }
 }

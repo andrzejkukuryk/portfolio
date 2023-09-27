@@ -9,18 +9,31 @@
   background-color: $color-secondary;
   border: 3px solid $color-quaternary;
   border-radius: 10px;
+  color: $color-tertiary;
 }
 
 .image {
   border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.stackContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stackIcon {
+  width: 30px;
+  height: 30px;
+  
+  margin: 0 4px;
 }
 
 .description {
   padding: 0px 5px 25px 5px;
-
-  h3 {
-    color: $color-primary;
-  }
 }
 
 .buttonsContainer {
@@ -28,6 +41,22 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
+
+  button {
+    width: 120px;
+    height: 40px;
+    background-color: $color-quaternary;
+    color: $color-secondary;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.25rem darken($color-quaternary, 10%)
+  }
+
+  button:active{
+  transform: translateY(0.125rem);
+  box-shadow: 0 0.125rem darken($color-quaternary, 10%)}
+  
 }
 
 @media screen and (min-width: $tablet) {
