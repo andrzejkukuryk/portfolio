@@ -12,28 +12,26 @@
   color: $color-tertiary;
 }
 
+.imageContainer {
+  flex-basis: 50%;
+}
+
 .image {
   border-radius: 10px 10px 0 0;
   width: 100%;
 }
 
-.stackContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .stackIcon {
   width: 30px;
   height: 30px;
-  
   margin: 0 4px;
 }
 
 .description {
   padding: 0px 5px 25px 5px;
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .buttonsContainer {
@@ -50,13 +48,13 @@
     font-size: 16px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0.25rem darken($color-quaternary, 10%)
+    box-shadow: 0 0.25rem darken($color-quaternary, 10%);
   }
 
-  button:active{
-  transform: translateY(0.125rem);
-  box-shadow: 0 0.125rem darken($color-quaternary, 10%)}
-  
+  button:active {
+    transform: translateY(0.125rem);
+    box-shadow: 0 0.125rem darken($color-quaternary, 10%);
+  }
 }
 
 @media screen and (min-width: $tablet) {
@@ -66,5 +64,24 @@
 
   .image {
     border-radius: 0;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .description {
+    flex-basis: 50%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .image {
+    height: auto;
   }
 }
