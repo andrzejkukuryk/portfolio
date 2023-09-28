@@ -9,7 +9,6 @@ export function Projects() {
   const { updateProjectsPosition } = useNavContext();
   const { ref } = usePosition(updateProjectsPosition);
 
-  console.log(projects[0].stack);
 
   return (
     <section id="projects" ref={ref} className={styles.container}>
@@ -18,7 +17,6 @@ export function Projects() {
         {projects.map((project) => (
           <ProjectCard project={project} />
         ))}
-        {/* <ProjectCard project={projects[0]} /> */}
       </div>
     </section>
   );
