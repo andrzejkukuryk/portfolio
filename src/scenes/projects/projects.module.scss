@@ -1,4 +1,19 @@
+@import "../../variables.module.scss";
+
 .container {
-    background-color: burlywood;
+    background-color: $color-tertiary;
     min-height: 100vh;
+}
+
+.innerContainer {
+    max-width: $appWidth;
+    height: 100%;
+    margin: 0px auto;
+    padding-bottom: 30px;
+
+    h2{
+        color: $color-secondary;
+        padding: 30px 0 10px 30px;
+        margin: 0;
+    }
 }
