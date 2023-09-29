@@ -1,21 +1,20 @@
 @import "../../variables.module.scss";
 
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .stackIcon {
-    width: 30px;
-    height: 30px;
-  
-    margin: 0 4px;
-  }
+  width: 30px;
+  height: 30px;
+
+  margin: 0 4px;
+}
 
 @media screen and (min-width: $tablet) {
   .container {
@@ -28,7 +27,7 @@
 }
 
 @media screen and (min-width: $laptop) {
-    .container {
+  .container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

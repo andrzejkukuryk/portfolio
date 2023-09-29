@@ -15,7 +15,7 @@ export function Projects() {
       <div className={styles.innerContainer}>
         <h2>Projects</h2>
         {projects.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} key={`project_${project.title}`} />
         ))}
       </div>
     </section>
