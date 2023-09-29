@@ -34,7 +34,7 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/pastabook/",
     repositoryUrl: "https://github.com/andrzejkukuryk/pastabook",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The application enables users to search for authentic Italian pasta recipes, browse through them, and, upon registration, provides the ability to rate recipes, bookmark favorites, and even contribute their own recipes. \nThis project was developed with the aim of gaining proficiency in TypeScript, React's useContext, React Router, and Bootstrap 5. Furthermore, it leverages the Google Firebase REST API for content retrieval and storage, as well as for secure user authentication.",
     imgUrl: pastabookScreen,
   },
   {
@@ -43,7 +43,7 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/playiteasy/",
     repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The application provides users with the ability to explore, filter, sort, and search through a catalog that contains links to my YouTube videos, music note sheets, and guitar tabs. \nThis project was developed with the goal of becoming proficient in Redux. It relies on the Google Firebase REST API to retrieve its content.",
     imgUrl: playiteasyScreen,
   },
   {
@@ -52,7 +52,7 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/music-theory/",
     repositoryUrl: "https://github.com/andrzejkukuryk/music-theory",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "This is my debut React application, designed to enable users to compose music notes, scales, and chords, or to play straightforward melodies using the onscreen keyboard. \nThe primary purpose behind this project was to gain proficiency in React, JavaScript, and Material-UI. \nPlease note that it is fully functional exclusively on desktop devices.",
     imgUrl: scalesScreen,
   },
 ];
