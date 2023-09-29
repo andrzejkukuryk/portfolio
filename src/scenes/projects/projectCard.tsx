@@ -9,7 +9,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const descriptionParagraphs = () => {
-    return project.description.split("\n").map((str) => <p>{str}</p>);
+    return project.description
+      .split("\n")
+      .map((str) => <p key={`paragraph${str[1]}${str[3]}${str[4]}`}>{str}</p>);
   };
 
   const handleClickLiveButton = () => {
