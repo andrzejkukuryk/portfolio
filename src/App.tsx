@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <Menu />
         <Home />
-        <Projects />
         <About />
+        <Projects />
         <Contact />
       </div>
     </NavProvider>

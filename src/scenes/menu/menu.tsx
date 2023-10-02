@@ -13,7 +13,7 @@ export function Menu() {
       <div className={styles.innerContainer}>
         <Title />
         <MenuMobileIcon menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
-        <MenuDesktop />
+        <MenuDesktop setMenuIsOpen={setMenuIsOpen} />
       </div>
       <MenuMobileList menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
     </div>

@@ -6,17 +6,24 @@ import { useNavContext } from "../../data/navProvider";
 
 interface MenuItemProps {
   listItem: SectionName;
+  setMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export function MenuItem({ listItem }: MenuItemProps) {
+export function MenuItem({ listItem, setMenuIsOpen }: MenuItemProps) {
   const href = listItem.toLowerCase();
   const { activeSection } = useNavContext();
+
+  const handleClick = () => {
+    setMenuIsOpen(false);
+  };
 
   const aClass = classNames({ [styles.active]: listItem === activeSection });
 
   return (
     <li className={styles.listItem}>
       <a href={`#${href}`} className={aClass}>
-        {listItem}
+        <div onClick={handleClick} className={styles.labelContainer}>
+          {listItem}
+        </div>
       </a>
     </li>
   );

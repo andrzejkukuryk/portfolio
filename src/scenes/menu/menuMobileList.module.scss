@@ -3,18 +3,21 @@
 .container {
     display: block;
     position: relative;
-    margin-top: -400px;
+    margin-top: -95vh;
     width: 100%;
+    height: 95vh;
     background-color: $color-secondary;
-    transition: margin-top 0.5s;
-    box-shadow: -1px 3px 3px -3px $color-tertiary;
-    -webkit-box-shadow: -1px 3px 3px -3px $color-tertiary;
-    -moz-box-shadow: -1px 3px 3px -3px $color-tertiary;
+    opacity: 0;
+    transition: margin-top 0.5s, opacity 0.5s;
+    box-shadow: -1px 3px 1px -3px $color-tertiary;
+    -webkit-box-shadow: -1px 3px 1px -3px $color-tertiary;
+    -moz-box-shadow: -1px 3px 1px -3px $color-tertiary;
     z-index: 4;
 }
 
 .menuIsOpen {
     margin-top: 0;
+    opacity: 1;
 }
 
 @media screen and (min-width: $laptop) {

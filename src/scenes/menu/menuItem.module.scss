@@ -3,16 +3,21 @@
 .listItem {
   display: block;
   list-style: none;
-  padding: 30px 0;
+  padding: 40px 0px;
   width: 100%;
   text-align: center;
 }
 a {
   color: $color-primary;
   text-decoration: none;
-  font-size: 1.3em;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 500;
   transition: 0.3s;
+
+  .labelContainer {
+    display: block;
+    padding: 20px 0px;
+  }
 }
 
 .active {
@@ -20,13 +25,24 @@ a {
 }
 
 @media screen and (min-width: $laptop) {
-  a:hover {
-    color: $color-tertiary;
-  }
-
   .listItem {
     display: inline;
     text-align: left;
-    margin: 0 20px;
+    margin: 0 30px;
+
+    a {
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+
+      .labelContainer {
+        display: inline-block;
+        padding: 30px 0;
+      }
+    }
+
+    a:hover {
+      color: $color-tertiary;
+    }
   }
 }
