@@ -13,7 +13,10 @@ export function ProjectCardStack({ stack }: ProjectCardStackProps) {
       <h5>Stack used:</h5>
       <div>
         {stack.map((icon) => (
-          <icon.component className={styles.stackIcon} />
+          <icon.component
+            className={styles.stackIcon}
+            key={`icon_${icon.label}`}
+          />
         ))}
       </div>
     </div>
