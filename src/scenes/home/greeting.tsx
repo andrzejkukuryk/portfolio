@@ -6,8 +6,9 @@ import { Photo } from "./photo";
 export function Greeting() {
   return (
     <div className={styles.container}>
-      <Message />
+      <p className={styles.tag}>{"</>"}</p>
       <Photo />
+      <Message />
     </div>
   );
 }

@@ -9,7 +9,7 @@ export function Message() {
   const [firstPartWritten, setFirtsPartWritten] = useState(false);
   const [firstPartDeleted, setFirstPartDeleted] = useState(false);
 
-  const firstLine: string = "Hi, I'm Andrzej Kukuryk";
+  const firstLine: string = "Andrzej Kukuryk";
   const musician: string = "Musician";
   const frontend: string = "Frontend developer and musician";
   const typingSpeed = () => {

@@ -2,11 +2,21 @@
 
 .container {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 80px;
+
+    .tag {
+        margin: 30px 0 0 0;
+        padding: 0;
+        color: $color-secondary;
+        font-family: $font-primary;
+        font-weight: 500;
+        font-size: 30px;
+    }
 }
 
-@media screen and (min-width: $laptop) {
-    .container{flex-direction: row;}
-}
+// @media screen and (min-width: $laptop) {
+//     .container{flex-direction: row;}
+// }

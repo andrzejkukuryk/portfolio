@@ -15,9 +15,9 @@ export function Home() {
     <section id="home" ref={ref} className={styles.container}>
       <div className={styles.innerContainer}>
         <Greeting />
-        <PersonalLinks />
-        <StackList />
-        <StackCarousel />
+        {/* <PersonalLinks /> */}
+        {/* <StackList /> */}
+        {/* <StackCarousel /> */}
       </div>
     </section>
   );
