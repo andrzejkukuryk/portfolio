@@ -1,6 +1,27 @@
 @import "../../variables.module.scss";
 
 .container {
-    background-color: rgb(184, 66, 11);
+    background-color: $color-secondary;
     min-height: 100vh;
+
+    .innerContainer {
+        max-width: $appWidth;
+        margin: 0 auto;
+
+        h2 {
+            font-family: $font-primary;
+            font-size: 40px;
+            font-weight: 300;
+            color: $color-tertiary;
+            text-align: center;
+            padding: 20px 0 0 0;
+        }
+        .story {
+            font-family: $font-primary;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-tertiary;
+            margin: 0 10px;
+        } 
+    }
 }

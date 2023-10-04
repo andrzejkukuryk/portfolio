@@ -1,0 +1,40 @@
+@import "../../variables.module.scss";
+
+.container {
+  $itemWidth: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+
+  .item {
+    background-color: $color-secondary;
+    width: $itemWidth;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      width: 50px;
+      color: $color-tertiary;
+    }
+  }
+
+  .label {
+    color: $color-tertiary;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    width: $itemWidth;
+    text-align: center;
+  }
+}
+
+// .a {
+//   color: $color-tertiary;
+//   text-decoration: none;
+//   margin: 0 10px;
+// }
