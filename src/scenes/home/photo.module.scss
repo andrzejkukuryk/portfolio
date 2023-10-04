@@ -2,17 +2,22 @@
 
 .container {
   display: block;
+ 
 
   .photo {
     max-width: 230px;
+    border-top-left-radius: 115px;
+      border-top-right-radius: 115px;
   }
 }
 
 @media screen and (min-width: $laptop) {
   .container {
-    margin: 50px 0px 0 0;
+    // margin: 10px 0px 0 0;
     .photo {
       max-width: 300px;
+      border-top-left-radius: 150px;
+      border-top-right-radius: 150px;
     }
   }
 }
