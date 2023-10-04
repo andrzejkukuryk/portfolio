@@ -2,10 +2,14 @@ import React from "react";
 import styles from "./menuDesktop.module.scss";
 import { MenuList } from "./menuList";
 
-export function MenuDesktop() {
+interface MenuDesktopProps {
+  setMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function MenuDesktop({ setMenuIsOpen }: MenuDesktopProps) {
   return (
     <div className={styles.container}>
-      <MenuList />
+      <MenuList setMenuIsOpen={setMenuIsOpen} />
     </div>
   );
 }

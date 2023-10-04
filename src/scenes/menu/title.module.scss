@@ -1,5 +1,13 @@
 @import "../../variables.module.scss";
 
 h1 {
-    color: $color-primary ;
+  color: $color-primary;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+}
+
+@media screen and (min-width: $laptop) {
+  h1 {
+    margin: 0 0 0 30px;
+  }
 }

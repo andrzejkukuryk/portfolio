@@ -20,8 +20,11 @@ export function MenuMobileList({
   });
 
   return (
-    <div onClick={handleClick} className={containerClass}>
-      <MenuList />
+    <div
+      // onClick={handleClick}
+      className={containerClass}
+    >
+      <MenuList setMenuIsOpen={setMenuIsOpen} />
     </div>
   );
 }
