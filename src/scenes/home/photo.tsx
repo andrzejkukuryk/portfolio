@@ -1,7 +1,6 @@
 import React from "react";
 import photo from "../../graph/fotoFrame300px.webp";
 import styles from "./photo.module.scss";
-import { SoftSkillsList } from "./softSkillsList";
 
 export function Photo() {
   return (

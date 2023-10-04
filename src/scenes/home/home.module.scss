@@ -1,12 +1,12 @@
 @import "../../variables.module.scss";
 
 .container {
-    background-color: $color-tertiary;
-    min-height: 100vh;
-}
+  background-color: $color-tertiary;
+  min-height: 100vh;
 
-.innerContainer {
+  .innerContainer {
     max-width: $appWidth;
     height: 100%;
     margin: 0 auto;
+  }
 }

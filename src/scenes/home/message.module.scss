@@ -1,46 +1,43 @@
 @import "../../variables.module.scss";
 
 .container {
-  flex-shrink: 2;
-  flex-basis: 210px;
   margin: 0 2px 30px 2px;
   color: $color-secondary;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-}
+  align-items: center;
 
-.firstLine {
-  font-size: 2.1em;
-  font-family: $font-primary;
-  text-align: center;
-  position: relative;
-  top: -400px;
-  height: 10px;
-}
+  .firstLine {
+    font-size: 34px;
+    font-family: $font-primary;
+    margin: 20px 0 -46px 0;
+    height: 72px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
 
-.secondLine {
-  font-size: 1.4em;
-  font-family: $font-secondary;
-  text-align: center;
-  position: relative;
-  top: -150px;
-  height: 10px;
+  .secondLine {
+    font-size: 24.5px;
+    font-family: $font-secondary;
+    text-align: center;
+    width: 230px;
+  }
 }
 
 @media screen and (min-width: $laptop) {
   .container {
-    margin: 0 0 0 30px;
-    flex-basis: 500px;
+    margin: 0 2px;
     justify-content: center;
-  }
 
-  .firstLine {
-    font-size: 2.5em;
-    height: 53px;
-  }
+    .firstLine {
+      font-size: 80px;
+    }
 
-  .secondLine {
-    font-size: 1.6em;
+    .secondLine {
+      font-size: 31px;
+      font-weight: 100;
+      width: 300px;
+    }
   }
 }
