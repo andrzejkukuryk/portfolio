@@ -4,7 +4,6 @@ import { stack } from "../../data/stackIcons";
 import { StackItem } from "./stackItem";
 
 export function StackList() {
-
   return (
     <div className={styles.container}>
       <h3>Technical stack:</h3>

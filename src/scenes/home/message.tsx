@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styles from "./message.module.scss";
+import { Photo } from "./photo";
 
 export function Message() {
-  const [currentTextFirstLine, setCurrentTextFirstLine] = useState("");
+  const [currentTextFirstLine, setCurrentTextFirstLine] = useState(" ");
   const [currentIndexFirstLine, setCurrentIndexFirstLine] = useState(0);
   const [currentTextSecondLine, setCurrentTextSecondLine] = useState("");
   const [currentIndexSecondLine, setCurrentIndexSecondLine] = useState(0);
   const [firstPartWritten, setFirtsPartWritten] = useState(false);
   const [firstPartDeleted, setFirstPartDeleted] = useState(false);
 
-  const firstLine: string = "Hi, I'm Andrzej Kukuryk";
+  const firstLine: string = "Andrzej Kukuryk";
   const musician: string = "Musician";
   const frontend: string = "Frontend developer and musician";
   const typingSpeed = () => {
@@ -100,6 +101,7 @@ export function Message() {
   return (
     <div className={styles.container}>
       <p className={styles.firstLine}>{currentTextFirstLine}</p>
+      <Photo />
       <p className={styles.secondLine}>{currentTextSecondLine}</p>
     </div>
   );
