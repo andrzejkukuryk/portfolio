@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../../graph/fotoFrame300px.webp";
+import photo from "../../graph/foto300px.webp";
 import styles from "./photo.module.scss";
 
 export function Photo() {

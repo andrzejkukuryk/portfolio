@@ -100,9 +100,7 @@ export function Message() {
   };
   return (
     <div className={styles.container}>
-      <Photo />
       <p className={styles.firstLine}>{currentTextFirstLine}</p>
-
       <p className={styles.secondLine}>{currentTextSecondLine}</p>
     </div>
   );
