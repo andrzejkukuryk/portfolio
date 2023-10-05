@@ -4,6 +4,8 @@ import { useNavContext } from "../../data/navProvider";
 import { usePosition } from "../../hooks/usePosition";
 import { story } from "../../data/about";
 import { PersonalLinks } from "./personalLinks";
+import { StackCarousel } from "./stackCarousel";
+import { StackList } from "./stackList";
 
 export function About() {
   const { updateAboutPosition } = useNavContext();
@@ -15,6 +17,7 @@ export function About() {
         <h2>About me</h2>
         <p className={styles.story}>{story}</p>
         <PersonalLinks />
+        <StackList />
       </div>
     </section>
   );

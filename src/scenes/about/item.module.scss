@@ -2,11 +2,12 @@
 
 .container {
   $itemWidth: 70px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 10px;
+  color: $color-primary;
+
 
   .item {
     background-color: $color-secondary;
@@ -18,12 +19,10 @@
 
     .icon {
       width: 50px;
-      color: $color-tertiary;
     }
   }
 
   .label {
-    color: $color-tertiary;
     font-family: $font-secondary;
     font-size: 16px;
     font-weight: 300;
@@ -33,8 +32,4 @@
   }
 }
 
-// .a {
-//   color: $color-tertiary;
-//   text-decoration: none;
-//   margin: 0 10px;
-// }
+
