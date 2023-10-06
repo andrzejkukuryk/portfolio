@@ -1,28 +1,43 @@
 @import "../../variables.module.scss";
 
+
 .container {
   $itemWidth: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 10px;
-  color: $color-primary;
 
-
-  .item {
+  @mixin item {
     background-color: $color-secondary;
+    color: $color-primary;
     width: $itemWidth;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color 0.2s;
 
     .icon {
       width: 50px;
     }
   }
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+
+  .stackItem {
+    @include item;
+  }
+
+  .linkItem {
+    @include item;
+  }
+
+  .linkItem:hover {
+    color: $color-tertiary;
+  }
 
   .label {
+    color: $color-primary;
     font-family: $font-secondary;
     font-size: 16px;
     font-weight: 300;
@@ -31,5 +46,3 @@
     text-align: center;
   }
 }
-
-

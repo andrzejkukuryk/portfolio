@@ -4,7 +4,6 @@ import { useNavContext } from "../../data/navProvider";
 import { usePosition } from "../../hooks/usePosition";
 import { story } from "../../data/about";
 import { PersonalLinks } from "./personalLinks";
-import { StackCarousel } from "./stackCarousel";
 import { StackList } from "./stackList";
 
 export function About() {
@@ -16,8 +15,8 @@ export function About() {
       <div className={styles.innerContainer}>
         <h2>About me</h2>
         <p className={styles.story}>{story}</p>
-        <PersonalLinks />
         <StackList />
+        <PersonalLinks />
       </div>
     </section>
   );

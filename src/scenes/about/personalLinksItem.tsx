@@ -9,7 +9,7 @@ export function PersonalLinksItem({ info }: PersonalLinksInfoProps) {
   return (
     <a href={info.url} target="_blank">
       <div className={styles.container}>
-        <div className={styles.item}>
+        <div className={styles.linkItem}>
           <info.icon className={styles.icon} />
         </div>
         <p className={styles.label}>{info.label}</p>
