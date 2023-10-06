@@ -23,24 +23,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        <img
-          src={project.imgUrl}
-          className={styles.image}
-          alt={project.title}
-        />
-        <ProjectCardStack stack={project.stack} />
-      </div>
-      <div className={styles.description}>
-        <h3>{project.title}</h3>
-        {descriptionParagraphs()}
+    // <div className={styles.container}>
+    //   <div className={styles.imageContainer}>
+    //     <img
+    //       src={project.imgUrl}
+    //       className={styles.image}
+    //       alt={project.title}
+    //     />
+    //     <ProjectCardStack stack={project.stack} />
+    //   </div>
+    //   <div className={styles.description}>
+    //     <h3>{project.title}</h3>
+    //     {descriptionParagraphs()}
 
-        <div className={styles.buttonsContainer}>
-          <button onClick={handleClickLiveButton}>Live</button>
-          <button onClick={handleClickRepoButton}>Repository</button>
-        </div>
-      </div>
-    </div>
+    //     <div className={styles.buttonsContainer}>
+    //       <button onClick={handleClickLiveButton}>Live</button>
+    //       <button onClick={handleClickRepoButton}>Repository</button>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className={styles.background}></div>
   );
 }
