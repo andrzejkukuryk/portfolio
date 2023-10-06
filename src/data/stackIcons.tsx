@@ -30,6 +30,10 @@ export type StackLabel =
 
 export const stack: StackInfo[] = [
   {
+    component: MuiIcon,
+    label: "Material-UI",
+  },
+  {
     component: ReactIcon,
     label: "React.js",
   },
@@ -60,9 +64,5 @@ export const stack: StackInfo[] = [
   {
     component: BootstrapIcon,
     label: "Bootstrap",
-  },
-  {
-    component: MuiIcon,
-    label: "Material-UI",
   },
 ];

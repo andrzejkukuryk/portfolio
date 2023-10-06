@@ -9,7 +9,7 @@ interface StackItemProps {
 export function StackItem({ item }: StackItemProps) {
   return (
     <div className={styles.container}>
-      <div className={styles.circle}>
+      <div className={styles.stackItem}>
         <item.component className={styles.icon} />
       </div>
       <p className={styles.label}>{item.label}</p>
