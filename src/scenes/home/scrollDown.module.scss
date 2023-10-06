@@ -1,15 +1,14 @@
 @import "../../variables.module.scss";
 
 @mixin centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
-    @include centered;
-    margin: 0 auto;
-    
+  @include centered;
+  margin: 0 auto;
+
   .circle {
     @include centered;
     width: 40px;
