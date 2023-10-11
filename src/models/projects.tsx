@@ -3,7 +3,8 @@ import { StackInfo } from "../data/stackIcons";
 export interface ProjectInfo {
   title: string;
   stack: StackInfo[];
-  imgUrl: string;
+  imgDesktop: string;
+  imgMobile?: string;
   repositoryUrl: string;
   appUrl: string;
   description: string;

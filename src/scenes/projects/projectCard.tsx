@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./projectCard.module.scss";
 import { ProjectInfo } from "../../models/projects";
 import { ProjectCardStack } from "./projectCardStack";
+import { Desktop } from "./desktop";
+import { Mobile } from "./mobile";
 
 interface ProjectCardProps {
   project: ProjectInfo;
@@ -42,6 +44,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
     //     </div>
     //   </div>
     // </div>
-    <div className={styles.background}></div>
+    <div className={styles.background}>
+      <div className={styles.innerContainer}>
+        <Desktop project={project} />
+        {project.imgMobile && <Mobile project={project} />}
+      </div>
+    </div>
   );
 }
