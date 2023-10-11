@@ -12,6 +12,7 @@
   position: relative;
   top: -28vw;
   left: 5vw;
+  margin-bottom: -60px;
 
   .frameHeader {
     background-color: $color-secondary;
@@ -50,5 +51,11 @@
     width: 100%;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .frame {
+    margin-bottom: 0;
   }
 }

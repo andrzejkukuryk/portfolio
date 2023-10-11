@@ -1,52 +1,58 @@
 @import "../../variables.module.scss";
 
 .frame {
-    $frameBorder: solid 1px $color-tertiary;
-  
-    border: $frameBorder;
-    border-radius: 3px;
-    width: 90%;
-    box-shadow: -9px 13px 39px -23px rgba(0,0,0,0.85);
--webkit-box-shadow: -9px 13px 39px -23px rgba(0,0,0,0.85);
--moz-box-shadow: -9px 13px 39px -23px rgba(0,0,0,0.85);
+  $frameBorder: solid 1px $color-tertiary;
 
-    .frameHeader {
-      background-color: $color-secondary;
-      height: 15px;
-      border-bottom: $frameBorder;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-  
-      @mixin frameDot {
-        width: 6px;
-        height: 6px;
-        border-radius: 3px;
-        margin-right: 6px;
-      }
-  
-      .dotPrimary {
-        @include frameDot;
-        background-color: $color-primary;
-        margin-left: 15px;
-      }
-  
-      .dotTertiary {
-        @include frameDot;
-        background-color: $color-tertiary;
-      }
-  
-      .dotQuaternary {
-        @include frameDot;
-        background-color: $color-quaternary;
-      }
+  border: $frameBorder;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
+
+  .frameHeader {
+    background-color: $color-secondary;
+    height: 15px;
+    border-bottom: $frameBorder;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @mixin frameDot {
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      margin-right: 6px;
     }
 
-    .image {
-        width: 100%;
-        height: auto;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
+    .dotPrimary {
+      @include frameDot;
+      background-color: $color-primary;
+      margin-left: 15px;
+    }
+
+    .dotTertiary {
+      @include frameDot;
+      background-color: $color-tertiary;
+    }
+
+    .dotQuaternary {
+      @include frameDot;
+      background-color: $color-quaternary;
     }
   }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .frame {
+    width: 90%;
+  }
+}

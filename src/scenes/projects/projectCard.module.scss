@@ -1,9 +1,12 @@
 @import "../../variables.module.scss";
 
 .background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  transition: width .4s;
-  margin: 0 auto;
+  // height: 75vw;
   background-image: linear-gradient(
     170deg,
     Hsl(47deg 58% 86%) 0%,
@@ -26,101 +29,17 @@
   );
 }
 
-.background:hover {
-  width: 99%;
-  cursor: pointer;
-}
-
 .innerContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0px 12% -23vw 8%;
-  padding: 80px 0 0 0;
+  margin: 0px 10% -13px 5%;
+  padding: 35px 0 0 0;
 }
 
-// .container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   margin: 30px 30px;
-//   padding: 0;
-//   background-color: $color-secondary;
-//   border: 3px solid $color-quaternary;
-//   border-radius: 10px;
-//   color: $color-tertiary;
-// }
-
-// .imageContainer {
-//   flex-basis: 50%;
-// }
-
-// .image {
-//   border-radius: 10px 10px 0 0;
-//   width: 100%;
-// }
-
-// .stackIcon {
-//   width: 30px;
-//   height: 30px;
-//   margin: 0 4px;
-// }
-
-// .description {
-//   padding: 0px 5px 25px 5px;
-//   h3 {
-//     margin-top: 0;
-//   }
-// }
-
-// .buttonsContainer {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: nowrap;
-//   justify-content: space-around;
-
-//   button {
-//     width: 120px;
-//     height: 40px;
-//     background-color: $color-quaternary;
-//     color: $color-secondary;
-//     font-size: 16px;
-//     border: none;
-//     border-radius: 10px;
-//     box-shadow: 0 0.25rem darken($color-quaternary, 10%);
-//   }
-
-//   button:active {
-//     transform: translateY(0.125rem);
-//     box-shadow: 0 0.125rem darken($color-quaternary, 10%);
-//   }
-// }
-
-// @media screen and (min-width: $tablet) {
-//   .container {
-//     padding: 20px;
-//   }
-
-//   .image {
-//     border-radius: 0;
-//   }
-// }
-
-// @media screen and (min-width: $laptop) {
-//   .container {
-//     flex-direction: row;
-//     align-items: flex-start;
-//   }
-
-//   .description {
-//     flex-basis: 50%;
-//     margin-left: 20px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//   }
-
-//   .image {
-//     height: auto;
-//   }
-// }
+@media screen and (min-width: $laptop) {
+  .innerContainer {
+    margin: 0px 12% -23vw 8%;
+    padding: 80px 0 0 0;
+  }
+}
