@@ -17,6 +17,8 @@
   .frameHeader {
     background-color: $color-secondary;
     height: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     border-bottom: $frameBorder;
     display: flex;
     flex-direction: row;
