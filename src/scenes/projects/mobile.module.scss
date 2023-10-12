@@ -50,6 +50,9 @@
   }
 
   .image {
+    display: block;
+    margin: 0;
+    padding: 0;
     width: 100%;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;

@@ -5,6 +5,7 @@ import pastabookDesktop from "../graph/pastabook_desktop.webp";
 import pastabookMobile from "../graph/pastabook_mobile.webp";
 import playiteasyScreen from "../graph/playiteasy.webp";
 import scalesScreen from "../graph/scales.webp";
+import photo from "../graph/foto300px.webp";
 
 const pastabookStack: StackLabel[] = [
   "React.js",

@@ -1,12 +1,14 @@
 @import "../../variables.module.scss";
 
+$dimension: 40px;
+$position: $dimension + 15px;
+
 .background {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  // height: 75vw;
   background-image: linear-gradient(
     170deg,
     Hsl(47deg 58% 86%) 0%,
@@ -35,11 +37,35 @@
   align-items: flex-end;
   margin: 0px 10% -13px 5%;
   padding: 35px 0 0 0;
+
+  .infoIcon {
+    height: $dimension;
+    width: $dimension;
+    color: $color-quaternary;
+    cursor: pointer;
+    margin: -($position) 72vw $position  0 ;
+  }
+}
+
+.info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 6;
+
+  background-color: $color-secondary;
 }
 
 @media screen and (min-width: $laptop) {
   .innerContainer {
     margin: 0px 12% -23vw 8%;
     padding: 80px 0 0 0;
+
+    .infoIcon {
+      margin: -($position) 62vw $position  0 ;
+    }
   }
 }

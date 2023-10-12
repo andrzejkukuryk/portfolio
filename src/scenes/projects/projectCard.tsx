@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./projectCard.module.scss";
 import { ProjectInfo } from "../../models/projects";
 import { ProjectCardStack } from "./projectCardStack";
 import { Desktop } from "./desktop";
 import { Mobile } from "./mobile";
+import { ReactComponent as Info } from "../../assets/info.svg";
 
 interface ProjectCardProps {
   project: ProjectInfo;
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [showInfo, setShowInfo] = useState(false);
+
   const descriptionParagraphs = () => {
     return project.description
       .split("\n")
       .map((str) => <p key={`paragraph${str[1]}${str[3]}${str[4]}`}>{str}</p>);
+  };
+
+  const handleClickInfo = () => {
+    setShowInfo(true);
   };
 
   const handleClickLiveButton = () => {
@@ -47,8 +54,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <div className={styles.background}>
       <div className={styles.innerContainer}>
         <Desktop project={project} />
+        <Info onClick={handleClickInfo} className={styles.infoIcon} />
         {project.imgMobile && <Mobile project={project} />}
       </div>
+      {showInfo && (
+        <div onClick={() => setShowInfo(false)} className={styles.info}>
+          test
+        </div>
+      )}
     </div>
   );
 }
