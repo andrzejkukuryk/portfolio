@@ -5,6 +5,8 @@ import { ProjectCardStack } from "./projectCardStack";
 import { Desktop } from "./desktop";
 import { Mobile } from "./mobile";
 import { ReactComponent as Info } from "../../assets/info.svg";
+import { ProjectDescription } from "./projectDescription";
+import { Mockup } from "./mockup";
 
 interface ProjectCardProps {
   project: ProjectInfo;
@@ -13,54 +15,20 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const [showInfo, setShowInfo] = useState(false);
 
-  const descriptionParagraphs = () => {
-    return project.description
-      .split("\n")
-      .map((str) => <p key={`paragraph${str[1]}${str[3]}${str[4]}`}>{str}</p>);
-  };
-
   const handleClickInfo = () => {
     setShowInfo(true);
   };
 
-  const handleClickLiveButton = () => {
-    window.open(project.appUrl, "_blank");
-  };
-
-  const handleClickRepoButton = () => {
-    window.open(project.repositoryUrl, "_blank");
-  };
-
   return (
-    // <div className={styles.container}>
-    //   <div className={styles.imageContainer}>
-    //     <img
-    //       src={project.imgUrl}
-    //       className={styles.image}
-    //       alt={project.title}
-    //     />
-    //     <ProjectCardStack stack={project.stack} />
-    //   </div>
-    //   <div className={styles.description}>
-    //     <h3>{project.title}</h3>
-    //     {descriptionParagraphs()}
-
-    //     <div className={styles.buttonsContainer}>
-    //       <button onClick={handleClickLiveButton}>Live</button>
-    //       <button onClick={handleClickRepoButton}>Repository</button>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className={styles.background}>
-      <div className={styles.innerContainer}>
-        <Desktop project={project} />
-        <Info onClick={handleClickInfo} className={styles.infoIcon} />
-        {project.imgMobile && <Mobile project={project} />}
-      </div>
+    <div className={styles.container}>
+      <Mockup project={project} />
+      <Info onClick={handleClickInfo} className={styles.infoIcon} />
       {showInfo && (
-        <div onClick={() => setShowInfo(false)} className={styles.info}>
-          test
-        </div>
+        <ProjectDescription
+          project={project}
+          showInfo={showInfo}
+          setShowInfo={setShowInfo}
+        />
       )}
     </div>
   );

@@ -14,8 +14,9 @@ export function Projects() {
     <section id="projects" ref={ref} className={styles.container}>
       <div className={styles.innerContainer}>
         <h2>My projects</h2>
-
-        <ProjectCard project={projects[0]} />
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
       </div>
     </section>
   );

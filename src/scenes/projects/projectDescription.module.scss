@@ -1,0 +1,28 @@
+@import "../../variables.module.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+  background-color: $color-secondary;
+
+  .backIcon {
+    color: $color-primary;
+    margin: 13px 0 13px 20px;
+    transform: rotate(90deg);
+  }
+
+  .projectInfo {
+    margin: 0 5px;
+    color: $color-primary;
+    font-family: $font-secondary;
+
+    h3 {
+        font-family: $font-primary;
+        text-align: center;
+    }
+  }
+}

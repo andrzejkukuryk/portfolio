@@ -1,0 +1,25 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+.container {
+  background-color: #ececec;
+  min-height: 100vh;
+}
+
+.innerContainer {
+  max-width: 1800px;
+  height: 100%;
+  margin: 0px auto;
+  padding-bottom: 30px;
+}
+.innerContainer h2 {
+  font-family: "Young Serif", serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: #525973;
+  text-align: center;
+  padding: 20px 0 0 0;
+  margin-top: 0;
+}/*# sourceMappingURL=projects.module.css.map */

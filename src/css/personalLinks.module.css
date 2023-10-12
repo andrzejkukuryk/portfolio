@@ -1,0 +1,30 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+h3 {
+  color: #00223e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: block;
+  }
+  .linksContainer {
+    justify-content: flex-start;
+  }
+}/*# sourceMappingURL=personalLinks.module.css.map */

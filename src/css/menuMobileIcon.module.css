@@ -1,0 +1,21 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+.container {
+  display: block;
+}
+
+.icon {
+  color: #525973;
+  width: 64px;
+  height: 64px;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: none;
+  }
+}/*# sourceMappingURL=menuMobileIcon.module.css.map */

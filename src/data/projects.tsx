@@ -3,9 +3,9 @@ import { ProjectInfo } from "../models/projects";
 import { StackLabel, stack } from "./stackIcons";
 import pastabookDesktop from "../graph/pastabook_desktop.webp";
 import pastabookMobile from "../graph/pastabook_mobile.webp";
-import playiteasyScreen from "../graph/playiteasy.webp";
-import scalesScreen from "../graph/scales.webp";
-import photo from "../graph/foto300px.webp";
+import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
+import playiteasyMobile from "../graph/playiteasy_mobile.webp";
+import scalesDesktop from "../graph/scales_deskop.webp";
 
 const pastabookStack: StackLabel[] = [
   "React.js",
@@ -47,7 +47,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
     description:
       "The application provides users with the ability to explore, filter, sort, and search through a catalog that contains links to my YouTube videos, music note sheets, and guitar tabs. \nThis project was developed with the goal of becoming proficient in Redux. It relies on the Google Firebase REST API to retrieve its content.",
-    imgDesktop: playiteasyScreen,
+    imgDesktop: playiteasyDesktop,
+    imgMobile: playiteasyMobile,
   },
   {
     title: "Chords & Scales",
@@ -56,6 +57,6 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/music-theory",
     description:
       "This is my debut React application, designed to enable users to compose music notes, scales, and chords, or to play straightforward melodies using the onscreen keyboard. \nThe primary purpose behind this project was to gain proficiency in React, JavaScript, and Material-UI. \nPlease note that it is fully functional exclusively on desktop devices.",
-    imgDesktop: scalesScreen,
+    imgDesktop: scalesDesktop,
   },
 ];

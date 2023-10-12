@@ -1,0 +1,35 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.backgroundPastabook {
+  background-image: linear-gradient(170deg, Hsl(47deg 58% 86%) 0%, Hsl(45deg 56% 86%) 12%, Hsl(44deg 54% 86%) 21%, Hsl(42deg 52% 86%) 27%, Hsl(40deg 50% 86%) 32%, Hsl(38deg 48% 85%) 37%, Hsl(36deg 46% 85%) 40%, Hsl(34deg 44% 85%) 44%, Hsl(32deg 42% 85%) 48%, Hsl(29deg 40% 85%) 51%, Hsl(26deg 38% 85%) 56%, Hsl(23deg 36% 84%) 60%, Hsl(20deg 35% 84%) 66%, Hsl(16deg 33% 84%) 73%, Hsl(12deg 31% 84%) 80%, Hsl(8deg 29% 84%) 89%, Hsl(3deg 28% 84%) 100%);
+}
+
+.backgroundPlayiteasy {
+  background-image: linear-gradient(170deg, Hsl(0deg 61% 85%) 0%, Hsl(0deg 49% 84%) 20%, Hsl(0deg 40% 82%) 33%, Hsl(0deg 32% 81%) 41%, Hsl(0deg 25% 79%) 47%, Hsl(1deg 19% 78%) 53%, Hsl(1deg 13% 77%) 60%, Hsl(1deg 8% 75%) 68%, Hsl(1deg 4% 74%) 81%, Hsl(0deg 0% 72%) 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0px 10% -13px 5%;
+  padding: 35px 0 0 0;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    margin: 0px 12% -23vw 8%;
+    padding: 80px 0 0 0;
+  }
+}/*# sourceMappingURL=mockup.module.css.map */

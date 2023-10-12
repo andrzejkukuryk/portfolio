@@ -1,0 +1,20 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: #4297b0;
+  padding: 10px 0 0 0;
+}
+
+.arrow {
+  height: 50px;
+  width: 24px;
+}
+
+.prev {
+  rotate: 180deg;
+}/*# sourceMappingURL=stackCarouselButton.module.css.map */

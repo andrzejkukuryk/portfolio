@@ -1,0 +1,16 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+h1 {
+  color: #525973;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    margin: 0 0 0 30px;
+  }
+}/*# sourceMappingURL=title.module.css.map */

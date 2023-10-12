@@ -1,0 +1,14 @@
+:export {
+  carouselMove: 400ms;
+  menuHeight: 90px;
+}
+
+.container {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: block;
+  }
+}/*# sourceMappingURL=menuDesktop.module.css.map */
