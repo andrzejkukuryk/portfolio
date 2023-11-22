@@ -10,9 +10,7 @@
   -webkit-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   -moz-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   position: relative;
-  top: -28vw;
-  left: 5vw;
-  margin-bottom: -60px;
+  transform: translate(-60%, 10%);
 
   .frameHeader {
     background-color: $color-secondary;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { ProjectInfo } from "../../models/projects";
 import { ReactComponent as BackIcon } from "../../assets/back.svg";
 import styles from "./projectDescription.module.scss";

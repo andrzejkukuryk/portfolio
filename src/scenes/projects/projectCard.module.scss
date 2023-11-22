@@ -1,22 +1,2 @@
 @import "../../variables.module.scss";
 
-$dimension: 40px;
-
-.infoIcon {
-  height: $dimension;
-  width: $dimension;
-  color: $color-quaternary;
-  cursor: pointer;
-  position: relative;
-  top: -31vw;
-  left: 9vw;
-}
-
-@media screen and (min-width: $laptop) {
-  .infoIcon {
-    height: $dimension + 10px;
-    width: $dimension + 10px;
-    top: Max(-17vw, -210px);
-    left: 20vw;
-  }
-}

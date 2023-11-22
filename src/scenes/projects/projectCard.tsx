@@ -4,9 +4,9 @@ import { ProjectInfo } from "../../models/projects";
 import { ProjectCardStack } from "./projectCardStack";
 import { Desktop } from "./desktop";
 import { Mobile } from "./mobile";
-import { ReactComponent as Info } from "../../assets/info.svg";
 import { ProjectDescription } from "./projectDescription";
 import { Mockup } from "./mockup";
+import { InfoButton } from "./infoButton";
 
 interface ProjectCardProps {
   project: ProjectInfo;
@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className={styles.container}>
       <Mockup project={project} />
-      <Info onClick={handleClickInfo} className={styles.infoIcon} />
+      <InfoButton ftn={handleClickInfo} />
       {showInfo && (
         <ProjectDescription
           project={project}
