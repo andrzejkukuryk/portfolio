@@ -47,6 +47,22 @@
   );
 }
 
+.backgroundMusicTheory {
+  background-image: linear-gradient(
+  170deg,
+  Hsl(185deg 21% 79%) 0%,
+  Hsl(187deg 22% 81%) 17%,
+  Hsl(189deg 22% 82%) 28%,
+  Hsl(190deg 21% 84%) 36%,
+  Hsl(192deg 21% 86%) 42%,
+  Hsl(194deg 20% 87%) 49%,
+  Hsl(195deg 18% 89%) 56%,
+  Hsl(197deg 16% 90%) 65%,
+  Hsl(198deg 13% 92%) 78%,
+  Hsl(200deg 9% 93%) 100%
+);
+}
+
 .container {
   display: flex;
   flex-direction: row;

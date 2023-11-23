@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectInfo } from "../../models/projects";
 import styles from "./desktop.module.scss";
+import classNames from "classnames";
 
 interface DesktopProps {
   project: ProjectInfo;
@@ -9,8 +10,12 @@ interface DesktopProps {
 export function Desktop({ project }: DesktopProps) {
   const frameDots = ["dotPrimary", "dotTertiary", "dotQuaternary"];
 
+  const frameClass = classNames([styles.frame], {
+    [styles.noMobile]: !project.imgMobile,
+  });
+
   return (
-    <div className={styles.frame}>
+    <div className={frameClass}>
       <div className={styles.frameHeader}>
         {frameDots.map((dot) => (
           <div className={styles[dot]}></div>

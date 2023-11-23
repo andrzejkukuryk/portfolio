@@ -6,7 +6,6 @@
   border: $frameBorder;
   border-radius: 3px;
   width: 100%;
-  // margin: 10% 0;
   box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   -webkit-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   -moz-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
@@ -46,10 +45,6 @@
     }
   }
 
-  .noMobile {
-    
-  }
-
   .image {
     display: block;
     margin: 0;
@@ -60,6 +55,10 @@
   }
 }
 
+.noMobile {
+  width: 82.8%;
+}
+
 @media screen and (min-width: $laptop) {
   .frame {
     width: 90%;
@@ -68,4 +67,9 @@
       height: 15px;
     }
   }
+
+  .noMobile {
+    width: 82.8%;
+  }
+  
 }
