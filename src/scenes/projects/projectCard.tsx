@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styles from "./projectCard.module.scss";
 import { ProjectInfo } from "../../models/projects";
-import { ProjectCardStack } from "./projectCardStack";
-import { Desktop } from "./desktop";
-import { Mobile } from "./mobile";
 import { ProjectDescription } from "./projectDescription";
 import { Mockup } from "./mockup";
 import { InfoButton } from "./infoButton";

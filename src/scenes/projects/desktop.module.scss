@@ -6,6 +6,7 @@
   border: $frameBorder;
   border-radius: 3px;
   width: 100%;
+  // margin: 10% 0;
   box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   -webkit-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
   -moz-box-shadow: -9px 13px 39px -23px rgba(0, 0, 0, 0.85);
@@ -43,6 +44,10 @@
       @include frameDot;
       background-color: $color-quaternary;
     }
+  }
+
+  .noMobile {
+    
   }
 
   .image {
