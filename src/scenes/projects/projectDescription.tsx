@@ -1,9 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { ProjectInfo } from "../../models/projects";
 import { ReactComponent as BackIcon } from "../../assets/back.svg";
+import { ReactComponent as CloseDescription } from "../../assets/closeMenu.svg";
 import styles from "./projectDescription.module.scss";
 import { Mockup } from "./mockup";
 import { ProjectCardStack } from "./projectCardStack";
+import classNames from "classnames";
+import { InfoButton } from "./infoButton";
 
 interface ProjectDescriptionProps {
   project: ProjectInfo;
@@ -16,8 +19,19 @@ export function ProjectDescription({
   showInfo,
   setShowInfo,
 }: ProjectDescriptionProps) {
+  const [showProjectInfo, setShowProjectInfo] = useState(false);
+
+  useEffect(() => {
+    if (showInfo) {
+      setTimeout(() => setShowProjectInfo(true), 500);
+    }
+  }, [showInfo]);
   const handleClickBack = () => {
     setShowInfo(false);
+  };
+
+  const handleClickClose = () => {
+    setShowProjectInfo(false);
   };
 
   const descriptionParagraphs = () => {
@@ -34,17 +48,33 @@ export function ProjectDescription({
     window.open(project.repositoryUrl, "_blank");
   };
 
+  const projectInfoClass = classNames([styles.projectInfo], {
+    [styles.showProjectInfo]: showProjectInfo,
+  });
+
   return (
     <div className={styles.container}>
       <BackIcon onClick={handleClickBack} className={styles.backIcon} />
-      <Mockup project={project} />
-      <div className={styles.projectInfo}>
+      <Mockup project={project} showInfo={showInfo} />
+      <div className={projectInfoClass}>
+        <CloseDescription
+          onClick={handleClickClose}
+          className={styles.closeButton}
+        />
         <h3>{project.title}</h3>
         <ProjectCardStack stack={project.stack} />
         {descriptionParagraphs()}
-        <div>
-          <button onClick={handleClickLiveButton}>live</button>
-          <button onClick={handleClickRepoButton}>repository</button>
+        <div className={styles.buttonsContainer}>
+          <InfoButton
+            ftn={handleClickLiveButton}
+            text="Live"
+            positionNeutral={true}
+          />
+          <InfoButton
+            ftn={handleClickRepoButton}
+            text="Repository"
+            positionNeutral={true}
+          />
         </div>
       </div>
     </div>

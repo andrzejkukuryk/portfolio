@@ -7,18 +7,23 @@ import classNames from "classnames";
 
 interface MockupProps {
   project: ProjectInfo;
+  showInfo: boolean;
 }
 
-export function Mockup({ project }: MockupProps) {
+export function Mockup({ project, showInfo }: MockupProps) {
   const backgroundClass = classNames([styles.background], {
     [styles.backgroundPastabook]: project.title === "Pastabook",
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
     [styles.backgroundMusicTheory]: project.title === "Chords & Scales",
   });
 
+  const containerClass = classNames([styles.container], {
+    [styles.smallPaddingTop]: showInfo,
+  });
+
   return (
     <div className={backgroundClass}>
-      <div className={styles.container}>
+      <div className={containerClass}>
         <Desktop project={project} />
         {project.imgMobile && <Mobile project={project} />}
       </div>

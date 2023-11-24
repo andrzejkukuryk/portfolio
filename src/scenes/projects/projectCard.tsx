@@ -18,8 +18,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div className={styles.container}>
-      <Mockup project={project} />
-      <InfoButton ftn={handleClickInfo} />
+      <Mockup project={project} showInfo={showInfo} />
+      <InfoButton
+        ftn={handleClickInfo}
+        text="Read more"
+        positionNeutral={false}
+      />
       {showInfo && (
         <ProjectDescription
           project={project}
