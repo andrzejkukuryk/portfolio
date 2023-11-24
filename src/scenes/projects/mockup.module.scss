@@ -64,20 +64,32 @@
 }
 
 .container {
-  display: flex;
+  margin: 0 0 0 10.8%;
+  padding: 7% 0 ;
+  
+
+  .content {
+    display: flex;
   flex-direction: row;
   align-items: flex-end;
   flex-wrap: nowrap;
-  margin: 0 0 0 10.8%;
-  padding: 7% 0 16%;
+  transform: scale(1);
+  transition: transform .5s;
+  
+  }
+  .scalable:hover {
+    transform: scale(.99);
+    cursor: pointer;
+  }
 }
+
 
 @media screen and (min-width: $laptop) {
   .container {
-    padding: 7% 0 13%;
+    padding: 7% 0 ;
   }
 
   .smallPaddingTop {
-    padding: 1% 0 13%;
+    padding: 1% 0 7%;
   }
 }

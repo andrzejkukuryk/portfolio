@@ -8,9 +8,16 @@ import classNames from "classnames";
 interface MockupProps {
   project: ProjectInfo;
   showInfo: boolean;
+  handleClickInfo?: () => void;
 }
 
-export function Mockup({ project, showInfo }: MockupProps) {
+export function Mockup({ project, showInfo, handleClickInfo }: MockupProps) {
+  const handleClick = () => {
+    if (!showInfo && handleClickInfo) {
+      handleClickInfo();
+    }
+  };
+
   const backgroundClass = classNames([styles.background], {
     [styles.backgroundPastabook]: project.title === "Pastabook",
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
@@ -21,11 +28,17 @@ export function Mockup({ project, showInfo }: MockupProps) {
     [styles.smallPaddingTop]: showInfo,
   });
 
+  const contentClass = classNames([styles.content], {
+    [styles.scalable]: !showInfo,
+  });
+
   return (
     <div className={backgroundClass}>
       <div className={containerClass}>
-        <Desktop project={project} />
-        {project.imgMobile && <Mobile project={project} />}
+        <div className={contentClass} onClick={handleClick}>
+          <Desktop project={project} />
+          {project.imgMobile && <Mobile project={project} />}
+        </div>
       </div>
     </div>
   );

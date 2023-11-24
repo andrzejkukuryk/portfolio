@@ -13,16 +13,11 @@
   font-size: 6vw;
   font-family: $font-secondary;
   position: relative;
-  top: -12vw;
   transition: color 0.2s;
 }
 
 .btn:hover {
   color: $color-tertiary;
-}
-
-.positionNeutral {
-  top: 0
 }
 
 button:active {
@@ -42,10 +37,5 @@ button:active {
 @media screen and (min-width: $laptop) {
   .btn {
     font-size: 28px;
-    top: -9vw;
-  }
-  
-  .positionNeutral {
-    top: 0
   }
 }
