@@ -21,13 +21,26 @@ export function ProjectDescription({
 }: ProjectDescriptionProps) {
   const [showProjectInfo, setShowProjectInfo] = useState(false);
 
+  const lockScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+
+  const unlockScroll = () => {
+    document.body.style.overflow = "auto";
+  };
+
   useEffect(() => {
     if (showInfo) {
       setTimeout(() => setShowProjectInfo(true), 500);
+      lockScroll();
+    } else {
+      unlockScroll();
     }
   }, [showInfo]);
+
   const handleClickBack = () => {
     setShowInfo(false);
+    unlockScroll();
   };
 
   const handleClickClose = () => {
@@ -51,6 +64,7 @@ export function ProjectDescription({
   const projectInfoClass = classNames([styles.projectInfo], {
     [styles.showProjectInfo]: showProjectInfo,
   });
+
 
   return (
     <div className={styles.container}>

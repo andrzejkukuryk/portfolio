@@ -19,6 +19,7 @@ export function Mockup({ project, showInfo, handleClickInfo }: MockupProps) {
   };
 
   const backgroundClass = classNames([styles.background], {
+    [styles.backgroundLimited]: showInfo,
     [styles.backgroundPastabook]: project.title === "Pastabook",
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
     [styles.backgroundMusicTheory]: project.title === "Chords & Scales",

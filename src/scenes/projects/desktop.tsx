@@ -18,7 +18,7 @@ export function Desktop({ project }: DesktopProps) {
     <div className={frameClass}>
       <div className={styles.frameHeader}>
         {frameDots.map((dot) => (
-          <div className={styles[dot]}></div>
+          <div className={styles[dot]} key={`${dot}Desktop`}></div>
         ))}
       </div>
       <img

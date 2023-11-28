@@ -13,7 +13,7 @@ export function Mobile({ project }: MobileProps) {
     <div className={styles.frame}>
       <div className={styles.frameHeader}>
         {frameDots.map((dot) => (
-          <div className={styles[dot]}></div>
+          <div className={styles[dot]} key={`${dot}Mobile`}></div>
         ))}
       </div>
       <img
