@@ -6,6 +6,8 @@ import pastabookMobile from "../graph/pastabook_mobile.webp";
 import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
 import playiteasyMobile from "../graph/playiteasy_mobile.webp";
 import scalesDesktop from "../graph/scales_deskop.webp";
+import circleDesktop from "../graph/circle_desktop.webp";
+import circleMobile from "../graph/circle_mobile.webp";
 
 const pastabookStack: StackLabel[] = [
   "React.js",
@@ -28,6 +30,8 @@ const chordsAndScalesStack: StackLabel[] = [
   "Material-UI",
   "CSS",
 ];
+
+const circleOfFifthsStack: StackLabel[] = ["JavaScript", "HTML", "CSS"];
 
 export const projects: ProjectInfo[] = [
   {
@@ -58,5 +62,15 @@ export const projects: ProjectInfo[] = [
     description:
       "This is my debut React application, designed to enable users to compose music notes, scales, and chords, or to play straightforward melodies using the onscreen keyboard. \nThe primary purpose behind this project was to gain proficiency in React, JavaScript, and Material-UI. \nPlease note that it is fully functional exclusively on desktop devices.",
     imgDesktop: scalesDesktop,
+  },
+  {
+    title: "Circle of Fifths",
+    stack: stack.filter((item) => circleOfFifthsStack.includes(item.label)),
+    appUrl: "https://andrzejkukuryk.github.io/circleoffifths/",
+    repositoryUrl: "https://github.com/andrzejkukuryk/circleoffifths",
+    description:
+      "The application allows the user to familiarize themselves with one of the key principles of music, namely the circle of fifths. \nIt was written to practice coding using pure JavaScript, HTML, and CSS.",
+    imgDesktop: circleDesktop,
+    imgMobile: circleMobile,
   },
 ];

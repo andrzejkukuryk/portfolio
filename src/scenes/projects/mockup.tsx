@@ -23,6 +23,7 @@ export function Mockup({ project, showInfo, handleClickInfo }: MockupProps) {
     [styles.backgroundPastabook]: project.title === "Pastabook",
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
     [styles.backgroundMusicTheory]: project.title === "Chords & Scales",
+    [styles.backgroundCircle]: project.title === "Circle of Fifths",
   });
 
   const containerClass = classNames([styles.container], {
