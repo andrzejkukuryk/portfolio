@@ -3,13 +3,13 @@ import { ProjectInfo } from "../../models/projects";
 import styles from "./desktop.module.scss";
 import classNames from "classnames";
 
+const frameDots = ["dotPrimary", "dotTertiary", "dotQuaternary"];
+
 interface DesktopProps {
   project: ProjectInfo;
 }
 
 export function Desktop({ project }: DesktopProps) {
-  const frameDots = ["dotPrimary", "dotTertiary", "dotQuaternary"];
-
   const frameClass = classNames([styles.frame], {
     [styles.noMobile]: !project.imgMobile,
   });

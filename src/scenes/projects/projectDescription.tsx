@@ -79,8 +79,8 @@ export function ProjectDescription({
         <ProjectCardStack stack={project.stack} />
         {descriptionParagraphs()}
         <div className={styles.buttonsContainer}>
-          <InfoButton ftn={handleClickLiveButton} text="Live" />
-          <InfoButton ftn={handleClickRepoButton} text="Repository" />
+          <InfoButton handleClick={handleClickLiveButton} text="Live" />
+          <InfoButton handleClick={handleClickRepoButton} text="Repository" />
         </div>
       </div>
     </div>

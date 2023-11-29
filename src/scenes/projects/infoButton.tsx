@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./infoButton.module.scss";
 
 interface InfoButtonProps {
-  ftn: () => void;
+  handleClick: () => void;
   text: string;
 }
 
-export function InfoButton({ ftn, text }: InfoButtonProps) {
+export function InfoButton({ handleClick, text }: InfoButtonProps) {
   return (
-    <button onClick={ftn} className={styles.btn}>
+    <button onClick={handleClick} className={styles.btn}>
       {text}
     </button>
   );

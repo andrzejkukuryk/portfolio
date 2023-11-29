@@ -2,13 +2,13 @@ import React from "react";
 import { ProjectInfo } from "../../models/projects";
 import styles from "./mobile.module.scss";
 
+const frameDots = ["dotPrimary", "dotTertiary", "dotQuaternary"];
+
 interface MobileProps {
   project: ProjectInfo;
 }
 
 export function Mobile({ project }: MobileProps) {
-  const frameDots = ["dotPrimary", "dotTertiary", "dotQuaternary"];
-
   return (
     <div className={styles.frame}>
       <div className={styles.frameHeader}>
