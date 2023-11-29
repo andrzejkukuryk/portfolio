@@ -1,0 +1,26 @@
+@import "../../variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 860px;
+
+  .infoDiv {
+    text-align: center;
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .infoDiv {
+        margin: 0 30px;
+    }
+  }
+}
