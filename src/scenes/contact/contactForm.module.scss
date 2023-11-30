@@ -3,6 +3,7 @@
 .formContainer {
   width: 100%;
   max-width: 860px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,18 +14,18 @@
     flex-direction: column;
     justify-content: center;
 
-
     .formElement {
       display: flex;
       flex-direction: column;
       margin: 0 0 10px 0;
-      
 
       .inputCell {
         background-color: $color-secondary;
         border: solid 1px $color-primary;
         height: 47px;
         width: 300px;
+        margin-top: 5px;
+        padding: 3px 3px 3px 20px;
         box-sizing: border-box;
       }
 
@@ -32,6 +33,90 @@
         border-radius: none;
         border: solid 2px $color-tertiary;
       }
+    }
+  }
+
+  .formMessage {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+
+    .inputCell {
+      background-color: $color-secondary;
+      border: solid 1px $color-primary;
+      height: 141px;
+      width: 300px;
+      margin-top: 5px;
+      padding: 10px 3px 3px 20px;
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    .inputCell:focus {
+      border-radius: none;
+      border: solid 2px $color-tertiary;
+    }
+  }
+
+  .submitButton {
+    background-color: $color-secondary;
+    border: solid 1px $color-primary;
+    border-radius: 24px;
+    margin-top: 30px;
+    height: 47px;
+    width: 150px;
+    font-family: $font-secondary;
+    font-size: 20px;
+    color: $color-primary;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  .submitButton:hover {
+    background-color: $color-primary;
+    border: solid 1px $color-tertiary;
+    color: $color-secondary;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .formContainer {
+    .formLine {
+      .formElement {
+        .inputCell {
+          width: 380px;
+        }
+      }
+    }
+    .formMessage {
+      .inputCell {
+        width: 380px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .formContainer {
+    margin: 60px 0;
+
+    .formLine {
+      flex-direction: row;
+      gap: 30px;
+      margin: 0 0 20px 0;
+      .formElement {
+        .inputCell {
+          width: 325px;
+        }
+      }
+    }
+    .formMessage {
+      .inputCell {
+        width: 680px;
+      }
+    }
+
+    .submitButton {
+      float: right;
     }
   }
 }
