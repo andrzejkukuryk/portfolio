@@ -1,8 +1,9 @@
-import React, { FormEvent, useRef } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./contactForm.module.scss";
 
 export function ContactForm() {
+  const [messageSend, setMessageSend] = useState(false);
   const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: FormEvent) => {
@@ -17,9 +18,10 @@ export function ContactForm() {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          //@ts-ignore
-          e.target.reset();
+          setMessageSend(true);
+          if (form.current && form.current.reset) {
+            form.current.reset();
+          }
         },
         (error) => {
           console.log(error.text);
@@ -27,9 +29,14 @@ export function ContactForm() {
       );
   };
 
+  const handleChange = (e: FormEvent) => {
+    e.preventDefault();
+    setMessageSend(false);
+  };
+
   return (
     <div className={styles.formContainer}>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail} onChange={handleChange}>
         <div className={styles.formLine}>
           <div className={styles.formElement}>
             <label htmlFor="userName">Name </label>
@@ -83,6 +90,7 @@ export function ContactForm() {
           ></textarea>
         </div>
         <input type="submit" value="Send" className={styles.submitButton} />
+        {messageSend && <p className={styles.sendInfo}>Message sent</p>}
       </form>
     </div>
   );
