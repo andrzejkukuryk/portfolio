@@ -1,5 +1,6 @@
 import { ReactComponent as HtmlIcon } from "../assets/html.svg";
 import { ReactComponent as CssIcon } from "../assets/css.svg";
+import { ReactComponent as SassIcon } from "../assets/sass.svg";
 import { ReactComponent as ReactIcon } from "../assets/react.svg";
 import { ReactComponent as TsIcon } from "../assets/typescript.svg";
 import { ReactComponent as JsIcon } from "../assets/javascript.svg";
@@ -25,6 +26,7 @@ export type StackLabel =
   | "TypeScript"
   | "HTML"
   | "CSS"
+  | "Sass"
   | "Bootstrap"
   | "Material-UI";
 
@@ -60,6 +62,10 @@ export const stack: StackInfo[] = [
   {
     component: CssIcon,
     label: "CSS",
+  },
+  {
+    component: SassIcon,
+    label: "Sass",
   },
   {
     component: BootstrapIcon,
