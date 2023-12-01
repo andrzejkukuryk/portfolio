@@ -10,13 +10,6 @@
   border: solid 1px $color-primary;
 }
 
-@mixin cellProperties {
-  @include backgroundAndBorder;
-  width: 300px;
-  margin-top: 5px;
-  box-sizing: border-box;
-}
-
 .formContainer {
   @include flexColumn;
   width: 100%;
@@ -28,22 +21,6 @@
     @include flexColumn;
     width: 100%;
     justify-content: center;
-
-    .formElement {
-      @include flexColumn;
-      margin: 0 0 10px 0;
-
-      .inputCell {
-        @include cellProperties;
-        height: 47px;
-        padding: 3px 3px 3px 20px;
-      }
-
-      .inputCell:focus {
-        border-radius: none;
-        border: solid 2px $color-tertiary;
-      }
-    }
   }
 
   .formMessage {
@@ -51,7 +28,10 @@
     margin: 0 0 10px 0;
 
     .inputCell {
-      @include cellProperties;
+      @include backgroundAndBorder;
+      width: 300px;
+      margin-top: 5px;
+      box-sizing: border-box;
       height: 141px;
       padding: 10px 3px 3px 20px;
       resize: none;
@@ -91,13 +71,6 @@
 
 @media screen and (min-width: $tablet) {
   .formContainer {
-    .formLine {
-      .formElement {
-        .inputCell {
-          width: 380px;
-        }
-      }
-    }
     .formMessage {
       .inputCell {
         width: 380px;
@@ -114,11 +87,6 @@
       flex-direction: row;
       gap: 30px;
       margin: 0 0 20px 0;
-      .formElement {
-        .inputCell {
-          width: 325px;
-        }
-      }
     }
     .formMessage {
       .inputCell {

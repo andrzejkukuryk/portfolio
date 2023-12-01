@@ -1,6 +1,7 @@
 import React, { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./contactForm.module.scss";
+import { FormInputElement } from "./formInputElement";
 
 export function ContactForm() {
   const [messageSend, setMessageSend] = useState(false);
@@ -38,45 +39,21 @@ export function ContactForm() {
     <div className={styles.formContainer}>
       <form ref={form} onSubmit={sendEmail} onChange={handleChange}>
         <div className={styles.formLine}>
-          <div className={styles.formElement}>
-            <label htmlFor="userName">Name </label>
-            <input
-              type="text"
-              id="userName"
-              name="userName"
-              className={styles.inputCell}
-            ></input>
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="userLastName">Last name </label>
-            <input
-              type="text"
-              id="userLastName"
-              name="userLastName"
-              className={styles.inputCell}
-            ></input>
-          </div>
+          <FormInputElement id="userName" inputType="text" label="Name" />
+          <FormInputElement
+            id="userLastName"
+            inputType="text"
+            label="Last name"
+          />
         </div>
         <div className={styles.formLine}>
-          <div className={styles.formElement}>
-            <label htmlFor="userEmail">Email * </label>
-            <input
-              type="email"
-              id="userEmail"
-              name="userEmail"
-              className={styles.inputCell}
-              required
-            ></input>
-          </div>
-          <div className={styles.formElement}>
-            <label htmlFor="userPhone">Phone </label>
-            <input
-              type="tel"
-              id="userPhone"
-              name="userPhone"
-              className={styles.inputCell}
-            ></input>
-          </div>
+          <FormInputElement
+            id="userEmail"
+            inputType="email"
+            label="Email"
+            required
+          />
+          <FormInputElement id="userPhone" inputType="tel" label="Phone" />
         </div>
 
         <div className={styles.formMessage}>
