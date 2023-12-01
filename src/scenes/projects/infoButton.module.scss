@@ -1,0 +1,31 @@
+@import "../../variables.module.scss";
+
+.btn {
+  background-color: $color-secondary;
+  border: none;
+  padding: 7px 25px;
+  color: $color-quaternary;
+  cursor: pointer;
+  font-size: 6vw;
+  font-family: $font-secondary;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.btn:hover {
+  color: $color-tertiary;
+}
+
+
+@media screen and (min-width: $tablet) {
+  .btn {
+    font-size: 4.5vw;
+    padding: 9px 25px;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .btn {
+    font-size: 28px;
+  }
+}

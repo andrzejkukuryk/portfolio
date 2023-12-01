@@ -1,0 +1,115 @@
+@import "../../variables.module.scss";
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.backgroundPastabook {
+  background-image: linear-gradient(
+    170deg,
+    Hsl(47deg 58% 86%) 0%,
+    Hsl(45deg 56% 86%) 12%,
+    Hsl(44deg 54% 86%) 21%,
+    Hsl(42deg 52% 86%) 27%,
+    Hsl(40deg 50% 86%) 32%,
+    Hsl(38deg 48% 85%) 37%,
+    Hsl(36deg 46% 85%) 40%,
+    Hsl(34deg 44% 85%) 44%,
+    Hsl(32deg 42% 85%) 48%,
+    Hsl(29deg 40% 85%) 51%,
+    Hsl(26deg 38% 85%) 56%,
+    Hsl(23deg 36% 84%) 60%,
+    Hsl(20deg 35% 84%) 66%,
+    Hsl(16deg 33% 84%) 73%,
+    Hsl(12deg 31% 84%) 80%,
+    Hsl(8deg 29% 84%) 89%,
+    Hsl(3deg 28% 84%) 100%
+  );
+}
+
+.backgroundPlayiteasy {
+  background-image: linear-gradient(
+    170deg,
+    Hsl(0deg 61% 85%) 0%,
+    Hsl(0deg 49% 84%) 20%,
+    Hsl(0deg 40% 82%) 33%,
+    Hsl(0deg 32% 81%) 41%,
+    Hsl(0deg 25% 79%) 47%,
+    Hsl(1deg 19% 78%) 53%,
+    Hsl(1deg 13% 77%) 60%,
+    Hsl(1deg 8% 75%) 68%,
+    Hsl(1deg 4% 74%) 81%,
+    Hsl(0deg 0% 72%) 100%
+  );
+}
+
+.backgroundMusicTheory {
+  background-image: linear-gradient(
+    170deg,
+    Hsl(185deg 21% 79%) 0%,
+    Hsl(187deg 22% 81%) 17%,
+    Hsl(189deg 22% 82%) 28%,
+    Hsl(190deg 21% 84%) 36%,
+    Hsl(192deg 21% 86%) 42%,
+    Hsl(194deg 20% 87%) 49%,
+    Hsl(195deg 18% 89%) 56%,
+    Hsl(197deg 16% 90%) 65%,
+    Hsl(198deg 13% 92%) 78%,
+    Hsl(200deg 9% 93%) 100%
+  );
+}
+
+.backgroundCircle {
+  background-image: linear-gradient(
+  170deg,
+  Hsl(0deg 0% 85%) 0%,
+  Hsl(344deg 0% 86%) 6%,
+  Hsl(344deg 0% 87%) 15%,
+  Hsl(344deg 0% 88%) 27%,
+  Hsl(344deg 0% 89%) 45%,
+  Hsl(344deg 0% 90%) 66%,
+  Hsl(344deg 0% 91%) 80%,
+  Hsl(344deg 0% 92%) 89%,
+  Hsl(344deg 0% 93%) 96%,
+  Hsl(0deg 0% 94%) 100%
+);
+}
+
+.container {
+  margin: 0 0 0 10.8%;
+  padding: 7% 0;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    transform: scale(1);
+    transition: transform 0.5s;
+  }
+  .scalable:hover {
+    transform: scale(0.99);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    padding: 7% 0;
+  }
+
+  .smallPaddingTop {
+    padding: 1% 0 7%;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .backgroundLimited {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}

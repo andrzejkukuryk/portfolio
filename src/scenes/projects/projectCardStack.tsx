@@ -1,5 +1,4 @@
 import React from "react";
-import { ProjectCard } from "./projectCard";
 import { StackInfo } from "../../data/stackIcons";
 import styles from "./projectCardStack.module.scss";
 

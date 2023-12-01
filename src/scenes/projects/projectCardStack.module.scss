@@ -19,20 +19,8 @@
 @media screen and (min-width: $tablet) {
   .container {
     justify-content: flex-start;
-
     h5 {
       margin-right: 30px;
     }
-  }
-}
-
-@media screen and (min-width: $laptop) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
   }
 }
