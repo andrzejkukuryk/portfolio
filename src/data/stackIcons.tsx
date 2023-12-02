@@ -48,13 +48,14 @@ export const stack: StackInfo[] = [
     label: "React Router",
   },
   {
-    component: JsIcon,
-    label: "JavaScript",
-  },
-  {
     component: TsIcon,
     label: "TypeScript",
   },
+  {
+    component: JsIcon,
+    label: "JavaScript",
+  },
+
   {
     component: HtmlIcon,
     label: "HTML",
