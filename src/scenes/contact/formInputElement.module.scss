@@ -8,6 +8,8 @@
   .inputCell {
     background-color: $color-secondary;
     border: solid 1px $color-primary;
+    border-radius: 0;
+    outline: none;
     width: 300px;
     margin-top: 5px;
     box-sizing: border-box;

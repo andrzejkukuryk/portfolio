@@ -29,6 +29,8 @@
 
     .inputCell {
       @include backgroundAndBorder;
+      border-radius: 0;
+    outline: none;
       width: 300px;
       margin-top: 5px;
       box-sizing: border-box;
