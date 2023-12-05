@@ -45,16 +45,6 @@ export const projects: ProjectInfo[] = [
     imgMobile: pastabookMobile,
   },
   {
-    title: "Play It Easy",
-    stack: stack.filter((item) => playItEasyStack.includes(item.label)),
-    appUrl: "https://andrzejkukuryk.github.io/playiteasy/",
-    repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
-    description:
-      "The application provides users with the ability to explore, filter, sort, and search through a catalog that contains links to my YouTube videos, music note sheets, and guitar tabs. \nThis project was developed with the goal of becoming proficient in Redux. It relies on the Google Firebase REST API to retrieve its content.",
-    imgDesktop: playiteasyDesktop,
-    imgMobile: playiteasyMobile,
-  },
-  {
     title: "Chords & Scales",
     stack: stack.filter((item) => chordsAndScalesStack.includes(item.label)),
     appUrl: "https://andrzejkukuryk.github.io/music-theory/",
@@ -72,5 +62,15 @@ export const projects: ProjectInfo[] = [
       "The application allows the user to familiarize themselves with one of the key principles of music, namely the circle of fifths. \nIt was written to practice coding using pure JavaScript, HTML, and CSS.",
     imgDesktop: circleDesktop,
     imgMobile: circleMobile,
+  },
+  {
+    title: "Play It Easy",
+    stack: stack.filter((item) => playItEasyStack.includes(item.label)),
+    appUrl: "https://andrzejkukuryk.github.io/playiteasy/",
+    repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
+    description:
+      "The application provides users with the ability to explore, filter, sort, and search through a catalog that contains links to my YouTube videos, music note sheets, and guitar tabs. \nThis project was developed with the goal of becoming proficient in Redux. It relies on the Google Firebase REST API to retrieve its content.",
+    imgDesktop: playiteasyDesktop,
+    imgMobile: playiteasyMobile,
   },
 ];
