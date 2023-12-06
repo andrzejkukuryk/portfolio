@@ -15,7 +15,7 @@ export function MenuList({ setMenuIsOpen }: MenuListProps) {
           <MenuItem
             listItem={section}
             setMenuIsOpen={setMenuIsOpen}
-            key={section}
+            key={section.name}
           />
         ))}
       </ul>
