@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./message.module.scss";
-import { Photo } from "./photo";
+import { useTranslation } from "react-i18next";
 
 export function Message() {
   const [currentTextFirstLine, setCurrentTextFirstLine] = useState(" ");
@@ -10,9 +10,12 @@ export function Message() {
   const [firstPartWritten, setFirtsPartWritten] = useState(false);
   const [firstPartDeleted, setFirstPartDeleted] = useState(false);
 
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
   const firstLine: string = "Andrzej Kukuryk";
-  const musician: string = "Musician";
-  const frontend: string = "Frontend developer and musician";
+  const musician: string = t("home_musician");
+  const frontend: string = t("home_frontend");
   const typingSpeed = () => {
     if (currentIndexSecondLine === 18) {
       return 800;
@@ -28,6 +31,12 @@ export function Message() {
       firstPartDeleted,
     ]
   );
+
+  useEffect(() => {
+    if (firstPartWritten) {
+      setCurrentTextSecondLine(frontend);
+    }
+  }, [currentLanguage]);
 
   const typeFirstLine = () => {
     if (currentIndexFirstLine < firstLine.length) {

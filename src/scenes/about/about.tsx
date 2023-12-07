@@ -16,7 +16,7 @@ export function About() {
     <section ref={ref} id="about" className={styles.container}>
       <div className={styles.innerContainer}>
         <h2>{t("about_about")}</h2>
-        <p className={styles.story}>{story}</p>
+        <p className={styles.story}>{t("about_story")}</p>
         <StackList />
         <PersonalLinks />
       </div>
