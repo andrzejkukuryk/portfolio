@@ -26,7 +26,7 @@ export const personalLinks: PersonalLinksInfo[] = [
   },
   {
     icon: CvIcon,
-    label: i18n.t("data_about_resume"),
+    label: "data_about_resume",
     url: "#",
   },
 ];
