@@ -9,6 +9,12 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
+    // debug: true,
+    // detection: {
+    //   order: ["navigator"],
+    // },
+    lng: "en",
+    fallbackLng: "en",
     resources: {
       en: {
         translation: translationEN,
@@ -17,8 +23,7 @@ i18n
         translation: translationPL,
       },
     },
-    lng: "en",
-    fallbackLng: "en",
   });
+
 
 export default i18n;

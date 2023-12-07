@@ -1,0 +1,27 @@
+@import "../../variables.module.scss";
+
+.languageButton {
+  background: none;
+  border: none;
+  font-family: $font-secondary;
+  color: $color-primary;
+  font-size: 2em;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.languageButton:hover {
+  color: $color-tertiary;
+}
+
+.currentLanguage {
+    color: $color-quaternary;
+  }
+
+@media screen and (min-width: $laptop) {
+  .languageButton {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
