@@ -3,6 +3,7 @@ import { SectionInfo } from "../../models/menu";
 import styles from "./menuItem.module.scss";
 import classNames from "classnames";
 import { useNavContext } from "../../data/navProvider";
+import { useTranslation } from "react-i18next";
 
 interface MenuItemProps {
   listItem: SectionInfo;
@@ -11,6 +12,7 @@ interface MenuItemProps {
 export function MenuItem({ listItem, setMenuIsOpen }: MenuItemProps) {
   const href = listItem.name.toLowerCase();
   const { activeSection } = useNavContext();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     setMenuIsOpen(false);
@@ -24,7 +26,7 @@ export function MenuItem({ listItem, setMenuIsOpen }: MenuItemProps) {
     <li className={styles.listItem}>
       <a href={`#${href}`} className={aClass}>
         <div onClick={handleClick} className={styles.labelContainer}>
-          {listItem.label}
+          {t(listItem.translationKey)}
         </div>
       </a>
     </li>
