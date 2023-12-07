@@ -15,5 +15,14 @@
   "projects_projects": "My projects",
   "projects_stack": "Stack used",
   "projects_button_live": "Live",
-  "projects_button_repo": "Repository"
+  "projects_button_repo": "Repository",
+  "contact_contact": "Contact me",
+  "contact_phone": "Phone",
+  "contact_location": "Location",
+  "contact_city": "Bytom, Poland",
+  "contact_name": "Name",
+  "contact_last": "Last name",
+  "contact_message": "Message",
+  "contact_button_send": "Send",
+  "contact_sent": "Message sent"
 }

@@ -15,5 +15,14 @@
   "projects_projects": "Moje projekty",
   "projects_stack": "Technologie",
   "projects_button_live": "Zobacz",
-  "projects_button_repo": "Repozytorium"
+  "projects_button_repo": "Repozytorium",
+  "contact_contact": "Kontakt",
+  "contact_phone": "Telefon",
+  "contact_location": "Miasto",
+  "contact_city": "Bytom, woj. śląskie",
+  "contact_name": "Imię",
+  "contact_last": "Nazwisko",
+  "contact_message": "Wiadomość",
+  "contact_button_send": "Wyślij",
+  "contact_sent": "Wiaddomość wysłana"
 }

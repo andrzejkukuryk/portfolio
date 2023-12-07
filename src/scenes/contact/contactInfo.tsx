@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import styles from "./contactInfo.module.scss";
 
 export function ContactInfo() {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.container}>
       <div className={styles.infoDiv}>
-        <h3>Phone:</h3>
+        <h3>{t("contact_phone")}:</h3>
         <p>
           <a href="tel:+48888908481">+48 888 908 481</a>
         </p>
@@ -20,8 +23,8 @@ export function ContactInfo() {
         </p>
       </div>
       <div className={styles.infoDiv}>
-        <h3>Location:</h3>
-        <p>Bytom, Poland</p>
+        <h3>{t("contact_location")}:</h3>
+        <p>{t("contact_city")}</p>
       </div>
     </div>
   );
