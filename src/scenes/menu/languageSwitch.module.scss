@@ -1,0 +1,37 @@
+@import "../../variables.module.scss";
+
+.listItem {
+  display: block;
+  list-style: none;
+  padding: 25px 0px;
+  width: 100%;
+  text-align: center;
+
+  .languageButton {
+    background: none;
+    border: none;
+    font-family: $font-secondary;
+    color: $color-primary;
+    font-size: 2em;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .languageButton:hover {
+    color: $color-tertiary;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .listItem {
+    display: inline;
+    text-align: left;
+    margin: 0 30px;
+
+    .languageButton {
+        font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
