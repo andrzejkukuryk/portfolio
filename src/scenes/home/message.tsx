@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./message.module.scss";
 import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 
 export function Message() {
   const [currentTextFirstLine, setCurrentTextFirstLine] = useState(" ");
@@ -17,7 +18,8 @@ export function Message() {
   const musician: string = t("home_musician");
   const frontend: string = t("home_frontend");
   const typingSpeed = () => {
-    if (currentIndexSecondLine === 18) {
+    const waitingTime = currentLanguage === "pl" ? 21 : 18;
+    if (currentIndexSecondLine === waitingTime) {
       return 800;
     }
     return Math.floor(Math.random() * 80) + 50;
@@ -107,10 +109,14 @@ export function Message() {
       }
     }
   };
+
+  const secondLineClass = classNames([styles.secondLine], {
+    [styles.wider]: currentLanguage === "pl",
+  });
   return (
     <div className={styles.container}>
       <p className={styles.firstLine}>{currentTextFirstLine}</p>
-      <p className={styles.secondLine}>{currentTextSecondLine}</p>
+      <p className={secondLineClass}>{currentTextSecondLine}</p>
     </div>
   );
 }

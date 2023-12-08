@@ -25,6 +25,10 @@
     width: 230px;
     height: 60px;
   }
+
+  .wider {
+    width: 252px;
+  }
 }
 
 @media screen and (min-width: $laptop) {
@@ -43,6 +47,10 @@
       font-weight: 100;
       height: 110px;
       width: 300px;
+    }
+
+    .wider {
+      width: 322px;
     }
   }
 }
