@@ -14,7 +14,8 @@ export function LanguageButton({
   currentLanguage,
 }: LanguageButtonProps) {
   const buttonClass = classNames([styles.languageButton], {
-    [styles.currentLanguage]: currentLanguage === language,
+    [styles.currentLanguage]:
+      currentLanguage.slice(0, 2) === language.slice(0, 2),
   });
 
   return (

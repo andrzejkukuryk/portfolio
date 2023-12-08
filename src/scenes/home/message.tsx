@@ -12,7 +12,7 @@ export function Message() {
   const [firstPartDeleted, setFirstPartDeleted] = useState(false);
 
   const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.language.slice(0, 2);
 
   const firstLine: string = "Andrzej Kukuryk";
   const musician: string = t("home_musician");

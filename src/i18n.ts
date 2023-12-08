@@ -9,11 +9,10 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    // debug: true,
-    // detection: {
-    //   order: ["navigator"],
-    // },
-    lng: "en",
+    detection: {
+      order: ["cookie", "localStorage", "sessionStorage", "navigator"],
+    },
+
     fallbackLng: "en",
     resources: {
       en: {

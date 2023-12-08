@@ -49,12 +49,6 @@ export function ProjectDescription({
     setShowProjectInfo(false);
   };
 
-  // const descriptionParagraphs = () => {
-  //   return project.description
-  //     .split("\n")
-  //     .map((str) => <p key={`paragraph${str[1]}${str[3]}${str[4]}`}>{str}</p>);
-  // };
-
   const descriptionParagraphs = () => {
     return t(project.translationKey)
       .split("\n")
