@@ -113,6 +113,7 @@ export function Message() {
   const secondLineClass = classNames([styles.secondLine], {
     [styles.wider]: currentLanguage === "pl",
   });
+
   return (
     <div className={styles.container}>
       <p className={styles.firstLine}>{currentTextFirstLine}</p>

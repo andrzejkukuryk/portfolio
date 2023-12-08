@@ -19,7 +19,7 @@ export function MenuList({ setMenuIsOpen }: MenuListProps) {
             key={section.name}
           />
         ))}
-        <LanguageSwitch />
+        <LanguageSwitch setMenuIsOpen={setMenuIsOpen} />
       </ul>
     </div>
   );
