@@ -7,7 +7,6 @@ import playiteasyMobile from "../graph/playiteasy_mobile.webp";
 import scalesDesktop from "../graph/scales_deskop.webp";
 import circleDesktop from "../graph/circle_desktop.webp";
 import circleMobile from "../graph/circle_mobile.webp";
-import i18n from "../i18n";
 
 const pastabookStack: StackLabel[] = [
   "React.js",
