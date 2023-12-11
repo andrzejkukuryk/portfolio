@@ -6,22 +6,21 @@
   z-index: 4;
   width: 100%;
   height: $menuHeight;
-  background-color: $color-secondary;
-  box-shadow: -1px 3px 1px -3px $color-tertiary;
-  -webkit-box-shadow: -1px 3px 1px -3px $color-tertiary;
-  -moz-box-shadow: -1px 3px 1px -3px $color-tertiary;
+  background-color: $color-tertiary-000;
+  border-bottom: solid 2px $color-quaternary-05;
 }
 
 .innerContainer {
   max-width: $appWidth;
   position: relative;
   margin: 0 auto;
-  height: $menuHeight;
+  padding: 16px 32px;
+  // height: $menuHeight;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-secondary;
+  background-color: $color-tertiary-000;
   z-index: 5;
 }
 

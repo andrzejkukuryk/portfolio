@@ -3,6 +3,17 @@ $color-secondary: #ececec;
 $color-tertiary: #00223e;
 $color-quaternary: #4297b0;
 
+$color-primary-100: #515973;
+$color-primary-500: #343844;
+$color-secondary-100: #605773;
+$color-secondary-200: #4A4458;
+$color-secondary-300: #2F2A39;
+$color-tertiary-100: #E8E6E4;
+$color-tertiary-000:  #DAD3CA;
+$color-quaternary-10: #023857;
+$color-quaternary-05: #3A7698;
+
+
 $font-primary: 'Young Serif', serif;
 $font-secondary: "Sen", sans-serif;
 
@@ -11,7 +22,8 @@ $tablet: 426px;
 $laptop: 769px;
 $desktop: 1025px;
 
-$menuHeight: 90px;
+// $menuHeight: 90px;
+$menuHeight: 82px;
 $carouselMove: 400ms;
 
 :export {
