@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./message.module.scss";
-import { Photo } from "./photo";
+import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 
 export function Message() {
   const [currentTextFirstLine, setCurrentTextFirstLine] = useState(" ");
@@ -10,11 +11,15 @@ export function Message() {
   const [firstPartWritten, setFirtsPartWritten] = useState(false);
   const [firstPartDeleted, setFirstPartDeleted] = useState(false);
 
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language.slice(0, 2);
+
   const firstLine: string = "Andrzej Kukuryk";
-  const musician: string = "Musician";
-  const frontend: string = "Frontend developer and musician";
+  const musician: string = t("home_musician");
+  const frontend: string = t("home_frontend");
   const typingSpeed = () => {
-    if (currentIndexSecondLine === 18) {
+    const waitingTime = currentLanguage === "pl" ? 21 : 18;
+    if (currentIndexSecondLine === waitingTime) {
       return 800;
     }
     return Math.floor(Math.random() * 80) + 50;
@@ -28,6 +33,12 @@ export function Message() {
       firstPartDeleted,
     ]
   );
+
+  useEffect(() => {
+    if (firstPartWritten) {
+      setCurrentTextSecondLine(frontend);
+    }
+  }, [currentLanguage]);
 
   const typeFirstLine = () => {
     if (currentIndexFirstLine < firstLine.length) {
@@ -98,10 +109,15 @@ export function Message() {
       }
     }
   };
+
+  const secondLineClass = classNames([styles.secondLine], {
+    [styles.wider]: currentLanguage === "pl",
+  });
+
   return (
     <div className={styles.container}>
       <p className={styles.firstLine}>{currentTextFirstLine}</p>
-      <p className={styles.secondLine}>{currentTextSecondLine}</p>
+      <p className={secondLineClass}>{currentTextSecondLine}</p>
     </div>
   );
 }

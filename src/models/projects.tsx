@@ -7,5 +7,5 @@ export interface ProjectInfo {
   imgMobile?: string;
   repositoryUrl: string;
   appUrl: string;
-  description: string;
+  translationKey: string;
 }

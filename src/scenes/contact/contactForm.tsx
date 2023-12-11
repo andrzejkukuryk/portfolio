@@ -2,10 +2,12 @@ import React, { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./contactForm.module.scss";
 import { FormInputElement } from "./formInputElement";
+import { useTranslation } from "react-i18next";
 
 export function ContactForm() {
   const [messageSend, setMessageSend] = useState(false);
   const form = useRef<HTMLFormElement | null>(null);
+  const { t } = useTranslation();
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
@@ -39,11 +41,15 @@ export function ContactForm() {
     <div className={styles.formContainer}>
       <form ref={form} onSubmit={sendEmail} onChange={handleChange}>
         <div className={styles.formLine}>
-          <FormInputElement id="userName" inputType="text" label="Name" />
+          <FormInputElement
+            id="userName"
+            inputType="text"
+            label={t("contact_name")}
+          />
           <FormInputElement
             id="userLastName"
             inputType="text"
-            label="Last name"
+            label={t("contact_last")}
           />
         </div>
         <div className={styles.formLine}>
@@ -53,11 +59,15 @@ export function ContactForm() {
             label="Email"
             required
           />
-          <FormInputElement id="userPhone" inputType="tel" label="Phone" />
+          <FormInputElement
+            id="userPhone"
+            inputType="tel"
+            label={t("contact_phone")}
+          />
         </div>
 
         <div className={styles.formMessage}>
-          <label htmlFor="message">Message * </label>
+          <label htmlFor="message">{t("contact_message")} * </label>
           <textarea
             id="message"
             name="message"
@@ -66,8 +76,12 @@ export function ContactForm() {
             required
           ></textarea>
         </div>
-        <input type="submit" value="Send" className={styles.submitButton} />
-        {messageSend && <p className={styles.sendInfo}>Message sent</p>}
+        <input
+          type="submit"
+          value={t("contact_button_send")}
+          className={styles.submitButton}
+        />
+        {messageSend && <p className={styles.sendInfo}>{t("contact_sent")}</p>}
       </form>
     </div>
   );

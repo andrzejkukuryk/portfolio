@@ -12,18 +12,12 @@ export function MenuMobileList({
   menuIsOpen,
   setMenuIsOpen,
 }: MenuMobileListProps) {
-  const handleClick = () => {
-    setMenuIsOpen(false);
-  };
   const containerClass = classNames(styles.container, {
     [styles.menuIsOpen]: menuIsOpen,
   });
 
   return (
-    <div
-      // onClick={handleClick}
-      className={containerClass}
-    >
+    <div className={containerClass}>
       <MenuList setMenuIsOpen={setMenuIsOpen} />
     </div>
   );

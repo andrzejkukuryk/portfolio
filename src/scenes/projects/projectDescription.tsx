@@ -5,6 +5,7 @@ import { ReactComponent as CloseDescription } from "../../assets/closeMenu.svg";
 import styles from "./projectDescription.module.scss";
 import { Mockup } from "./mockup";
 import { ProjectCardStack } from "./projectCardStack";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import { InfoButton } from "./infoButton";
 
@@ -20,6 +21,7 @@ export function ProjectDescription({
   setShowInfo,
 }: ProjectDescriptionProps) {
   const [showProjectInfo, setShowProjectInfo] = useState(false);
+  const { t } = useTranslation();
 
   const lockScroll = () => {
     document.body.style.overflow = "hidden";
@@ -48,7 +50,7 @@ export function ProjectDescription({
   };
 
   const descriptionParagraphs = () => {
-    return project.description
+    return t(project.translationKey)
       .split("\n")
       .map((str) => <p key={`paragraph${str[1]}${str[3]}${str[4]}`}>{str}</p>);
   };
@@ -65,7 +67,6 @@ export function ProjectDescription({
     [styles.showProjectInfo]: showProjectInfo,
   });
 
-
   return (
     <div className={styles.container}>
       <BackIcon onClick={handleClickBack} className={styles.backIcon} />
@@ -79,8 +80,14 @@ export function ProjectDescription({
         <ProjectCardStack stack={project.stack} />
         {descriptionParagraphs()}
         <div className={styles.buttonsContainer}>
-          <InfoButton handleClick={handleClickLiveButton} text="Live" />
-          <InfoButton handleClick={handleClickRepoButton} text="Repository" />
+          <InfoButton
+            handleClick={handleClickLiveButton}
+            text={t("projects_button_live")}
+          />
+          <InfoButton
+            handleClick={handleClickRepoButton}
+            text={t("projects_button_repo")}
+          />
         </div>
       </div>
     </div>
