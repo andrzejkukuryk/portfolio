@@ -7,10 +7,10 @@ export interface SectionInfo {
 }
 
 export const sections: SectionInfo[] = [
-  {
-    name: "Home",
-    translationKey: "models_menu_home",
-  },
+  // {
+  //   name: "Home",
+  //   translationKey: "models_menu_home",
+  // },
   {
     name: "About",
     translationKey: "models_menu_about",

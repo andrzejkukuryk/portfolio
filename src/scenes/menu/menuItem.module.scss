@@ -8,7 +8,7 @@
   text-align: center;
 }
 a {
-  color: $color-primary;
+  color: $color-secondary-100;
   text-decoration: none;
   font-size: 2em;
   font-weight: 500;
@@ -20,29 +20,30 @@ a {
   }
 }
 
+a:hover {
+  color: $color-secondary-200;  
+}
+
 .active {
-  color: $color-quaternary;
+  color: $color-secondary-300;
+  text-shadow: 1px 0px 2px $color-secondary-300;
 }
 
 @media screen and (min-width: $laptop) {
   .listItem {
     display: inline;
-    text-align: left;
-    margin: 0 28px;
+    padding: 4px 8px;
 
     a {
       font-family: $font-secondary;
-      font-size: 16px;
+      font-size: 32px;
       font-weight: 400;
 
       .labelContainer {
         display: inline-block;
-        padding: 30px 0;
+        padding: 4px 8px;
       }
     }
 
-    a:hover {
-      color: $color-tertiary;
-    }
   }
 }

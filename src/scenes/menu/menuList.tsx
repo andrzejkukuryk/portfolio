@@ -9,6 +9,7 @@ interface MenuListProps {
 }
 
 export function MenuList({ setMenuIsOpen }: MenuListProps) {
+
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
