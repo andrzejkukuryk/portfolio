@@ -2,5 +2,9 @@ import React from "react";
 import "./title.module.scss";
 
 export function Title() {
-  return <h1>{"</> AK"} </h1>;
+  return (
+    <a href="#home">
+      <h1>{"</> AK"}</h1>
+    </a>
+  );
 }
