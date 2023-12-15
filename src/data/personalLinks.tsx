@@ -1,7 +1,6 @@
 import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
 import { ReactComponent as GitHubIcon } from "../assets/github.svg";
 import { ReactComponent as CvIcon } from "../assets/cv.svg";
-import i18n from "../i18n";
 
 export interface PersonalLinksInfo {
   icon: React.FunctionComponent<

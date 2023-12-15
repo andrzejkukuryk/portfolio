@@ -8,20 +8,16 @@
   margin-top: 80px;
 
   .tag {
-    margin: 30px 0 0 0;
-    padding: 0;
-    color: $color-primary;
-    font-family: $font-primary;
-    font-weight: 500;
-    font-size: 30px;
+    @include header1;
+    font-size: 36px;
   }
 }
 
-@media screen and (min-width: $laptop) {
+@media screen and (min-width: $tablet) {
   .container {
     .tag {
-      margin: 30px 0 -10px 0;
-      font-size: 70px;
+     @include header1;
     }
   }
 }
+

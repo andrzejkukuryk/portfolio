@@ -1,8 +1,11 @@
 @import "../../variables.module.scss";
 
 .container {
-  background-color: $color-secondary;
+  background-color: $color-tertiary-000;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
 
   .innerContainer {
     max-width: $appWidth;

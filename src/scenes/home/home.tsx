@@ -13,7 +13,7 @@ export function Home() {
     <section id="home" ref={ref} className={styles.container}>
       <div className={styles.innerContainer}>
         <Greeting />
-        <ScrollDown />
+        {/* <ScrollDown /> */}
       </div>
     </section>
   );

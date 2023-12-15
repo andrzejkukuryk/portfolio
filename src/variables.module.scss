@@ -26,6 +26,16 @@ $desktop: 1025px;
 $menuHeight: 82px;
 $carouselMove: 400ms;
 
+@mixin header1 {
+font-family: $font-primary;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+margin: 0;
+
+color: $color-secondary-100;
+}
+
 :export {
   carouselMove: $carouselMove;
   menuHeight: $menuHeight;
