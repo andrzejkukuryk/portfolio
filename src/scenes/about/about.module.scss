@@ -1,7 +1,7 @@
 @import "../../variables.module.scss";
 
 .container {
-  background-color: $color-secondary;
+  background-color: $color-tertiary-000;
   min-height: 100vh;
 
   .innerContainer {
@@ -11,31 +11,51 @@
     flex-direction: column;
     align-items: center;
 
-    h2 {
-      font-family: $font-primary;
-      font-size: 40px;
-      font-weight: 300;
-      color: $color-primary;
-      text-align: center;
-      padding: 20px 0 0 0;
-      margin-top: 0;
-    }
+    .left {
+      h2 {
+        font-family: $font-primary;
+        font-size: 28px;
+        font-weight: 500;
+        color: $color-primary;
+        text-align: center;
+        padding: 20px 0 0 0;
+        margin-top: 0;
+      }
 
-    h3 {
-      color: $color-primary;
-      font-family: $font-primary;
-      font-weight: 400;
-      font-size: 24px;
-      text-align: center;
-    }
+      h3 {
+        color: $color-primary;
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+      }
 
-    .story {
-      font-family: $font-secondary;
-      font-size: 18px;
-      line-height: 1.5;
-      color: $color-primary;
-      margin: 0 10px;
-      max-width: 600px;
+      .story {
+        font-family: $font-secondary;
+        font-size: 18px;
+        line-height: 1.4;
+        color: $color-primary-100;
+        margin: 24px 8px;
+        max-width: 426px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    .innerContainer {
+      .left{
+        h2 {
+          font-family: $font-primary;
+        font-size: 40px;
+        font-weight: 300;
+        color: $color-primary;
+        text-align: center;
+        padding: 20px 0 0 0;
+        margin-top: 0;
+        }
+      }
     }
   }
 }
