@@ -5,7 +5,9 @@ export interface ProjectInfo {
   stack: StackInfo[];
   imgDesktop: string;
   imgMobile?: string;
+  imgPrev: string;
   repositoryUrl: string;
   appUrl: string;
   translationKey: string;
+  shortTranslationKey: string;
 }

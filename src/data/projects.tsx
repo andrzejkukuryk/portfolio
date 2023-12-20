@@ -2,6 +2,7 @@ import { ProjectInfo } from "../models/projects";
 import { StackLabel, stack } from "./stackIcons";
 import pastabookDesktop from "../graph/pastabook_desktop.webp";
 import pastabookMobile from "../graph/pastabook_mobile.webp";
+import pastabookPrev from "../graph/pastabook480.png";
 import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
 import playiteasyMobile from "../graph/playiteasy_mobile.webp";
 import scalesDesktop from "../graph/scales_deskop.webp";
@@ -39,8 +40,10 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/pastabook/",
     repositoryUrl: "https://github.com/andrzejkukuryk/pastabook",
     translationKey: "data_projects_pastabookDescription",
+    shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: pastabookDesktop,
     imgMobile: pastabookMobile,
+    imgPrev: pastabookPrev,
   },
   {
     title: "Chords & Scales",
@@ -48,7 +51,9 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/music-theory/",
     repositoryUrl: "https://github.com/andrzejkukuryk/music-theory",
     translationKey: "data_projects_chordsDescription",
+    shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: scalesDesktop,
+    imgPrev: pastabookPrev,
   },
   {
     title: "Circle of Fifths",
@@ -56,8 +61,10 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/circleoffifths/",
     repositoryUrl: "https://github.com/andrzejkukuryk/circleoffifths",
     translationKey: "data_projects_circleDescription",
+    shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: circleDesktop,
     imgMobile: circleMobile,
+    imgPrev: pastabookPrev,
   },
   {
     title: "Play It Easy",
@@ -65,7 +72,9 @@ export const projects: ProjectInfo[] = [
     appUrl: "https://andrzejkukuryk.github.io/playiteasy/",
     repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
     translationKey: "data_projects_playItEasyDescription",
+    shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: playiteasyDesktop,
     imgMobile: playiteasyMobile,
+    imgPrev: pastabookPrev,
   },
 ];
