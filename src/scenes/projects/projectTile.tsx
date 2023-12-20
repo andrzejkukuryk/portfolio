@@ -10,14 +10,16 @@ interface ProjectTileProps {
 
 export function ProjectTile({ project }: ProjectTileProps) {
   return (
-    <div className={styles.tileContainer}>
-      <TilePhoto imgPrev={project.imgPrev} title={project.title} />
-      <TileDescription
-        title={project.title}
-        description={project.shortTranslationKey}
-        appUrl={project.appUrl}
-        repositoryUrl={project.repositoryUrl}
-      />
+    <div className={styles.outerWrapper}>
+      <div className={styles.tileContainer}>
+        <TilePhoto imgPrev={project.imgPrev} title={project.title} />
+        <TileDescription
+          title={project.title}
+          description={project.shortTranslationKey}
+          appUrl={project.appUrl}
+          repositoryUrl={project.repositoryUrl}
+        />
+      </div>
     </div>
   );
 }
