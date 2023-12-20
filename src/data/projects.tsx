@@ -5,9 +5,12 @@ import pastabookMobile from "../graph/pastabook_mobile.webp";
 import pastabookPrev from "../graph/pastabook480.png";
 import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
 import playiteasyMobile from "../graph/playiteasy_mobile.webp";
+import playiteasyPrev from "../graph/playiteasy480.png";
 import scalesDesktop from "../graph/scales_deskop.webp";
+import scalesPrev from "../graph/scales480.png";
 import circleDesktop from "../graph/circle_desktop.webp";
 import circleMobile from "../graph/circle_mobile.webp";
+import circlePrev from "../graph/circle480.png";
 
 const pastabookStack: StackLabel[] = [
   "React.js",
@@ -53,7 +56,7 @@ export const projects: ProjectInfo[] = [
     translationKey: "data_projects_chordsDescription",
     shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: scalesDesktop,
-    imgPrev: pastabookPrev,
+    imgPrev: scalesPrev,
   },
   {
     title: "Circle of Fifths",
@@ -64,7 +67,7 @@ export const projects: ProjectInfo[] = [
     shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: circleDesktop,
     imgMobile: circleMobile,
-    imgPrev: pastabookPrev,
+    imgPrev: circlePrev,
   },
   {
     title: "Play It Easy",
@@ -75,6 +78,6 @@ export const projects: ProjectInfo[] = [
     shortTranslationKey: "data_projects_pastabookShort",
     imgDesktop: playiteasyDesktop,
     imgMobile: playiteasyMobile,
-    imgPrev: pastabookPrev,
+    imgPrev: playiteasyPrev,
   },
 ];
