@@ -10,6 +10,7 @@
   "data_projects_playItEasyDescription": "Aplikacja umożliwia użytkownikom przeglądanie, filtrowanie, sortowanie i wyszukiwanie w katalogu zawierającym linki do moich filmów na YouTube, partytury i tabulatury gitarowe. \nProjekt ten został stworzony celem zapoznania się z Reduxem. Wykorzystuje Google Firebase REST API do pobierania swojej zawartości.",
   "home_musician": "Muzyk",
   "home_frontend": "Programista frontend i muzyk",
+  "home_hire": "Zatrudnij mnie!",
   "about_about": "O mnie",
   "about_story": "Moją ponad dziesięcioletnią karierę zawodowego muzyka i instruktora gry na gitarze zgodną z wykształceniem wraz z pandemią spotkało istne trzęsienie ziemi. Dodatkowo przyjście syna na świat było impulsem do zmiany ścieżki zawodowej, by móc spędzać z nim czas. Postanowiłem początkowo samodzielnie, a potem pod okiem mentorki zdobywać nowe umiejętności by zostać frontend developerem. Teraz, gdy Kazik poszedł do przedszkola jestem gotowy na nowe wyzwania, a moje potrzeby wykonywania kreatywnych zadań i spotykania nowych ludzi są niezaspokojone jak nigdy wcześniej.",
   "about_stack": "Języki i frameworki",
