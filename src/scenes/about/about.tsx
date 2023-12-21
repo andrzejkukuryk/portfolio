@@ -14,11 +14,14 @@ export function About() {
 
   return (
     <section ref={ref} id="about" className={styles.container}>
+      <h2>{t("about_about")}</h2>
       <div className={styles.innerContainer}>
-        <h2>{t("about_about")}</h2>
-        <p className={styles.story}>{t("about_story")}</p>
+        <div className={styles.storyAndLinks}>
+          <p className={styles.story}>{t("about_story_p1")}</p>
+          <p className={styles.story}>{t("about_story_p2")}</p>
+          <PersonalLinks />
+        </div>
         <StackList />
-        <PersonalLinks />
       </div>
     </section>
   );

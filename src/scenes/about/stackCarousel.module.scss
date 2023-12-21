@@ -56,3 +56,11 @@
         width: 630px;
     }
 }
+
+@media screen and (min-width: $desktop) {
+    .container{
+        margin: 0 48px;
+    .innerContainer{
+        width: 450px;
+    }}
+}

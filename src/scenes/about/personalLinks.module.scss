@@ -10,16 +10,31 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 24px;
     justify-content: center;
   }
 }
 
-@media screen and (min-width: $laptop) {
-  .container {
-    display: block;
+@media screen and (min-width: $tablet) {
+  .container{
+    .linksContainer{
+      gap: 48px;
+    }
   }
+}
 
-  .linksContainer {
-    justify-content: flex-start;
+@media screen and (min-width: $laptop) {
+  .container{
+    .linksContainer{
+      gap: 64px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container{
+    .linksContainer{
+      gap: 48px;
+    }
   }
 }
