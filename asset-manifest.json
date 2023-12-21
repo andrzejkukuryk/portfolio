@@ -1,16 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.61fed850.css",
-    "main.js": "/portfolio/static/js/main.b12bbb1e.js",
+    "main.css": "/portfolio/static/css/main.f005f175.css",
+    "main.js": "/portfolio/static/js/main.532c80b9.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pastabook_desktop.webp": "/portfolio/static/media/pastabook_desktop.904b0771e4a79bd9a56d.webp",
-    "static/media/pastabook480.png": "/portfolio/static/media/pastabook480.ccefce460c2368005358.png",
     "static/media/pastabook_mobile.webp": "/portfolio/static/media/pastabook_mobile.5227cd9abfc530bcccfc.webp",
-    "static/media/circle480.png": "/portfolio/static/media/circle480.f60e1f21f3e4e6a23362.png",
     "static/media/circle_desktop.webp": "/portfolio/static/media/circle_desktop.c34f91c583ac014e2d5b.webp",
     "static/media/foto300px.webp": "/portfolio/static/media/foto300px.3badbd338066ba1d3c0b.webp",
-    "static/media/playiteasy480.png": "/portfolio/static/media/playiteasy480.804bf7d284c1c2701eda.png",
-    "static/media/scales480.png": "/portfolio/static/media/scales480.19aa8b0c533ce243b38c.png",
     "static/media/playiteasy_mobile.webp": "/portfolio/static/media/playiteasy_mobile.473dc39a7e07b81ba427.webp",
     "static/media/playiteasy_desktop.webp": "/portfolio/static/media/playiteasy_desktop.c102dc8fa9f75f6dbf9f.webp",
     "static/media/scales_deskop.webp": "/portfolio/static/media/scales_deskop.3588557669dfd0b5cf6e.webp",
@@ -25,6 +21,7 @@
     "index.html": "/portfolio/index.html",
     "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.dd07f21c600b6d06e4d6430eea752cc6.svg",
     "static/media/typescript.svg": "/portfolio/static/media/typescript.c37abf05ddd51342050abcfbbee0eb21.svg",
+    "static/media/arrowDown.svg": "/portfolio/static/media/arrowDown.a6b12d9bf3c325d20e516557f3e13e19.svg",
     "static/media/javascript.svg": "/portfolio/static/media/javascript.48bc6049ce6068b618a46ad96d3b0e3b.svg",
     "static/media/css.svg": "/portfolio/static/media/css.2a2e9aca31744834b61dbb814c1d8c40.svg",
     "static/media/closeMenu.svg": "/portfolio/static/media/closeMenu.43869a777646ed670da460c3c65c74aa.svg",
@@ -33,12 +30,12 @@
     "static/media/menu.svg": "/portfolio/static/media/menu.f7eb4f0788af03d53fba6a2fb3d1a36a.svg",
     "static/media/mui.svg": "/portfolio/static/media/mui.3af953009239bfe3daeff73047359f3e.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.1bfe161594d9874cff2689932805f0c9.svg",
-    "main.61fed850.css.map": "/portfolio/static/css/main.61fed850.css.map",
-    "main.b12bbb1e.js.map": "/portfolio/static/js/main.b12bbb1e.js.map",
+    "main.f005f175.css.map": "/portfolio/static/css/main.f005f175.css.map",
+    "main.532c80b9.js.map": "/portfolio/static/js/main.532c80b9.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61fed850.css",
-    "static/js/main.b12bbb1e.js"
+    "static/css/main.f005f175.css",
+    "static/js/main.532c80b9.js"
   ]
 }
