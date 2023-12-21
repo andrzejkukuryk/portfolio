@@ -12,6 +12,7 @@
     cursor: pointer;
     filter: none;
     transition: filter, 0.1s;
+    perspective: 2000px;
   }
 
   .tileContainer:hover {
@@ -24,7 +25,6 @@
     .tileContainer {
       max-width: 600px;
       padding: 16px;
-    //   margin: 0 auto;
       border-radius: 16px;
     }
   }
@@ -45,7 +45,6 @@
         gap: 64px;
         max-width: none;
         width: 952px;
-        // margin: 64px auto;
       }
 
       .evenTile {
