@@ -25,43 +25,48 @@
 
   .formMessage {
     @include flexColumn;
-    margin: 0 0 10px 0;
+    margin: 24px 0 0 0;
 
     .inputCell {
       @include backgroundAndBorder;
-      border-radius: 0;
+      border-radius: 4px;
     outline: none;
       width: 300px;
-      margin-top: 5px;
+      margin-top: 4px;
       box-sizing: border-box;
       height: 141px;
-      padding: 10px 3px 3px 20px;
+      padding: 16px 4px 4px 24px;
       resize: none;
     }
 
     .inputCell:focus {
-      border-radius: none;
-      border: solid 2px $color-tertiary;
+      border: solid 1px $color-tertiary;
+      filter: drop-shadow(0px 1px 1px rgba(82, 89, 115, 0.6));
     }
   }
 
   .submitButton {
     @include backgroundAndBorder;
-    border-radius: 24px;
-    margin-top: 30px;
-    height: 47px;
+    border-radius: 4px;
+    margin-top: 32px;
+    height: 48px;
     width: 150px;
     font-family: $font-secondary;
     font-size: 20px;
     color: $color-primary;
-    float: left;
+    float: right;
     cursor: pointer;
+    filter: drop-shadow(0px 1px 1px rgba(82, 89, 115, 0.6));
     transition: all 0.5s;
   }
   .submitButton:hover {
     background-color: $color-primary;
     border: solid 1px $color-tertiary;
     color: $color-secondary;
+  }
+
+  .submitButton:active{
+    filter: none;
   }
 
   .sendInfo {
@@ -83,16 +88,39 @@
 
 @media screen and (min-width: $laptop) {
   .formContainer {
-    margin: 60px 0;
+    margin: 64px 24px;
 
     .formLine {
       flex-direction: row;
-      gap: 30px;
-      margin: 0 0 20px 0;
+      gap: 48px;
+      margin: 0 0 24px 0;
+    }
+    .formMessage {
+      margin: 0;
+      .inputCell {
+        width: 720px;
+      }
+    }
+
+    .submitButton {
+      float: right;
+    }
+  }
+}
+
+
+@media screen and (min-width: $desktop) {
+  .formContainer {
+    margin: 64px 32px;
+
+    .formLine {
+      flex-direction: row;
+      gap: 48px;
+      margin: 0 0 24px 0;
     }
     .formMessage {
       .inputCell {
-        width: 680px;
+        width: 756px;
       }
     }
 

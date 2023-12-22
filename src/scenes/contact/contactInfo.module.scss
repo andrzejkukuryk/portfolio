@@ -8,7 +8,11 @@
 
   .infoDiv {
     text-align: center;
+    h3 {
+      font-family: $font-secondary;
+    }
     p {
+      font-family: $font-primary;
       font-size: 20px;
       color: $color-primary;
     }
@@ -19,9 +23,23 @@
   .container {
     flex-direction: row;
     justify-content: space-between;
+    width: 768px;
 
     .infoDiv {
-        margin: 0 30px;
+      margin: 0 24px;
+
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    width: auto;
+    .infoDiv {
+      margin: 0 32px;
     }
   }
 }

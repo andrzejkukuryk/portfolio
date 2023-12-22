@@ -3,6 +3,10 @@
 .container {
   background-color: $color-secondary;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 0;
 
   .innerContainer {
     max-width: $appWidth;
