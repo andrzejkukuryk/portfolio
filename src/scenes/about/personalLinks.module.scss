@@ -33,8 +33,11 @@
 
 @media screen and (min-width: $desktop) {
   .container{
+    margin: 64px 0 64px 16px;
     .linksContainer{
       gap: 48px;
+      width: 100%;
+      justify-content: flex-start;
     }
   }
 }
