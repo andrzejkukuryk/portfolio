@@ -3,6 +3,17 @@
 .container {
   background-color: $color-secondary;
   min-height: 100vh;
+  padding-bottom: 64px;
+
+  h2 {
+    font-family: $font-primary;
+    font-size: 40px;
+    font-weight: 300;
+    color: $color-primary;
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin-top: 0;
+  }
 
   .innerContainer {
     max-width: $appWidth;
@@ -11,14 +22,17 @@
     flex-direction: column;
     align-items: center;
 
-    h2 {
-      font-family: $font-primary;
-      font-size: 40px;
-      font-weight: 300;
-      color: $color-primary;
-      text-align: center;
-      padding: 20px 0 0 0;
-      margin-top: 0;
+    .storyAndLinks {
+      margin: 0;
+
+      .story {
+        font-family: $font-secondary;
+        font-size: 18px;
+        line-height: 1.5;
+        color: $color-primary;
+        margin: 32px 16px;
+        max-width: 600px;
+      }
     }
 
     h3 {
@@ -28,14 +42,23 @@
       font-size: 24px;
       text-align: center;
     }
+  }
+}
 
-    .story {
-      font-family: $font-secondary;
-      font-size: 18px;
-      line-height: 1.5;
-      color: $color-primary;
-      margin: 0 10px;
-      max-width: 600px;
+@media screen and (min-width: $desktop) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 64px;
+
+    .innerContainer {
+      flex-direction: row;
+      .storyAndLinks {
+        margin: 0 48px;
+        max-width: 500px;
+      }
     }
   }
 }

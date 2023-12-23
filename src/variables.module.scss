@@ -1,7 +1,10 @@
 $color-primary: #525973;
 $color-secondary: #ececec;
+$color-secondary-dark: #E0E0E0;
+$color-secondary-darker: #D6D6D6;
 $color-tertiary: #00223e;
-$color-quaternary: #4297b0;
+$color-tertiary-dark: #001629;
+$color-quaternary: #E4572E;
 
 $font-primary: 'Young Serif', serif;
 $font-secondary: "Sen", sans-serif;
@@ -11,7 +14,7 @@ $tablet: 426px;
 $laptop: 769px;
 $desktop: 1025px;
 
-$menuHeight: 90px;
+$menuHeight: 80px;
 $carouselMove: 400ms;
 
 :export {
