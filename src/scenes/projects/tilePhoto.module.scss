@@ -1,0 +1,30 @@
+@import "../../variables.module.scss";
+
+.photo {
+    max-width: 401px;
+    height: auto;
+    // filter: drop-shadow(0px 1px 1px rgba(82, 89, 115, 0.6));
+    filter: brightness(0.9) contrast(1.1);
+    transform: rotateY(10deg) rotateX(5deg);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid $color-primary;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.photo:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), transparent 70%);
+    transform: rotate(-5deg);
+  }
+
+@media screen and (min-width: $tablet) {
+    .photo {
+        max-width: 600px;
+    }
+    
+}

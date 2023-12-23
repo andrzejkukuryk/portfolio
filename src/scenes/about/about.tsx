@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./about.module.scss";
 import { useNavContext } from "../../data/navProvider";
 import { usePosition } from "../../hooks/usePosition";
-import { story } from "../../data/about";
 import { PersonalLinks } from "./personalLinks";
 import { StackList } from "./stackList";
 import { useTranslation } from "react-i18next";

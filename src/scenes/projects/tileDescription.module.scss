@@ -1,0 +1,43 @@
+@import "../../variables.module.scss";
+
+.descriptionContainer {
+  .tileHeader {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  p {
+    color: $color-primary;
+    font-family: $font-secondary;
+    font-size: 16px;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 16px 0;
+    cursor: auto;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .descriptionContainer {
+    .tileHeader {
+      text-align: left;
+      margin-top: 0;
+    }
+
+    p {
+      padding-right: 32px;
+    }
+
+    .buttonsContainer {
+      justify-content: flex-start;
+      gap: 32px;
+    }
+  }
+}

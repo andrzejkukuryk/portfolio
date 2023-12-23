@@ -1,0 +1,33 @@
+@import "../../variables.module.scss";
+
+.tileBtn {
+background-color: $color-secondary-dark;
+color: $color-primary;
+font-family: $font-secondary;
+font-size: 16px;
+padding: 8px 16px;
+outline: none;
+border: solid 1px $color-primary;
+border-radius: 4px;
+cursor: pointer;
+filter: drop-shadow(0px 1px 1px rgba(82, 89, 115, 0.6));
+transition: background-color 0.3s;
+}
+
+.tileBtn:hover {
+    background-color: $color-secondary-darker;
+}
+
+.tileBtn:active {
+    filter: none;
+}
+
+.dark {
+    background-color: $color-tertiary;
+    color: $color-secondary;
+
+}
+
+.dark:hover {
+    background-color: $color-tertiary-dark;
+}
