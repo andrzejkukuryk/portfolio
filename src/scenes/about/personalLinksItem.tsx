@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./item.module.scss";
+import styles from "./personalLinksItem.module.scss";
 import { PersonalLinksInfo } from "../../data/personalLinks";
 import { useTranslation } from "react-i18next";
 

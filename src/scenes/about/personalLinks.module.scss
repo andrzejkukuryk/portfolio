@@ -4,22 +4,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0;
+  margin: 64px 0;
 
   .linksContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 24px;
     justify-content: center;
   }
 }
 
-@media screen and (min-width: $laptop) {
-  .container {
-    display: block;
+@media screen and (min-width: $tablet) {
+  .container{
+    .linksContainer{
+      gap: 48px;
+    }
   }
+}
 
-  .linksContainer {
-    justify-content: flex-start;
+@media screen and (min-width: $laptop) {
+  .container{
+    .linksContainer{
+      gap: 64px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container{
+    margin: 64px 0 64px 16px;
+    .linksContainer{
+      gap: 48px;
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 }

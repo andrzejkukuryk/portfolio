@@ -6,7 +6,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
-    margin: 0 auto;
+    margin: 0 auto 64px;
 }
 
 .innerContainer {
@@ -55,4 +55,12 @@
     .innerContainer{
         width: 630px;
     }
+}
+
+@media screen and (min-width: $desktop) {
+    .container{
+        margin: 0 48px;
+    .innerContainer{
+        width: 450px;
+    }}
 }
