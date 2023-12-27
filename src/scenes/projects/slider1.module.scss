@@ -1,0 +1,40 @@
+@import "../../variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  perspective: 2000px;
+
+  .screenDesktop {
+    width: 80vw;
+    height: auto;
+    margin: 48px 4px 16px 16px;
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .screenDesktop:before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.2),
+      transparent 70%
+    );
+    transform: rotate(-5deg);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    .screenDesktop {
+      width: 75vw;
+      margin: 48px 4px 16px 40px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  margin: 24px 16px;
+  color: $color-primary;
+  font-family: $font-secondary;
+}
+
+.stackIcon {
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}

@@ -14,13 +14,15 @@
 
   .closeIcon {
     cursor: pointer;
-    margin: 20px;
+    margin-left: 20px;
+    color: $color-primary;
+    transform: translateY(-64px);
   }
 
   .frame {
-    border: solid 1px red;
-    height: 300px;
-    margin: 0px 0 0px 20px;
+    height: auto;
+    margin: 0px 0 0px 4px;
     overflow: hidden;
+    transform: translateY(-64px);
   }
 }
