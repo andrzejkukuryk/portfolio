@@ -4,6 +4,7 @@ import { ReactComponent as CloseCard } from "../../assets/closeMenu.svg";
 import styles from "./projectCard.module.scss";
 
 import { useTranslation } from "react-i18next";
+import { CardContent } from "./cardContent";
 
 interface ProjectCardProps {
   project: ProjectInfo;
@@ -42,7 +43,9 @@ export function ProjectCard({
   return (
     <div className={styles.container}>
       <CloseCard onClick={handleClickClose} className={styles.closeIcon} />
-      <div className={styles.frame}></div>
+      <div className={styles.frame}>
+        <CardContent project={project} />
+      </div>
     </div>
   );
 }
