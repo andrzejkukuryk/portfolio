@@ -34,7 +34,8 @@
     margin: 0 0 0 4px;
     overflow: hidden;
     transform: translateY(-64px);
-    transition: transform 0.3s;
+    transition: margin 0.5s;
+    transition-timing-function: ease-in;
   }
 
   .slider2 {

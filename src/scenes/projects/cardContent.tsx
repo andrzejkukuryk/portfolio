@@ -9,7 +9,6 @@ interface CardContentProps {
 }
 
 export function CardContent({ project }: CardContentProps) {
-  const [slideNumber, setSlideNumber] = useState(1);
   const imgMobile1 = project.imgMobile ? project.imgMobile[0] : "";
 
   const backgroundClass = classNames([styles.contentContainer], {
@@ -17,7 +16,6 @@ export function CardContent({ project }: CardContentProps) {
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
     [styles.backgroundMusicTheory]: project.title === "Chords & Scales",
     [styles.backgroundCircle]: project.title === "Circle of Fifths",
-    [styles.slider2]: slideNumber === 2,
   });
   return (
     <div className={backgroundClass}>
