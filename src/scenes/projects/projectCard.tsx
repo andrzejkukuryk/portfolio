@@ -1,35 +1,43 @@
-import React, { useState } from "react";
-import styles from "./projectCard.module.scss";
+import React, { useEffect } from "react";
 import { ProjectInfo } from "../../models/projects";
-import { ProjectDescription } from "./projectDescription";
-import { Mockup } from "./mockup";
+import { ReactComponent as CloseCard } from "../../assets/closeMenu.svg";
+import styles from "./projectCard.module.scss";
+
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   project: ProjectInfo;
+  showProjectCard: boolean;
+  setShowProjectCard: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
-  const [showInfo, setShowInfo] = useState(false);
+export function ProjectCard({
+  project,
+  showProjectCard,
+  setShowProjectCard,
+}: ProjectCardProps) {
+  const { t } = useTranslation();
 
-  const handleClickInfo = () => {
-    setShowInfo(true);
+  const lockScroll = () => {
+    document.body.style.overflow = "hidden";
   };
 
-  return (
-    <div className={styles.container}>
-      <Mockup
-        project={project}
-        showInfo={showInfo}
-        handleClickInfo={handleClickInfo}
-      />
+  const unlockScroll = () => {
+    document.body.style.overflow = "auto";
+  };
 
-      {showInfo && (
-        <ProjectDescription
-          project={project}
-          showInfo={showInfo}
-          setShowInfo={setShowInfo}
-        />
-      )}
-    </div>
-  );
+  useEffect(() => {
+    if (showProjectCard) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [showProjectCard]);
+
+  const handleClickClose = () => {
+    setShowProjectCard(false);
+    unlockScroll();
+  };
+
+  return <div className={styles.container}></div>;
 }

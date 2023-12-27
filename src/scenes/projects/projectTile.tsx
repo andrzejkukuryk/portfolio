@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./projectTile.module.scss";
 import { ProjectInfo } from "../../models/projects";
 import { TilePhoto } from "./tilePhoto";
@@ -11,6 +11,7 @@ interface ProjectTileProps {
 }
 
 export function ProjectTile({ project, even }: ProjectTileProps) {
+  const [showProjectCard, setShowProjectCard] = useState(false);
   const containerClass = classNames([styles.tileContainer], {
     [styles.evenTile]: even,
   });
