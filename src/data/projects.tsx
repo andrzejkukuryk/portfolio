@@ -1,7 +1,9 @@
 import { ProjectInfo } from "../models/projects";
 import { StackLabel, stack } from "./stackIcons";
-import pastabookDesktop from "../graph/pastabook_desktop.webp";
-import pastabookMobile from "../graph/pastabook_mobile.webp";
+import pastabookDesktop1 from "../graph/pastabook_desktop_1.png";
+import pastabookDesktop2 from "../graph/pastabook_desktop_2.png";
+import pastabookMobile1 from "../graph/pastabook_mobile_1.png";
+import pastabookMobile2 from "../graph/pastabook_mobile_2.png";
 import pastabookPrev from "../graph/pastabook480.png";
 import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
 import playiteasyMobile from "../graph/playiteasy_mobile.webp";
@@ -44,8 +46,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/pastabook",
     translationKey: "data_projects_pastabookDescription",
     shortTranslationKey: "data_projects_pastabookShort",
-    imgDesktop: pastabookDesktop,
-    imgMobile: pastabookMobile,
+    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
+    imgMobile: [pastabookMobile1, pastabookMobile2],
     imgPrev: pastabookPrev,
   },
   {
@@ -55,7 +57,7 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/music-theory",
     translationKey: "data_projects_chordsDescription",
     shortTranslationKey: "data_projects_chordsShort",
-    imgDesktop: scalesDesktop,
+    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
     imgPrev: scalesPrev,
   },
   {
@@ -65,8 +67,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/circleoffifths",
     translationKey: "data_projects_circleDescription",
     shortTranslationKey: "data_projects_circleShort",
-    imgDesktop: circleDesktop,
-    imgMobile: circleMobile,
+    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
+    imgMobile: [pastabookMobile1, pastabookMobile2],
     imgPrev: circlePrev,
   },
   {
@@ -76,8 +78,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
     translationKey: "data_projects_playItEasyDescription",
     shortTranslationKey: "data_projects_playiteasyShort",
-    imgDesktop: playiteasyDesktop,
-    imgMobile: playiteasyMobile,
+    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
+    imgMobile: [pastabookMobile1, pastabookMobile2],
     imgPrev: playiteasyPrev,
   },
 ];
