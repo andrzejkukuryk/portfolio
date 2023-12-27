@@ -39,5 +39,10 @@ export function ProjectCard({
     unlockScroll();
   };
 
-  return <div className={styles.container}></div>;
+  return (
+    <div className={styles.container}>
+      <CloseCard onClick={handleClickClose} className={styles.closeIcon} />
+      <div className={styles.frame}></div>
+    </div>
+  );
 }
