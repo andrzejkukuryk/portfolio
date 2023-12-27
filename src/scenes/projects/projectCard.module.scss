@@ -19,10 +19,25 @@
     transform: translateY(-64px);
   }
 
+  .slideRight {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 40%;
+    width: 48px;
+    color: $color-primary;
+    cursor: pointer;
+  }
+
   .frame {
     height: auto;
-    margin: 0px 0 0px 4px;
+    margin: 0 0 0 4px;
     overflow: hidden;
     transform: translateY(-64px);
+    transition: transform 0.3s;
+  }
+
+  .slider2 {
+    margin: 0 0 0 -100vw ;
   }
 }

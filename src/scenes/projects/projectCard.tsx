@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { ProjectInfo } from "../../models/projects";
 import { ReactComponent as CloseCard } from "../../assets/closeMenu.svg";
+import { ReactComponent as SlideRight } from "../../assets/arrowRight.svg";
 import styles from "./projectCard.module.scss";
 
 import { useTranslation } from "react-i18next";
@@ -43,6 +44,7 @@ export function ProjectCard({
   return (
     <div className={styles.container}>
       <CloseCard onClick={handleClickClose} className={styles.closeIcon} />
+      <SlideRight className={styles.slideRight} />
       <div className={styles.frame}>
         <CardContent project={project} />
       </div>
