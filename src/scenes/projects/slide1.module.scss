@@ -1,5 +1,20 @@
 @import "../../variables.module.scss";
 
+@mixin screenBefore {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+  transform: rotate(-5deg);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -18,18 +33,16 @@
   }
 
   .screenDesktop:before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    width: 80%;
-    height: 80%;
-    background: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.2),
-      transparent 70%
-    );
-    transform: rotate(-5deg);
+    @include screenBefore;
+  }
+
+  .screenMobile {
+    display: none;
+  }
+
+  .showHideStack {
+    display: block;
+    margin: 0;
   }
 }
 
@@ -38,6 +51,42 @@
     .screenDesktop {
       width: 75vw;
       margin: 48px 4px 16px 40px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .screenDesktop {
+      width: 70vw;
+      max-width: 800px;
+    }
+
+    .screenMobile {
+      display: block;
+      width: 20vw;
+      max-width: 250px;
+      height: auto;
+      transform: rotateY(3deg) rotateX(1deg);
+      filter: brightness(0.9) contrast(1.1);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      margin: 128px 24px 16px -40px;
+    }
+    .showHideStack {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    .screenMobile {
+      margin: 140px 24px 16px 32px;
     }
   }
 }

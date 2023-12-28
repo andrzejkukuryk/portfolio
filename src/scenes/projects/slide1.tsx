@@ -23,7 +23,14 @@ export function Slide1({
         className={styles.screenDesktop}
         alt={`${title} desktop screen`}
       />
-      <ProjectStack stack={stack} />
+      <img
+        src={screenMobile}
+        className={styles.screenMobile}
+        alt={`${title} mobile screen`}
+      />
+      <div className={styles.showHideStack}>
+        <ProjectStack stack={stack} />
+      </div>
     </div>
   );
 }
