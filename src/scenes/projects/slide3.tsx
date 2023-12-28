@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./slide3.module.scss";
+import { TileButton } from "./tileButton";
+import { useTranslation } from "react-i18next";
+import { ButtonsContainer } from "./buttonsContainer";
 
 interface Slide3Props {
   screenDesktop: string;
@@ -23,6 +26,9 @@ export function Slide3({
         className={styles.screenDesktop}
         alt={`${title} desktop screen`}
       />
+      <div className={styles.positionSetter}>
+        <ButtonsContainer repositoryUrl={repositoryUrl} appUrl={appUrl} />
+      </div>
     </div>
   );
 }
