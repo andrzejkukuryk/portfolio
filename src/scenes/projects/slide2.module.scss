@@ -1,0 +1,68 @@
+@import "../../variables.module.scss";
+
+@mixin screenMobile {
+  width: 28vw;
+  height: auto;
+  margin: 16px 0;
+  filter: brightness(0.9) contrast(1.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@mixin screenMobileBefore {
+    content: "";
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      width: 80%;
+      height: 80%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        transparent 70%
+      );
+      transform: rotate(-5deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+
+  .screensContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15vw;
+    perspective: 2000px;
+
+    .screenMobile1 {
+      @include screenMobile;
+      transform: rotateY(5deg) rotateX(2deg);
+    }
+
+    .screenMobile1:before {
+      @include screenMobileBefore;
+    }
+
+    .screenMobile2 {
+      @include screenMobile;
+      transform: rotateY(-5deg) rotateX(-2deg);
+    }
+
+    .screenMobile2:before {
+      @include screenMobileBefore;
+    }
+  }
+
+  .paragraph {
+    font-family: $font-secondary;
+    color: $color-primary;
+    margin: 16px 16px;
+  }
+
+  .narrow {
+    margin: 24px 40px;
+  }
+}

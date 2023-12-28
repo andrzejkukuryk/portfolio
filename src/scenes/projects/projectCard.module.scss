@@ -1,8 +1,17 @@
 @import "../../variables.module.scss";
 
+@mixin arrow {
+  position: absolute;
+    z-index: 2;
+    top: 40%;
+    width: 48px;
+    color: $color-primary;
+    cursor: pointer;
+}
+
 .container {
   position: fixed;
-  top: $menuHeight;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -16,29 +25,31 @@
     cursor: pointer;
     margin-left: 20px;
     color: $color-primary;
-    transform: translateY(-64px);
+  }
+
+  .slideLeft {
+    @include arrow;
+    transform: rotate(180deg);
   }
 
   .slideRight {
-    position: absolute;
-    z-index: 2;
+    @include arrow;
     right: 0;
-    top: 40%;
-    width: 48px;
-    color: $color-primary;
-    cursor: pointer;
   }
 
   .frame {
     height: auto;
     margin: 0 0 0 4px;
     overflow: hidden;
-    transform: translateY(-64px);
-    transition: margin 0.5s;
+    transition: margin 0.4s;
     transition-timing-function: ease-in;
   }
 
-  .slider2 {
+  .slide2 {
     margin: 0 0 0 -100vw ;
+  }
+
+  .slide3 {
+    margin: 0 0 0 -200vw ;
   }
 }

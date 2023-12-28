@@ -1,21 +1,21 @@
 import React from "react";
-import styles from "./slider1.module.scss";
-import { StackInfo } from "../../data/stackIcons";
-import { ProjectStack } from "./projectStack";
+import styles from "./slide3.module.scss";
 
-interface Slider1Props {
+interface Slide3Props {
   screenDesktop: string;
   screenMobile?: string;
-  stack: StackInfo[];
+  repositoryUrl: string;
+  appUrl: string;
   title: string;
 }
 
-export function Slider1({
+export function Slide3({
   screenDesktop,
   screenMobile,
-  stack,
+  repositoryUrl,
+  appUrl,
   title,
-}: Slider1Props) {
+}: Slide3Props) {
   return (
     <div className={styles.container}>
       <img
@@ -23,7 +23,6 @@ export function Slider1({
         className={styles.screenDesktop}
         alt={`${title} desktop screen`}
       />
-      <ProjectStack stack={stack} />
     </div>
   );
 }

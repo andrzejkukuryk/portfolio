@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styles from "./cardContent.module.scss";
 import { ProjectInfo } from "../../models/projects";
 import classNames from "classnames";
-import { Slider1 } from "./slider1";
+import { Slide1 } from "./slide1";
+import { Slide2 } from "./slide2";
+import { Slide3 } from "./slide3";
 
 interface CardContentProps {
   project: ProjectInfo;
@@ -10,6 +12,8 @@ interface CardContentProps {
 
 export function CardContent({ project }: CardContentProps) {
   const imgMobile1 = project.imgMobile ? project.imgMobile[0] : "";
+  const imgMobile2 = project.imgMobile ? project.imgMobile[1] : "";
+  const screensMobile = project.imgMobile ? project.imgMobile : undefined;
 
   const backgroundClass = classNames([styles.contentContainer], {
     [styles.backgroundPastabook]: project.title === "Pastabook",
@@ -19,10 +23,23 @@ export function CardContent({ project }: CardContentProps) {
   });
   return (
     <div className={backgroundClass}>
-      <Slider1
+      <Slide1
         screenDesktop={project.imgDesktop[0]}
         screenMobile={imgMobile1}
         stack={project.stack}
+        title={project.title}
+      />
+      <Slide2
+        screensMobile={screensMobile}
+        description={project.translationKey}
+        stack={project.stack}
+        title={project.title}
+      />
+      <Slide3
+        screenDesktop={project.imgDesktop[1]}
+        screenMobile={imgMobile2}
+        repositoryUrl={project.repositoryUrl}
+        appUrl={project.repositoryUrl}
         title={project.title}
       />
     </div>

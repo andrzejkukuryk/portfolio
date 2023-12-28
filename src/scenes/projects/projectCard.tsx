@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ProjectInfo } from "../../models/projects";
 import { ReactComponent as CloseCard } from "../../assets/closeMenu.svg";
-import { ReactComponent as SlideRight } from "../../assets/arrowRight.svg";
+import { ReactComponent as Arrow } from "../../assets/arrowRight.svg";
 import styles from "./projectCard.module.scss";
 
 import { useTranslation } from "react-i18next";
@@ -51,20 +51,27 @@ export function ProjectCard({
     }
   };
 
-  useEffect(() => console.log(slideNumber), [slideNumber]);
+  const decreaseSlideNumber = () => {
+    if (slideNumber > 1) {
+      setSlideNumber(slideNumber - 1);
+    } else {
+      return;
+    }
+  };
 
   const frameClass = classNames([styles.frame], {
-    [styles.slider2]: slideNumber === 2,
+    [styles.slide2]: slideNumber === 2,
+    [styles.slide3]: slideNumber === 3,
   });
 
   return (
     <div className={styles.container}>
       <CloseCard onClick={handleClickClose} className={styles.closeIcon} />
+      {slideNumber > 1 && (
+        <Arrow className={styles.slideLeft} onClick={decreaseSlideNumber} />
+      )}
       {slideNumber < 3 && (
-        <SlideRight
-          className={styles.slideRight}
-          onClick={increaseSlideNumber}
-        />
+        <Arrow className={styles.slideRight} onClick={increaseSlideNumber} />
       )}
       <div className={frameClass}>
         <CardContent project={project} />
