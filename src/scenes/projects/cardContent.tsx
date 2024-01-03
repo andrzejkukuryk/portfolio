@@ -33,6 +33,8 @@ export function CardContent({ project }: CardContentProps) {
         screensMobile={screensMobile}
         description={project.translationKey}
         stack={project.stack}
+        appUrl={project.appUrl}
+        repositoryUrl={project.repositoryUrl}
         title={project.title}
       />
       <Slide3

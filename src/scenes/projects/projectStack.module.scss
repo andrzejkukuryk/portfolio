@@ -17,3 +17,9 @@
   height: 30px;
   margin: 0 4px;
 }
+
+@media screen and (min-width: $laptop) {
+  .container{
+    width: auto;
+  }
+}

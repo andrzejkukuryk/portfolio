@@ -3,11 +3,15 @@ import styles from "./slide2.module.scss";
 import { StackInfo } from "../../data/stackIcons";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
+import { ProjectStack } from "./projectStack";
+import { ButtonsContainer } from "./buttonsContainer";
 
 interface Slide2Props {
   screensMobile?: string[];
   description: string;
   stack: StackInfo[];
+  appUrl: string;
+  repositoryUrl: string;
   title: string;
 }
 
@@ -15,6 +19,8 @@ export function Slide2({
   screensMobile,
   description,
   stack,
+  appUrl,
+  repositoryUrl,
   title,
 }: Slide2Props) {
   const { t } = useTranslation();
@@ -56,6 +62,12 @@ export function Slide2({
         </div>
       )}
       {descriptionParagraphs()}
+      <div className={styles.showHideStack}>
+        <ProjectStack stack={stack} />
+      </div>
+      <div className={styles.showHideButtons}>
+        <ButtonsContainer appUrl={appUrl} repositoryUrl={repositoryUrl} />
+      </div>
     </div>
   );
 }
