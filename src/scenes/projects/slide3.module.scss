@@ -12,13 +12,17 @@
     width: 80vw;
     height: auto;
     margin: 48px 16px 16px 4px;
-    transform: rotateY(-10deg) rotateX(-5deg);
+    transform: rotateY(-5deg) rotateX(-2deg);
     filter: brightness(0.9) contrast(1.1);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   }
 
-  .positionSetter {
+  .screenMobile {
+    display: none;
+  }
+
+  .showHideButtons {
     width: 90vw;
   }
 }
@@ -28,6 +32,44 @@
   .container{
     .screenDesktop{
       margin: 48px 32px 16px 4px;
+    }
+  }
+}
+
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .screenDesktop {
+      width: 70vw;
+      max-width: 800px;
+      margin: 48px 16px 16px 24px;
+    }
+
+    .screenMobile {
+      display: block;
+      width: 20vw;
+      max-width: 250px;
+      height: auto;
+      transform: rotateY(-3deg) rotateX(-1deg);
+      filter: brightness(0.9) contrast(1.1);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      margin: 128px 24px 16px -40px;
+    }
+    .showHideButtons {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    .screenMobile {
+      margin: 140px 24px 16px 32px;
     }
   }
 }

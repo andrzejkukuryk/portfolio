@@ -26,7 +26,12 @@ export function Slide3({
         className={styles.screenDesktop}
         alt={`${title} desktop screen`}
       />
-      <div className={styles.positionSetter}>
+      <img
+        src={screenMobile}
+        className={styles.screenMobile}
+        alt={`${title} mobile screen`}
+      />
+      <div className={styles.showHideButtons}>
         <ButtonsContainer repositoryUrl={repositoryUrl} appUrl={appUrl} />
       </div>
     </div>

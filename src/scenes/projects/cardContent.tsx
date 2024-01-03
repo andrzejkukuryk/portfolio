@@ -41,7 +41,7 @@ export function CardContent({ project }: CardContentProps) {
         screenDesktop={project.imgDesktop[1]}
         screenMobile={imgMobile2}
         repositoryUrl={project.repositoryUrl}
-        appUrl={project.repositoryUrl}
+        appUrl={project.appUrl}
         title={project.title}
       />
     </div>

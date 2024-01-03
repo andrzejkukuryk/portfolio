@@ -86,6 +86,7 @@
     }
     .paragraph {
       flex-basis: 30%;
+      line-height: 1.4;
     }
     .paragraph:nth-of-type(1){
       order: 0;
@@ -101,6 +102,7 @@
       display: block;
       flex-basis: 40%;
       order: 1;
+      font-size: 18px;
     }
     .showHideButtons {
       display: block;
@@ -112,8 +114,13 @@
 
 @media screen and (min-width: $desktop) {
   .container{
+    .paragraph {
+      line-height: 1.7;
+      font-size: 18px;
+    }
     .showHideStack {
       flex-basis: 30%;
+      font-size: 20px;
     }
   }
 }

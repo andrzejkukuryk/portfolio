@@ -27,7 +27,6 @@ export function ButtonsContainer({
       <TileButton
         handleClick={handleClickLiveButton}
         label={t("projects_button_live")}
-        dark
       />
       <TileButton
         handleClick={handleClickRepoButton}
