@@ -3,6 +3,7 @@ import styles from "./slide3.module.scss";
 import { TileButton } from "./tileButton";
 import { useTranslation } from "react-i18next";
 import { ButtonsContainer } from "./buttonsContainer";
+import classNames from "classnames";
 
 interface Slide3Props {
   screenDesktop: string;
@@ -19,6 +20,11 @@ export function Slide3({
   appUrl,
   title,
 }: Slide3Props) {
+  const screenMobileClass = classNames({
+    [styles.screenMobile]: screenMobile,
+    [styles.hideMobile]: !screenMobile,
+  });
+
   return (
     <div className={styles.container}>
       <img
@@ -28,7 +34,7 @@ export function Slide3({
       />
       <img
         src={screenMobile}
-        className={styles.screenMobile}
+        className={screenMobileClass}
         alt={`${title} mobile screen`}
       />
       <div className={styles.showHideButtons}>

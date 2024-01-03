@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./slide1.module.scss";
 import { StackInfo } from "../../data/stackIcons";
 import { ProjectStack } from "./projectStack";
+import classNames from "classnames";
 
 interface Slide1Props {
   screenDesktop: string;
@@ -16,6 +17,11 @@ export function Slide1({
   stack,
   title,
 }: Slide1Props) {
+  const screenMobileClass = classNames({
+    [styles.screenMobile]: screenMobile,
+    [styles.hideMobile]: !screenMobile,
+  });
+
   return (
     <div className={styles.container}>
       <img
@@ -25,7 +31,7 @@ export function Slide1({
       />
       <img
         src={screenMobile}
-        className={styles.screenMobile}
+        className={screenMobileClass}
         alt={`${title} mobile screen`}
       />
       <div className={styles.showHideStack}>

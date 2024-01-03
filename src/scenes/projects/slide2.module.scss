@@ -80,7 +80,7 @@
     flex-direction: row;
    flex-wrap: wrap;
    align-items: center;
-   gap: 10%;
+   gap: 5%;
     .screensContainer{
       display: none;
     }
@@ -96,6 +96,7 @@
     }
     .paragraph:nth-of-type(3){
       order: 4;
+      flex-basis: 75%;
     }
 
     .showHideStack {
@@ -117,6 +118,11 @@
     .paragraph {
       line-height: 1.7;
       font-size: 18px;
+    }
+
+    .paragraph:nth-of-type(3){
+      order: 4;
+      flex-basis: 65%;
     }
     .showHideStack {
       flex-basis: 30%;
