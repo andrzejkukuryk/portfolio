@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cbece257.css",
-    "main.js": "/portfolio/static/js/main.b6efb23d.js",
+    "main.css": "/portfolio/static/css/main.2ce52ee9.css",
+    "main.js": "/portfolio/static/js/main.3eaea1eb.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/pastabook_desktop_1.png": "/portfolio/static/media/pastabook_desktop_1.61dddf93275017e25dde.png",
     "static/media/pastabook_desktop_2.png": "/portfolio/static/media/pastabook_desktop_2.24ce92046e4cfaa91e25.png",
     "static/media/pastabook480.png": "/portfolio/static/media/pastabook480.ccefce460c2368005358.png",
     "static/media/pastabook_mobile_1.png": "/portfolio/static/media/pastabook_mobile_1.d9964b50cc64e69ef794.png",
+    "static/media/circle_desktop_2.png": "/portfolio/static/media/circle_desktop_2.08cad2ef17c0eec09a0c.png",
     "static/media/pastabook_mobile_2.png": "/portfolio/static/media/pastabook_mobile_2.2db734bce7e7333988e3.png",
+    "static/media/circle_desktop_1.png": "/portfolio/static/media/circle_desktop_1.051ef69dda294a2947f1.png",
     "static/media/circle480.png": "/portfolio/static/media/circle480.f60e1f21f3e4e6a23362.png",
+    "static/media/playiteasy_desktop_1.png": "/portfolio/static/media/playiteasy_desktop_1.988a8b19fa7ece3613fd.png",
+    "static/media/scales_desktop_2.png": "/portfolio/static/media/scales_desktop_2.b681b35a925f7bba857e.png",
+    "static/media/playiteasy_mobile_1.png": "/portfolio/static/media/playiteasy_mobile_1.9097468e94a35113c316.png",
+    "static/media/playiteasy_desktop_2.png": "/portfolio/static/media/playiteasy_desktop_2.1cbedad06a0687922560.png",
+    "static/media/circle_mobile_2.png": "/portfolio/static/media/circle_mobile_2.8e966cfc5cc76fb6001a.png",
+    "static/media/circle_mobile_1.png": "/portfolio/static/media/circle_mobile_1.9c9dcf803e0b8072e6d2.png",
     "static/media/foto300px.webp": "/portfolio/static/media/foto300px.3badbd338066ba1d3c0b.webp",
     "static/media/playiteasy480.png": "/portfolio/static/media/playiteasy480.804bf7d284c1c2701eda.png",
+    "static/media/playiteasy_mobile_2.png": "/portfolio/static/media/playiteasy_mobile_2.203a1b74a6c0ed018978.png",
+    "static/media/scales_desktop_1.png": "/portfolio/static/media/scales_desktop_1.a4df42d0daa48414bca1.png",
     "static/media/scales480.png": "/portfolio/static/media/scales480.19aa8b0c533ce243b38c.png",
     "static/media/sass.svg": "/portfolio/static/media/sass.50116b3cd4261a162d96bfb6646278a5.svg",
     "static/media/react.svg": "/portfolio/static/media/react.ee0db66f517be283d7812b1de167e76c.svg",
@@ -31,12 +41,12 @@
     "static/media/arrowRight.svg": "/portfolio/static/media/arrowRight.b21a439c3d1c7cb629eefb3105e16a6e.svg",
     "static/media/mui.svg": "/portfolio/static/media/mui.3af953009239bfe3daeff73047359f3e.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.1bfe161594d9874cff2689932805f0c9.svg",
-    "main.cbece257.css.map": "/portfolio/static/css/main.cbece257.css.map",
-    "main.b6efb23d.js.map": "/portfolio/static/js/main.b6efb23d.js.map",
+    "main.2ce52ee9.css.map": "/portfolio/static/css/main.2ce52ee9.css.map",
+    "main.3eaea1eb.js.map": "/portfolio/static/js/main.3eaea1eb.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbece257.css",
-    "static/js/main.b6efb23d.js"
+    "static/css/main.2ce52ee9.css",
+    "static/js/main.3eaea1eb.js"
   ]
 }
