@@ -57,10 +57,8 @@ export function useSwipe(left: () => void, right: () => void) {
   const swipe = (move: number) => {
     if (move < 0) {
       right();
-      console.log("right");
     } else if (move > 0) {
       left();
-      console.log("left");
     } else return;
   };
 
