@@ -5,13 +5,18 @@ import pastabookDesktop2 from "../graph/pastabook_desktop_2.png";
 import pastabookMobile1 from "../graph/pastabook_mobile_1.png";
 import pastabookMobile2 from "../graph/pastabook_mobile_2.png";
 import pastabookPrev from "../graph/pastabook480.png";
-import playiteasyDesktop from "../graph/playiteasy_desktop.webp";
-import playiteasyMobile from "../graph/playiteasy_mobile.webp";
 import playiteasyPrev from "../graph/playiteasy480.png";
-import scalesDesktop from "../graph/scales_deskop.webp";
+import playiteasyDesktop1 from "../graph/playiteasy_desktop_1.png";
+import playiteasyDesktop2 from "../graph/playiteasy_desktop_2.png";
+import playiteasyMobile1 from "../graph/playiteasy_mobile_1.png";
+import playiteasyMobile2 from "../graph/playiteasy_mobile_2.png";
+import scalesDesktop1 from "../graph/scales_desktop_1.png";
+import scalesDesktop2 from "../graph/scales_desktop_2.png";
 import scalesPrev from "../graph/scales480.png";
-import circleDesktop from "../graph/circle_desktop.webp";
-import circleMobile from "../graph/circle_mobile.webp";
+import circleDesktop1 from "../graph/circle_desktop_1.png";
+import circleDesktop2 from "../graph/circle_desktop_2.png";
+import circleMobile1 from "../graph/circle_mobile_1.png";
+import circleMobile2 from "../graph/circle_mobile_2.png";
 import circlePrev from "../graph/circle480.png";
 
 const pastabookStack: StackLabel[] = [
@@ -57,7 +62,7 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/music-theory",
     translationKey: "data_projects_chordsDescription",
     shortTranslationKey: "data_projects_chordsShort",
-    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
+    imgDesktop: [scalesDesktop1, scalesDesktop2],
     imgPrev: scalesPrev,
   },
   {
@@ -67,8 +72,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/circleoffifths",
     translationKey: "data_projects_circleDescription",
     shortTranslationKey: "data_projects_circleShort",
-    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
-    imgMobile: [pastabookMobile1, pastabookMobile2],
+    imgDesktop: [circleDesktop1, circleDesktop2],
+    imgMobile: [circleMobile1, circleMobile2],
     imgPrev: circlePrev,
   },
   {
@@ -78,8 +83,8 @@ export const projects: ProjectInfo[] = [
     repositoryUrl: "https://github.com/andrzejkukuryk/playiteasy",
     translationKey: "data_projects_playItEasyDescription",
     shortTranslationKey: "data_projects_playiteasyShort",
-    imgDesktop: [pastabookDesktop1, pastabookDesktop2],
-    imgMobile: [pastabookMobile1, pastabookMobile2],
+    imgDesktop: [playiteasyDesktop1, playiteasyDesktop2],
+    imgMobile: [playiteasyMobile1, playiteasyMobile2],
     imgPrev: playiteasyPrev,
   },
 ];

@@ -17,6 +17,10 @@ export function Slide1({
   stack,
   title,
 }: Slide1Props) {
+  const screenDesktopClass = classNames([styles.screenDesktop], {
+    [styles.marginBottom]: !screenMobile,
+  });
+
   const screenMobileClass = classNames({
     [styles.screenMobile]: screenMobile,
     [styles.hideMobile]: !screenMobile,
@@ -26,7 +30,7 @@ export function Slide1({
     <div className={styles.container}>
       <img
         src={screenDesktop}
-        className={styles.screenDesktop}
+        className={screenDesktopClass}
         alt={`${title} desktop screen`}
       />
       <img
