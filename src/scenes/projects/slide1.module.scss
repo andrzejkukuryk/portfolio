@@ -40,6 +40,10 @@
     display: none;
   }
 
+  .hideMobile {
+    display: none;
+  }
+
   .showHideStack {
     display: block;
     margin: 0;
@@ -82,9 +86,6 @@
       margin: 128px 24px 16px -40px;
     }
 
-    .hideMobile {
-      display: none;
-    }
     
     .showHideStack {
       display: none;

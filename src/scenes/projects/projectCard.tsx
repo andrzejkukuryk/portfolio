@@ -3,10 +3,9 @@ import { ProjectInfo } from "../../models/projects";
 import { ReactComponent as CloseCard } from "../../assets/closeMenu.svg";
 import { ReactComponent as Arrow } from "../../assets/arrowRight.svg";
 import styles from "./projectCard.module.scss";
-
-import { useTranslation } from "react-i18next";
 import { CardContent } from "./cardContent";
 import classNames from "classnames";
+import { useSwipe } from "../../hooks/useSwipe";
 
 interface ProjectCardProps {
   project: ProjectInfo;
@@ -20,7 +19,6 @@ export function ProjectCard({
   setShowProjectCard,
 }: ProjectCardProps) {
   const [slideNumber, setSlideNumber] = useState(1);
-  const { t } = useTranslation();
 
   const lockScroll = () => {
     document.body.style.overflow = "hidden";
@@ -59,6 +57,8 @@ export function ProjectCard({
     }
   };
 
+  const { ref } = useSwipe(increaseSlideNumber, decreaseSlideNumber);
+
   const frameClass = classNames([styles.frame], {
     [styles.slide2]: slideNumber === 2,
     [styles.slide3]: slideNumber === 3,
@@ -73,7 +73,7 @@ export function ProjectCard({
       {slideNumber < 3 && (
         <Arrow className={styles.slideRight} onClick={increaseSlideNumber} />
       )}
-      <div className={frameClass}>
+      <div ref={ref} className={frameClass}>
         <CardContent project={project} />
       </div>
     </div>
