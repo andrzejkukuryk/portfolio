@@ -36,17 +36,10 @@
     @include screenBefore;
   }
 
-  .screenMobile {
-    display: none;
-  }
-
-  .hideMobile {
-    display: none;
-  }
-
-  .showHideStack {
-    display: block;
-    margin: 0;
+  .paragraph {
+    font-family: $font-secondary;
+    color: $color-primary;
+    margin: 16px 16px;
   }
 }
 
@@ -61,34 +54,9 @@
 
 @media screen and (min-width: $laptop) {
   .container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
     .screenDesktop {
       width: 70vw;
       max-width: 800px;
-    }
-
-    .marginBottom {
-      margin-bottom: 48px;
-    }
-
-    .screenMobile {
-      display: block;
-      width: 20vw;
-      max-width: 250px;
-      height: auto;
-      transform: rotateY(3deg) rotateX(1deg);
-      filter: brightness(0.9) contrast(1.1);
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-      margin: 128px 24px 16px -40px;
-    }
-
-    
-    .showHideStack {
-      display: none;
     }
   }
 }

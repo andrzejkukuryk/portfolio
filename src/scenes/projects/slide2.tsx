@@ -28,17 +28,12 @@ export function Slide2({
   const screenMobile1 = screensMobile ? screensMobile[0] : "";
   const screenMobile2 = screensMobile ? screensMobile[1] : "";
 
-  const descriptionParagraphs = () => {
-    return t(description)
-      .split("\n")
-      .map((str) => (
-        <p
-          className={paragraphClass}
-          key={`paragraph${str[1]}${str[3]}${str[4]}`}
-        >
-          {str}
-        </p>
-      ));
+  const descriptionParagraph = (paragraphNumber: number) => {
+    const arrOfParagraphs = t(description).split("\n");
+
+    return (
+      <p className={styles.paragraph}>{arrOfParagraphs[paragraphNumber]}</p>
+    );
   };
 
   const paragraphClass = classNames([styles.paragraph], {
@@ -61,12 +56,14 @@ export function Slide2({
           />
         </div>
       )}
-      {descriptionParagraphs()}
-      <div className={styles.showHideStack}>
+      <div className={styles.descriptionContainer}>
+        {descriptionParagraph(1)}
+
         <ProjectStack stack={stack} />
-      </div>
-      <div className={styles.showHideButtons}>
-        <ButtonsContainer appUrl={appUrl} repositoryUrl={repositoryUrl} />
+        {descriptionParagraph(2)}
+        <div className={styles.showHideButtons}>
+          <ButtonsContainer appUrl={appUrl} repositoryUrl={repositoryUrl} />
+        </div>
       </div>
     </div>
   );

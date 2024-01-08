@@ -10,24 +10,25 @@
 }
 
 @mixin screenMobileBefore {
-    content: "";
-      position: absolute;
-      top: 10%;
-      right: 10%;
-      width: 80%;
-      height: 80%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.2),
-        transparent 70%
-      );
-      transform: rotate(-5deg);
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+  transform: rotate(-5deg);
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100vw;
 
   .screensContainer {
@@ -56,47 +57,49 @@
     }
   }
 
-  .paragraph {
-    font-family: $font-secondary;
-    color: $color-primary;
-    margin: 16px 16px;
-  }
+  .descriptionContainer {
+    .paragraph {
+      font-family: $font-secondary;
+      color: $color-primary;
+      margin: 16px 16px;
+    }
 
-  .narrow {
-    margin: 24px 40px;
-  }
+    .narrow {
+      margin: 24px 40px;
+    }
 
-  .showHideStack {
-    display: none;
-  }
+    .showHideStack {
+      display: none;
+    }
 
-  .showHideButtons {
-    display: none;
+    .showHideButtons {
+      display: none;
+    }
   }
 }
 
-@media screen and (min-width: $laptop) {
+@media screen and (min-width: $tablet) {
   .container{
+    .descriptionContainer {
+      width: 80vw;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: $laptop) {
+  .container {
     flex-direction: row;
-   flex-wrap: wrap;
-   align-items: center;
-   gap: 5%;
-    .screensContainer{
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5%;
+    .screensContainer {
       display: none;
     }
     .paragraph {
       flex-basis: 30%;
       line-height: 1.4;
-    }
-    .paragraph:nth-of-type(1){
-      order: 0;
-    }
-    .paragraph:nth-of-type(2){
-      order: 3;
-    }
-    .paragraph:nth-of-type(3){
-      order: 4;
-      flex-basis: 75%;
     }
 
     .showHideStack {
@@ -114,13 +117,13 @@
 }
 
 @media screen and (min-width: $desktop) {
-  .container{
+  .container {
     .paragraph {
       line-height: 1.7;
       font-size: 18px;
     }
 
-    .paragraph:nth-of-type(3){
+    .paragraph:nth-of-type(3) {
       order: 4;
       flex-basis: 65%;
     }

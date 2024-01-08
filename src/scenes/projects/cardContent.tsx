@@ -25,8 +25,7 @@ export function CardContent({ project }: CardContentProps) {
     <div className={backgroundClass}>
       <Slide1
         screenDesktop={project.imgDesktop[0]}
-        screenMobile={imgMobile1}
-        stack={project.stack}
+        description={project.translationKey}
         title={project.title}
       />
       <Slide2

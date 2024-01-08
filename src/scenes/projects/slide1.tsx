@@ -1,46 +1,32 @@
 import React from "react";
 import styles from "./slide1.module.scss";
-import { StackInfo } from "../../data/stackIcons";
-import { ProjectStack } from "./projectStack";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 interface Slide1Props {
   screenDesktop: string;
-  screenMobile?: string;
-  stack: StackInfo[];
+  description: string;
   title: string;
 }
 
-export function Slide1({
-  screenDesktop,
-  screenMobile,
-  stack,
-  title,
-}: Slide1Props) {
-  const screenDesktopClass = classNames([styles.screenDesktop], {
-    [styles.marginBottom]: !screenMobile,
-  });
+export function Slide1({ screenDesktop, description, title }: Slide1Props) {
+  const { t } = useTranslation();
 
-  const screenMobileClass = classNames({
-    [styles.screenMobile]: screenMobile,
-    [styles.hideMobile]: !screenMobile,
-  });
+  const descriptionParagraph = (paragraphNumber: number) => {
+    const arrOfParagraphs = t(description).split("\n");
 
+    return (
+      <p className={styles.paragraph}>{arrOfParagraphs[paragraphNumber]}</p>
+    );
+  };
   return (
     <div className={styles.container}>
       <img
         src={screenDesktop}
-        className={screenDesktopClass}
+        className={styles.screenDesktop}
         alt={`${title} desktop screen`}
       />
-      <img
-        src={screenMobile}
-        className={screenMobileClass}
-        alt={`${title} mobile screen`}
-      />
-      <div className={styles.showHideStack}>
-        <ProjectStack stack={stack} />
-      </div>
+      {descriptionParagraph(0)}
     </div>
   );
 }
