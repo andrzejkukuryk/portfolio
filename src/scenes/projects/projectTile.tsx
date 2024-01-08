@@ -4,6 +4,7 @@ import { ProjectInfo } from "../../models/projects";
 import { TilePhoto } from "./tilePhoto";
 import { TileDescription } from "./tileDescription";
 import classNames from "classnames";
+import { ProjectCard } from "./projectCard";
 
 interface ProjectTileProps {
   project: ProjectInfo;
@@ -12,13 +13,17 @@ interface ProjectTileProps {
 
 export function ProjectTile({ project, even }: ProjectTileProps) {
   const [showProjectCard, setShowProjectCard] = useState(false);
+
+  const handleClick = () => {
+    setShowProjectCard(true);
+  };
   const containerClass = classNames([styles.tileContainer], {
     [styles.evenTile]: even,
   });
 
   return (
     <div className={styles.outerWrapper}>
-      <div className={containerClass}>
+      <div className={containerClass} onClick={handleClick}>
         <TilePhoto imgPrev={project.imgPrev} title={project.title} />
         <TileDescription
           title={project.title}
@@ -27,6 +32,13 @@ export function ProjectTile({ project, even }: ProjectTileProps) {
           repositoryUrl={project.repositoryUrl}
         />
       </div>
+      {showProjectCard && (
+        <ProjectCard
+          project={project}
+          showProjectCard={showProjectCard}
+          setShowProjectCard={setShowProjectCard}
+        />
+      )}
     </div>
   );
 }
