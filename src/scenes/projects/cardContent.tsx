@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./cardContent.module.scss";
 import { ProjectInfo } from "../../models/projects";
 import classNames from "classnames";
@@ -11,7 +11,6 @@ interface CardContentProps {
 }
 
 export function CardContent({ project }: CardContentProps) {
-  const imgMobile1 = project.imgMobile ? project.imgMobile[0] : "";
   const imgMobile2 = project.imgMobile ? project.imgMobile[1] : "";
   const screensMobile = project.imgMobile ? project.imgMobile : undefined;
 

@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./slide3.module.scss";
-import { TileButton } from "./tileButton";
-import { useTranslation } from "react-i18next";
 import { ButtonsContainer } from "./buttonsContainer";
 import classNames from "classnames";
 

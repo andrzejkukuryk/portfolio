@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { TileButton } from "./tileButton";
 import styles from "./tileDescription.module.scss";
 import { ButtonsContainer } from "./buttonsContainer";
 

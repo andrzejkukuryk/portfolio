@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./slide1.module.scss";
-import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 
 interface Slide1Props {
