@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 .buttonsContainer {
     display: flex;
     flex-direction: row;
@@ -5,3 +7,15 @@
     padding: 16px 0;
     cursor: auto;
   }
+
+
+@media screen and (min-width: $laptop) {
+  .buttonsContainer{
+    justify-content: space-between;
+    margin: 16px;
+  }
+
+  .narrow {
+    margin: 16px 44px;
+  }
+}

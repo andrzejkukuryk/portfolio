@@ -2,15 +2,18 @@ import React from "react";
 import styles from "./buttonsContainer.module.scss";
 import { useTranslation } from "react-i18next";
 import { TileButton } from "./tileButton";
+import classNames from "classnames";
 
 interface ButtonsContainerProps {
   appUrl: string;
   repositoryUrl: string;
+  narrow?: boolean;
 }
 
 export function ButtonsContainer({
   repositoryUrl,
   appUrl,
+  narrow,
 }: ButtonsContainerProps) {
   const { t } = useTranslation();
 
@@ -22,8 +25,11 @@ export function ButtonsContainer({
     window.open(repositoryUrl, "_blank");
   };
 
+  const buttonsContainerClass = classNames([styles.buttonsContainer], {
+    [styles.narrow]: narrow,
+  });
   return (
-    <div className={styles.buttonsContainer}>
+    <div className={buttonsContainerClass}>
       <TileButton
         handleClick={handleClickLiveButton}
         label={t("projects_button_live")}

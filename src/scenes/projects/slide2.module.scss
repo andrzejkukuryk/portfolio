@@ -58,6 +58,9 @@
   }
 
   .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+
     .paragraph {
       font-family: $font-secondary;
       color: $color-primary;
@@ -65,7 +68,7 @@
     }
 
     .narrow {
-      margin: 24px 40px;
+      margin: 24px 44px;
     }
 
     .showHideStack {
@@ -79,57 +82,57 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .container{
+  .container {
     .descriptionContainer {
       width: 80vw;
     }
   }
 }
 
-
-
 @media screen and (min-width: $laptop) {
   .container {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 5%;
     .screensContainer {
-      display: none;
+      .screenMobile1 {
+        max-width: 250px;
+      }
+
+      .screenMobile2 {
+        display: none;
+      }
     }
-    .paragraph {
-      flex-basis: 30%;
-      line-height: 1.4;
+    .descriptionContainer {
+      width: 45vw;
+      .paragraph {
+        line-height: 1.4;
+      }
+
+      .showHideStack {
+        display: block;
+        font-size: 18px;
+      }
+      .showHideButtons {
+        display: block;
+      }
     }
 
-    .showHideStack {
-      display: block;
-      flex-basis: 40%;
-      order: 1;
-      font-size: 18px;
-    }
-    .showHideButtons {
-      display: block;
-      flex-basis: 30%;
-      order: 2;
+    .wider {
+      width: 70vw;
     }
   }
 }
 
 @media screen and (min-width: $desktop) {
   .container {
-    .paragraph {
-      line-height: 1.7;
-      font-size: 18px;
-    }
-
-    .paragraph:nth-of-type(3) {
-      order: 4;
-      flex-basis: 65%;
-    }
-    .showHideStack {
-      flex-basis: 30%;
-      font-size: 20px;
+    .descriptionContainer {
+      width: 40vw;
+      .paragraph {
+        line-height: 1.7;
+        font-size: 18px;
+      }
     }
   }
 }

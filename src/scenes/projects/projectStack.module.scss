@@ -4,12 +4,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 80vw;
   margin: 24px 16px;
   color: $color-primary;
   font-family: $font-secondary;
+}
+
+.narrow {
+  margin: 24px 44px;
 }
 
 .stackIcon {
@@ -18,8 +22,33 @@
   margin: 0 4px;
 }
 
+@media screen and (min-width: $tablet) {
+  .container{
+    width: 70vw;
+  }
+}
+
 @media screen and (min-width: $laptop) {
   .container{
     width: auto;
+    h5{
+      font-size: 18px;
+    }
+
+    .stackIcon {
+      width: 32px;
+      height: 32px;
+      margin: 0 4px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container{
+    .stackIcon{
+      width: 36px;
+      height: 36px;
+      margin: 0 8px;
+    }
   }
 }

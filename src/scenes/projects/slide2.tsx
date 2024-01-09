@@ -31,13 +31,15 @@ export function Slide2({
   const descriptionParagraph = (paragraphNumber: number) => {
     const arrOfParagraphs = t(description).split("\n");
 
-    return (
-      <p className={styles.paragraph}>{arrOfParagraphs[paragraphNumber]}</p>
-    );
+    return <p className={paragraphClass}>{arrOfParagraphs[paragraphNumber]}</p>;
   };
 
   const paragraphClass = classNames([styles.paragraph], {
     [styles.narrow]: !screensMobile,
+  });
+
+  const descriptionContainerClass = classNames([styles.descriptionContainer], {
+    [styles.wider]: !screensMobile,
   });
 
   return (
@@ -56,13 +58,17 @@ export function Slide2({
           />
         </div>
       )}
-      <div className={styles.descriptionContainer}>
+      <div className={descriptionContainerClass}>
         {descriptionParagraph(1)}
 
-        <ProjectStack stack={stack} />
+        <ProjectStack stack={stack} narrow={!screensMobile} />
         {descriptionParagraph(2)}
         <div className={styles.showHideButtons}>
-          <ButtonsContainer appUrl={appUrl} repositoryUrl={repositoryUrl} />
+          <ButtonsContainer
+            appUrl={appUrl}
+            repositoryUrl={repositoryUrl}
+            narrow={!screensMobile}
+          />
         </div>
       </div>
     </div>
