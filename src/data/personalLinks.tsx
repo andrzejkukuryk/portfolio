@@ -29,7 +29,7 @@ export const personalLinks: PersonalLinksInfo[] = [
   {
     icon: CvIcon,
     label: "data_about_resume",
-    url: "../../data/ANDRZEJ_KUKURYK_-_CV.pdf",
+    url: "https://drive.google.com/file/d/1yGWoEZaKmAmpANtR6T2E8HGdL3ifv8lQ/view?usp=sharing",
     download: true,
   },
 ];
