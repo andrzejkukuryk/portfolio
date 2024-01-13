@@ -9,7 +9,7 @@ interface PersonalLinksInfoProps {
 export function PersonalLinksItem({ info }: PersonalLinksInfoProps) {
   const { t } = useTranslation();
   return (
-    <a href={info.url} target="_blank">
+    <a href={info.url} target="_blank" download={info.download}>
       <div className={styles.container}>
         <div className={styles.linkItem}>
           <info.icon className={styles.icon} />

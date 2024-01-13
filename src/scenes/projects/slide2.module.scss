@@ -1,0 +1,141 @@
+@import "../../variables.module.scss";
+
+@mixin screenMobile {
+  width: 28vw;
+  height: auto;
+  margin: 16px 0;
+  filter: brightness(0.9) contrast(1.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@mixin screenMobileBefore {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2),
+    transparent 70%
+  );
+  transform: rotate(-5deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  .screensContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15vw;
+    perspective: 2000px;
+
+    .screenMobile1 {
+      @include screenMobile;
+      transform: rotateY(5deg) rotateX(2deg);
+    }
+
+    .screenMobile1:before {
+      @include screenMobileBefore;
+    }
+
+    .screenMobile2 {
+      @include screenMobile;
+      transform: rotateY(-5deg) rotateX(-2deg);
+    }
+
+    .screenMobile2:before {
+      @include screenMobileBefore;
+    }
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+
+    .paragraph {
+      font-family: $font-secondary;
+      color: $color-primary;
+      margin: 16px 16px;
+    }
+
+    .narrow {
+      margin: 24px 44px;
+    }
+
+    .showHideStack {
+      display: none;
+    }
+
+    .showHideButtons {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    .descriptionContainer {
+      width: 80vw;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5%;
+    .screensContainer {
+      .screenMobile1 {
+        max-width: 250px;
+      }
+
+      .screenMobile2 {
+        display: none;
+      }
+    }
+    .descriptionContainer {
+      width: 45vw;
+      .paragraph {
+        line-height: 1.4;
+      }
+
+      .showHideStack {
+        display: block;
+        font-size: 18px;
+      }
+      .showHideButtons {
+        display: block;
+      }
+    }
+
+    .wider {
+      width: 70vw;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    .descriptionContainer {
+      width: 40vw;
+      .paragraph {
+        line-height: 1.7;
+        font-size: 18px;
+      }
+    }
+    .wider {
+      width: 65vw;
+    }
+  }
+}
