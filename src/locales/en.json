@@ -12,6 +12,8 @@
   "data_projects_circleShort": "App introduces the user to the music principle, the circle of fifths. \nDeveloped to practice coding in pure JavaScript, HTML, and CSS.",
   "data_projects_playItEasyDescription": "The application provides users with the ability to explore, filter, sort, and search through a catalog that contains links to my YouTube videos, music note sheets, and guitar tabs. \nThis project was developed with the goal of becoming proficient in Redux. It relies on the Google Firebase REST API to retrieve its content.",
   "data_projects_playiteasyShort": "App enables users to explore, filter, sort, and search a catalog featuring my YouTube videos, music sheets, and guitar tabs.\n Developed to master Redux, utilizing Google Firebase REST API for content retrieval.",
+  "data_projects_paniniDescription": "The application allows configuring a sandwich from a set of ingredients, then placing and previewing an order. \nThe main goal was learning unit test writing. Developed using React, Redux Toolkit, and Sass. REST API requests for sending and retrieving data leverage a backend created in Xano. \nPlease note that it is fully functional exclusively on desktop devices.",
+  "data_projects_paniniShort": "The app enables sandwich customization and order preview. \nMain goal was learning unit tests. It utilizes React, Redux Toolkit, Sass, and Xano's REST API.",
   "home_musician": "Musician",
   "home_frontend": "Frontend developer and musician",
   "home_hire": "Hire me!",

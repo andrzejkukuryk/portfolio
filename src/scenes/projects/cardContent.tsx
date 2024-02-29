@@ -18,7 +18,9 @@ export function CardContent({ project }: CardContentProps) {
     [styles.backgroundPastabook]: project.title === "Pastabook",
     [styles.backgroundPlayiteasy]: project.title === "Play It Easy",
     [styles.backgroundMusicTheory]: project.title === "Chords & Scales",
-    [styles.backgroundCircle]: project.title === "Circle of Fifths",
+    [styles.backgroundCircle]:
+      project.title === "Circle of Fifths" ||
+      project.title === "Panini Creator",
   });
   return (
     <div className={backgroundClass}>

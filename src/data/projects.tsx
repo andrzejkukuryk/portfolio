@@ -18,6 +18,9 @@ import circleDesktop2 from "../graph/circle_desktop_2.png";
 import circleMobile1 from "../graph/circle_mobile_1.png";
 import circleMobile2 from "../graph/circle_mobile_2.png";
 import circlePrev from "../graph/circle480.png";
+import paniniDesktop1 from "../graph/panini_desktop_1.png";
+import paniniDesktop2 from "../graph/panini_desktop_2.png";
+import paniniPrev from "../graph/panini480.png";
 
 const pastabookStack: StackLabel[] = [
   "React.js",
@@ -43,6 +46,8 @@ const chordsAndScalesStack: StackLabel[] = [
 
 const circleOfFifthsStack: StackLabel[] = ["JavaScript", "HTML", "CSS"];
 
+const paniniStack: StackLabel[] = ["React.js", "Redux", "TypeScript", "Sass"];
+
 export const projects: ProjectInfo[] = [
   {
     title: "Pastabook",
@@ -54,6 +59,16 @@ export const projects: ProjectInfo[] = [
     imgDesktop: [pastabookDesktop1, pastabookDesktop2],
     imgMobile: [pastabookMobile1, pastabookMobile2],
     imgPrev: pastabookPrev,
+  },
+  {
+    title: "Panini Creator",
+    stack: stack.filter((item) => paniniStack.includes(item.label)),
+    appUrl: "https://andrzejkukuryk.github.io/pastabook/",
+    repositoryUrl: "https://github.com/andrzejkukuryk/panini-creator",
+    translationKey: "data_projects_paniniDescription",
+    shortTranslationKey: "data_projects_paniniShort",
+    imgDesktop: [paniniDesktop1, paniniDesktop2],
+    imgPrev: paniniPrev,
   },
   {
     title: "Chords & Scales",

@@ -12,6 +12,8 @@
   "data_projects_circleShort": "Aplikacja prezentuje użytkownikowi koło kwintowe - jedną z podstawowych zasad muzyki. \nNapisana dla treningu w czystym JavaScript, HTML i CSS.",
   "data_projects_playItEasyDescription": "Aplikacja umożliwia użytkownikom przeglądanie, filtrowanie, sortowanie i wyszukiwanie w katalogu zawierającym linki do moich filmów na YouTube, partytury i tabulatury gitarowe. \nProjekt ten został stworzony celem zapoznania się z Reduxem. Wykorzystuje Google Firebase REST API do pobierania swojej zawartości.",
   "data_projects_playiteasyShort": "Aplikacja pozwala przeglądać, filtrować i szukać linków do moich filmów na YouTube, partytur i tabulatur gitarowych. \nProjekt z Reduxem i Google Firebase API.",
+  "data_projects_paniniDescription": "Aplikacja umożliwia skofigurowanie kanapki z zestawu składników, a następnie złożenie i podgląd zamówienia. \nGłównym celem była nauka pisania testów jednostkowych. Napisana z użyciem Reacta, Redux Toolkit oraz Sass. Zapytania REST API wysyłające i pobierające dane wykorzystują backend stworzony w Xano. \nJest w pełni funkcjonalna tylko w wersji desktopowej.",
+  "data_projects_paniniShort": "Aplikacja pozwala na konfigurację kanapek i podgląd zamówienia. \nGłównym celem była nauka testów jednostkowych. Wykorzystuje React, Redux Toolkit, Sass oraz REST API w Xano.",
   "home_musician": "Muzyk",
   "home_frontend": "Programista frontend i muzyk",
   "home_hire": "Zatrudnij mnie!",
