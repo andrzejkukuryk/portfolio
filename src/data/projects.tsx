@@ -63,7 +63,7 @@ export const projects: ProjectInfo[] = [
   {
     title: "Panini Creator",
     stack: stack.filter((item) => paniniStack.includes(item.label)),
-    appUrl: "https://andrzejkukuryk.github.io/pastabook/",
+    appUrl: "https://andrzejkukuryk.github.io/panini-creator/",
     repositoryUrl: "https://github.com/andrzejkukuryk/panini-creator",
     translationKey: "data_projects_paniniDescription",
     shortTranslationKey: "data_projects_paniniShort",
