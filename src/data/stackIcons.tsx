@@ -8,6 +8,8 @@ import { ReactComponent as ReduxIcon } from "../assets/redux.svg";
 import { ReactComponent as ReactRouterIcon } from "../assets/router.svg";
 import { ReactComponent as BootstrapIcon } from "../assets/bootstrap.svg";
 import { ReactComponent as MuiIcon } from "../assets/mui.svg";
+import { ReactComponent as AngularIcon } from "../assets/angular.svg";
+import { ReactComponent as GitIcon } from "../assets/git.svg";
 
 export interface StackInfo {
   component: React.FunctionComponent<
@@ -22,13 +24,15 @@ export type StackLabel =
   | "React.js"
   | "Redux"
   | "React Router"
+  | "Angular"
   | "JavaScript"
   | "TypeScript"
   | "HTML"
   | "CSS"
   | "Sass"
   | "Bootstrap"
-  | "Material-UI";
+  | "Material-UI"
+  | "Git";
 
 export const stack: StackInfo[] = [
   {
@@ -46,6 +50,10 @@ export const stack: StackInfo[] = [
   {
     component: ReactRouterIcon,
     label: "React Router",
+  },
+  {
+    component: AngularIcon,
+    label: "Angular",
   },
   {
     component: TsIcon,
@@ -71,5 +79,9 @@ export const stack: StackInfo[] = [
   {
     component: BootstrapIcon,
     label: "Bootstrap",
+  },
+  {
+    component: GitIcon,
+    label: "Git",
   },
 ];
